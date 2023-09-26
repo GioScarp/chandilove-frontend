@@ -1,11 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <title>ChandiLove</title>
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="logo"><img src="img/Logo_2.png"></div>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">¿Qué ofrecemos?</a></li>
+            <li><a href="#">¿Quiénes somos?</a></li>
+            <li><a href="#">El equipo</a></li>
+            <li><a href="#">Contáctenos</a></li>
+            <li><button id="boton2">Registrarse</button></li>
+            <li><button id="boton3">Iniciar Sesión</button></li>
+        </ul>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <!-- Sección Home/Inicio  + Encabezado -->
+    <section class="cabecera">
+        <div class="presentacion">
+            <h1>¿Listo para adoptar y amar <br>a un compañero peludo?</h1>
+            
+            <p>En nuestra comunidad la palabra "chanda" abraza el amor por todos los animales. <br>¡Únete y da un hogar a un amigo necesitado!</p>
+            <button id="boton1">Adopta ahora</button>
+            <ul class="menuCabecera">
+                <li>Adopta<br><p>Perritos y gatitos</p></a></li>
+                <li>Aporta<br><p>Dona a fundaciones <br>o a tu chandosito preferido</p></a></li>
+                <li>Compra<br><p>Visita nuestra petshop</p></a></li>
+            </ul>
+        </div>
+        <div class="imagen">
+            <img src="img/banner.png">
+        </div>
+    </section>
+
+    <!-- Sección: ¿Qué opciones tienes? -->
+    <div class="container">
+        <h2>¿Qué opciones <span>tienes?</span></h2>
+    </div>
+    <section id="opciones">
+        <div class="caja">
+            <img src="img/1.png">
+            <p>Adoptar, apadrinar o donar</p>
+        </div>
+        <div class="caja">
+            <img src="img/2.png">
+            <p>Tienda y grandes descuentos</p>
+        </div>
+        <div class="caja">
+            <img src="img/3.png">
+            <p>Comunidad amante de los animales</p>
+        </div>        
+    </section>
+    <div id="cajitas">
+        <ul class="cajitas1">
+            <li class="cajitas2">+ de 90 chandositos<br> esperando por ti</li>
+            <li class="cajitas3">+ de 30 fundaciones<br> registradas</li>
+            <li class="cajitas4">+ de 150.000 recaudos en donaciones</li>
+            <li class="cajitas5">+ de 50 personas registradas</li>
+        </ul>
+    </div>
+
+
+    <!-- Sección: ¿Quiénes somos? -->
+    <div class="container2">
+        <h2>¿Quiénes <span>Somos?</span></h2>
+    </div>
+    <section id="opciones2">
+        <div class="caja">
+            <p>Chandi Love va más allá de ser una plataforma de adopción; es una comunidad apasionada por los animales. <br>Los usuarios pueden interactuar, compartir historias y tips! <br>Puedes donar directamente desde nuestra tienda o encontrar los esenciales para tu casa y tu adorado chandosito. <br>Encuentra descuentos increibles!<br>Juntos podemos resignificar la palabra "chanda" como patrimonio cultural, promovamos la idea de que todos los animales merecen amor y cuidado, sin importar su origen.</p>
+        </div>
+        <div class="caja">
+            <img src="img/esquina.png" class="esquina">
+        </div>               
+    </section>
+    <section id="opciones2">
+        <div class="caja2">
+            <img src="img/28.png">
+            <p>Nuestra Causa</p>
+            <p>Descripción</p>
+        </div>
+        <div class="caja2">
+            <img src="img/30.png">
+            <p>Nuestro Futuro</p>
+            <p>Descripción</p>
+        </div>
+        <div class="caja2">
+            <img src="img/29.png">
+            <p>Nuestros principios</p>
+            <p>Descripción</p>
+        </div>        
+    </section>
+
+
+    <!-- Sección: Nuestro equipo -->
+    <div class="container__cards">
+        <h2>Nuestro <span>equipo</span></h2>
+    </div>
+
+    <section class="ourTeam__cards"> <!-- swiper -->
+
+        <div class="swiper-wrapper">
+            <div class="card__Ot"> <!-- card -->
+                <div class="card__Ot_img"> <!-- card__image -->
+                    <img src="/img/Valentina__OurTeam.svg" alt="card image">
+                </div>
+
+                <div class="card__content">
+                    <!-- <span class="card__title">Front-end Developer</span> -->
+                    <span class="card__name">Valentina Acevedo</span>
+                    <!-- <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    </p> -->
+                    <!-- <button class="card__btn">View More</button> -->
+                 </div>
+
+                 
+            </div>
+            <div class="card__Ot"> <!-- card -->
+                <div class="card__Ot_img"> <!-- card__image -->
+                    <img src="/img/Giovanni__OurTeam.svg" alt="card image">
+                </div>
+
+                <div class="card__content">
+                    <!-- <span class="card__title">Back-end  Developer</span> -->
+                    <span class="card__name">Giovanni Escarpeta</span>
+                    <!-- <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    </p> -->
+                    <!-- <button class="card__btn">View More</button> -->
+                 </div>
+
+                 
+            </div>
+
+            <div class="card__Ot"> <!-- card -->
+                <div class="card__Ot_img"> <!-- card__image -->
+                    <img src="/img/Joscari__OurTeam.svg" alt="card image">
+                </div>
+
+                <div class="card__content">
+                    <!-- <span class="card__title">Front-end Developer</span> -->
+                    <span class="card__name">Joscari Ortiz</span>
+                    <!-- <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    </p> -->
+                    <!-- <button class="card__btn">View More</button> -->
+                 </div>
+
+                 
+            </div>
+            <div class="card__Ot"> <!-- card -->
+                <div class="card__Ot_img"> <!-- card__image -->
+                    <img src="/img/Estiber__OurTeam.svg" alt="card image">
+                </div>
+
+                <div class="card__content">
+                    <!-- <span class="card__title">Back-end Developer</span> -->
+                    <span class="card__name">Estiber Téllez</span>
+                    <!-- <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    </p> -->
+                    <!-- <button class="card__btn">View More</button> -->
+                 </div>
+
+                 
+            </div>
+        </div>
+    </section>
+
+    <div class="OurTeam__txt">
+        <h2>Nuestras <span>fundaciones </span> y <span class="span2"> marcas</span> aliadas </h2>
+        <p>Siempre llevarás tu proceso de adopción y donación con fundaciones legalmente constituidas, <br> tu dinero llegará a los chandositos de manera confiable.</p>
+    </div>
+
+    <section>
+        <section class="marcas__container">
+            <div class="brand brand1">
+                <img src="img/whiskas_logo.png" class="marca__img">
+            </div>
+            <div class="brand brand2">
+                <img src="img/ringo_logo.png" class="marca__img">
+            </div>
+            <div class="brand brand3">
+                <img src="img/pedigree_logo.png" class="marca__img">
+            </div>
+            <div class="brand brand4">
+                <img src="img/dogshow_logo.webp" class="marca__img">
+            </div>
+            <div class="brand brand5">
+                <img src="img/logo-monello-especial.png" class="marca__img">
+            </div>
+        </section>
+    </section>
+
+
+    <script src="js/efectos.js"></script>
 </body>
 </html>
+

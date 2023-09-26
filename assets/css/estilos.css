@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Dosis, sans-serif;
+}
+
+:root {
+    --azul: #30B6B8 ;
+    --naranja: #F9A112;
+    --rojo: #FE5E6D;
+    --gris: #404040;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-size: cover;
+	background-image: url("/img/barra-prueba3.png");
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    width: 1295px;
+}
+
+/* Logo */
+
+.navbar img{
+    width: 150px;
+    padding-top: 0px;
+    padding-left: 50px;
+}
+
+/* Barra de navegación */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    padding-top: 30px;
+    padding-left: 20px;
+    margin-right: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--rojo);
+}
+
+#boton1 {
+    margin-top: 30px;
+    width: 170px;
+    height: 55px;
+    border-radius: 30px;
+    border-style: none;
+    background-color: var(--rojo);
+    color: snow;
+}
+
+#boton2 {
+    font-size: 15px;
+    color: #FFFFFF;
+    width: 145px;
+    height: 50px;
+    border-radius: 30px;
+    border-style: none;
+    margin-top: -30px;
+    background-color: var(--naranja);
+}
+
+#boton3 {
+    font-size: 15px;
+    color: #FFFFFF;
+    width: 145px;
+    height: 50px;
+    border-radius: 30px;
+    border-style: none;
+    margin-top: -30px;
+    background-color: var(--azul); 
+}
+
+/*Cabecera */
+
+.cabecera {
+    background-size: cover;
+    background-attachment: fixed;
+    padding-left: 120px;
+    padding-right: 150px;
+    display: flex;
+    width: 1025px;
+    height: 550px;
+}
+
+.cabecera h1{
+    padding-top: 10px;
+    font-family: Dosis;
+    color: var(--gris);
+    font-size: 40px;
+}
+
+.cabecera p{
+    margin-top: 10px;
+    font-family: Dosis;
+    font-size: 20px;
+    color: var(--gris);
+}
+
+.cabecera .presentacion{
+    margin-top: 50px;
+    width: 750px;
+    height: 545px;
+}
+
+.cabecera .imagen{
+    display: flex;
+    margin-top: 30px;
+    margin-left: -80px;
+    width: 350px;
+    height: 600px;
+}
+
+.cabecera .imagen img{
+    width: 400px;
+    height: 500px;
+}
+
+.menuCabecera{
+    display: flex;
+    padding: 15px;
+    margin: 0px;
+}
+
+.menuCabecera li{
+    margin-top: 10px;
+    font-family: Dosis;
+    color: var(--gris);
+    display: inline;
+    font-size: 30px;
+    padding-right: 50px;
+}
+
+.menuCabecera p{
+    font-family: Dosis;
+    color: var(--gris);
+    font-size: 20px;
+}
+
+.container{
+    display: flex;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-left: 20px;
+    width: 1000px;
+    height: 100px;
+    color: var(--gris);
+    font-family: Dosis;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-top: -30px;
+    margin-left: 120PX;
+}
+
+.container span{
+    color: #FCA311;
+}
+
+section{
+    /* height:100vh;
+    width: 100%; */
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#opciones {
+    background-image: url("/chandilove-frontend/img/barra.png");
+    margin-top: -30px;
+    padding-top: -30px;
+    padding-left: 80px;
+    padding-right: 150px;
+    display: flex;
+    width: 1025px;
+    height: 350px;
+}
+
+
+#opciones .caja{
+    text-align: center;
+    font-family: Dosis;
+    color: var(--gris);
+    border: 5px gray double;
+    margin: 35px;
+    height: 330px;
+}
+
+.caja img{
+    width: 300px;
+    height: 250px;
+}
+
+
+#cajitas{
+    padding-top: 40px;
+    padding-left: 120px;
+}
+
+#cajitas .cajitas1{
+    display: flex;
+    list-style: none;
+}
+
+.cajitas1 .cajitas2{
+    color: #FFFFFF;
+    padding-top: 20px;
+    margin: 30px;
+    text-align: center;
+    margin-right: 10px;
+    background-color: var(--azul);
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.cajitas1 .cajitas3{
+    color: #FFFFFF;
+    padding-top: 20px;
+    text-align: center;
+    margin: 30px;
+    margin-right: 10px;
+    width: 200px;
+    height: 50px;
+    background-color: #F9A213;
+    border-radius: 5px;
+}
+
+.cajitas1 .cajitas4{
+    color: #FFFFFF;
+    padding-top: 20px;
+    text-align: center;
+    margin: 30px;
+    margin-right: 10px;
+    width: 200px;
+    height: 50px;
+    background-color: var(--rojo);
+    border-radius: 5px;
+}
+
+.cajitas1 .cajitas5{
+    color: #FFFFFF;
+    padding-top: 20px;
+    text-align: center;
+    margin: 30px;
+    margin-right: 10px;
+    background-color: var(--azul);
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.container2{
+    display: flex;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-left: 20px;
+    width: 1000px;
+    height: 100px;
+    color: var(--gris);
+    font-family: Dosis;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: -30px;
+    padding-top: -30px;
+    margin-left: 120PX;
+}
+
+.container2 span{
+    color: var(--naranja);
+}
+
+
+/* NO SE ESTA USANDO */
+#somos {
+    background-image: url("/img/barra.png");
+    margin-top: 10px;
+    padding-top: 30px;
+    padding-left: 80px;
+    padding-right: 150px;
+    display: flex;
+    width: 1025px;
+    height: 650px;
+}
+
+#somos .caja{
+    padding-left: 30px;
+    font-family: Dosis;
+    color: var(--gris);
+    margin: 35px;
+}
+
+#somos .caja img{
+    width: 300px;
+    height: 250px;
+}
+
+#somos2 {
+    background-image: url("/chandilove-frontend/img/barra.png");
+    margin-top: 10px;
+    padding-top: 30px;
+    padding-left: 80px;
+    padding-right: 150px;
+    display: flex;
+    width: 1025px;
+    height: 350px;
+}
+
+#somos2 .caja{
+    padding-left: 30px;
+    font-family: Dosis;
+    color: var(--gris);
+    margin: 35px;
+}
+
+#somos2 .caja img{
+    width: 300px;
+    height: 250px;
+}
+
+#opciones2 {
+    background-image: url("/img/barra.png");
+    margin-top: 0px;
+    padding-top: -30px;
+    padding-left: 80px;
+    padding-right: 150px;
+    display: flex;
+    width: 1025px;
+    height: 300px;
+}
+
+
+#opciones2 .caja{
+    text-align: center;
+    font-family: Dosis;
+    color: var(--gris);
+    margin: 35px;
+    height: 330px;
+}
+
+#opciones2 p{
+    text-align: left;
+}
+
+
+.caja2 img{
+    padding-left: 180px;
+    padding-top: -10px;
+    width: 100px;
+    height: 70px;
+}
+
+.caja2 p{
+    padding-left: 180px;
+    font-family: Dosis;
+    color: var(--gris);
+}
+
+.caja .esquina{
+    margin-top: -30px;
+    padding-top: -30px;
+    width: 300px;
+    height: 330px;
+}
+
+/*************************/
+/**   Nuestro equipo    **/
+/*************************/
+
+#ourTeam__container{
+    background-image: url("/img/barra-prueba3.png");
+
+}
+
+
+.container__cards{
+    text-align: center;
+    margin-left: 150px;
+    width: 1000px;
+    color: var(--gris);
+    font-family: Dosis;
+    font-size: 25px;
+}
+
+.container__cards span{
+    color: var(--naranja);
+}
+
+.ourTeam__cards{
+    width: 100%;
+    display: grid;
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+}
+
+.swiper-wrapper {
+    
+    width: 1025px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 130px;
+    gap: 20px;
+}
+
+.card__Ot {
+    width: 230px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 2em;
+    box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.card__Ot_img {
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    padding: 3px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.card__Ot_img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card__title {
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    top: .1em;
+}
+
+.card__name{
+    color: var(--gris);
+}
+
+.card__text {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 1em 0;
+}
+
+
+
+.card__btn {
+    background-color: var(--azul);
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    padding: .5em;
+    border-radius: .5em;
+    margin-top: .5em;
+    cursor: pointer;
+}
+
+
+
+
+/* #OurTeam {
+    margin-top: -30px;
+    padding-top: -30px;
+    padding-left: 80px;
+    padding-right: 150px;
+    display: flex;
+    width: 1025px;
+    height: 300px;
+} */
+
+/* #OurTeam .caja__ourTeam {
+    text-align: center;
+    font-family: Dosis;
+    color: var(--gris);
+    border: 5px gray double;
+    margin: 35px;
+    height: 230px;
+}
+
+.caja__ourTeam img {
+    width: 100px;
+} */
+
+.OurTeam__txt {
+    margin-left: -30px;
+    text-align: center;
+}
+
+.OurTeam__txt span{
+    color: var(--naranja);
+}
+
+.OurTeam__txt h2{
+    color: var(--gris);
+}
+
+.OurTeam__txt .span2{
+    color: var(--azul);
+}
+
+.marcas__container{
+    height: 0;
+    width: 1025px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 100px;
+}
+
+.brand{
+    margin:auto;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.marca__img {
+    width: 120px;
+}
