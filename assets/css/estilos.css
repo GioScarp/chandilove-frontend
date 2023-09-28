@@ -2,10 +2,20 @@
 
 
 /* Estilos generales */
+
+
 body {
     margin: 0;
     padding: 0;
     font-family: Dosis, sans-serif;
+}
+section{
+    /* height:100vh;
+    width: 100%; */
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 :root {
@@ -22,9 +32,10 @@ body {
     background-attachment: fixed;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 0px;
     margin: 0px;
-    width: 1295px;
+    width: 100%;
 }
 
 /* Logo */
@@ -32,12 +43,12 @@ body {
 .navbar img{
     width: 150px;
     padding-top: 0px;
-    padding-left: 50px;
 }
 
 /* Barra de navegación */
 
 .nav-links {
+    gap: 15px;
     list-style: none;
     display: flex;
 }
@@ -99,15 +110,14 @@ body {
     padding-left: 120px;
     padding-right: 150px;
     display: flex;
-    width: 1025px;
+    width: 100%;
     height: 550px;
 }
 
 .cabecera h1{
-    padding-top: 10px;
     font-family: Dosis;
     color: var(--gris);
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .cabecera p{
@@ -126,13 +136,12 @@ body {
 .cabecera .imagen{
     display: flex;
     margin-top: 30px;
-    margin-left: -80px;
-    width: 350px;
-    height: 600px;
+    width: 500px;
+    height: 700px;
 }
 
 .cabecera .imagen img{
-    width: 400px;
+    width: 700px;
     height: 500px;
 }
 
@@ -177,23 +186,22 @@ body {
     color: #FCA311;
 }
 
-section{
-    /* height:100vh;
-    width: 100%; */
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+.container h2 {
+    font-size: 40px;
 }
+
+
+/******************************/
+/**   ¿Qué opciones tienes?  **/
+/******************************/
 
 #opciones {
     background-image: url("/chandilove-frontend/img/barra.png");
     margin-top: -30px;
     padding-top: -30px;
-    padding-left: 80px;
-    padding-right: 150px;
+    justify-content: center;
     display: flex;
-    width: 1025px;
+    width: 100%;
     height: 350px;
 }
 
@@ -202,20 +210,27 @@ section{
     text-align: center;
     font-family: Dosis;
     color: var(--gris);
-    border: 5px gray double;
     margin: 35px;
-    height: 330px;
+    height: 370px;
+    border-radius: 30px;
+    box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+}
+
+.caja p{
+    font-size: 25px;
 }
 
 .caja img{
+
     width: 300px;
     height: 250px;
 }
 
 
 #cajitas{
-    padding-top: 40px;
-    padding-left: 120px;
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
 }
 
 #cajitas .cajitas1{
@@ -228,7 +243,6 @@ section{
     padding-top: 20px;
     margin: 30px;
     text-align: center;
-    margin-right: 10px;
     background-color: var(--azul);
     width: 200px;
     height: 50px;
@@ -240,7 +254,6 @@ section{
     padding-top: 20px;
     text-align: center;
     margin: 30px;
-    margin-right: 10px;
     width: 200px;
     height: 50px;
     background-color: #F9A213;
@@ -252,7 +265,6 @@ section{
     padding-top: 20px;
     text-align: center;
     margin: 30px;
-    margin-right: 10px;
     width: 200px;
     height: 50px;
     background-color: var(--rojo);
@@ -264,19 +276,27 @@ section{
     padding-top: 20px;
     text-align: center;
     margin: 30px;
-    margin-right: 10px;
     background-color: var(--azul);
     width: 200px;
     height: 50px;
     border-radius: 5px;
 }
 
+/*************************/
+/**   ¿Quiénes somos?   **/
+/*************************/
+
+.container2 h2{
+    font-size: 40px;
+}
+
+
 .container2{
     display: flex;
     background-size: cover;
     background-attachment: fixed;
     padding-left: 20px;
-    width: 1000px;
+    width: 100%;
     height: 100px;
     color: var(--gris);
     font-family: Dosis;
@@ -340,13 +360,11 @@ section{
 }
 
 #opciones2 {
-    background-image: url("/img/barra.png");
+    background-image: url("/img/Fondo__paticas.svg");
     margin-top: 0px;
     padding-top: -30px;
-    padding-left: 80px;
-    padding-right: 150px;
     display: flex;
-    width: 1025px;
+    width: 100%;
     height: 300px;
 }
 
@@ -368,7 +386,7 @@ section{
     padding-left: 180px;
     padding-top: -10px;
     width: 100px;
-    height: 70px;
+    height: 100px;
 }
 
 .caja2 p{
@@ -396,11 +414,13 @@ section{
 
 .container__cards{
     text-align: center;
-    margin-left: 150px;
-    width: 1000px;
+    width: 100%;
     color: var(--gris);
     font-family: Dosis;
     font-size: 25px;
+}
+.container__cards h2 {
+    font-size: 40px;
 }
 
 .container__cards span{
@@ -416,17 +436,17 @@ section{
 }
 
 .swiper-wrapper {
-    
-    width: 1025px;
+
+    width: 100%;
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 130px;
-    gap: 20px;
+    gap: 50px;
 }
 
 .card__Ot {
+    
     width: 230px;
     height: 250px;
     background-color: #fff;
@@ -493,34 +513,7 @@ section{
     cursor: pointer;
 }
 
-
-
-
-/* #OurTeam {
-    margin-top: -30px;
-    padding-top: -30px;
-    padding-left: 80px;
-    padding-right: 150px;
-    display: flex;
-    width: 1025px;
-    height: 300px;
-} */
-
-/* #OurTeam .caja__ourTeam {
-    text-align: center;
-    font-family: Dosis;
-    color: var(--gris);
-    border: 5px gray double;
-    margin: 35px;
-    height: 230px;
-}
-
-.caja__ourTeam img {
-    width: 100px;
-} */
-
 .OurTeam__txt {
-    margin-left: -30px;
     text-align: center;
 }
 
@@ -538,23 +531,51 @@ section{
 
 .marcas__container{
     height: 0;
-    width: 1025px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 100px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 200px;
 }
 
 .brand{
-    margin:auto;
+    display: flex;
+    padding: 50px 70px;
     align-items: center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 
 
 .marca__img {
-    width: 120px;
+    width: 150px;
+}
+
+
+/*************************/
+/****   Contact Us   *****/
+/*************************/
+
+.container__contactUs {
+    display: flex;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100px;
+    color: var(--gris);
+    font-family: Dosis;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-top: -30px;
+
+}
+
+.container__contactUs span{
+    color: var(--naranja);
+}
+
+.submit-form {
+
 }
