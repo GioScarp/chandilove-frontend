@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor_principal{
+    background-color: aqua;
+    display: flex;
+    align-content: space-between;
+}
+
+.contenedor-sidebar {
+    background-color: salmon;
+    width: 15%;
+    height: 900px;
+}
+
+main {
+    background-color: red;
+    width: 100%;
+    display: flex;
+
+}
+
+#adopcion {
+    background-color: blue;
+    width: 70%;
+}
+
+.contenedor_adopcion {
+    background-color: aquamarine;
+    width: 100%;
+}
+
+.contenedor-buscador{
+    background-color: black;
+}
+
+.contenedor__banner{
+    background-color: brown;
+}
+
+.contenedor_categorias{
+    background-color: rebeccapurple;
+}
+
+.lista_botones{
+    display: flex;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    list-style-type: none;
+    width: 50%;
+}
+
+.boton_categoria{
+    border-radius: 10px;
+    width: 150px;
+}
+.contenedor_fundaciones {
+    background-color: sandybrown;
+    width: 30%;
+}
+
+
+.contenedor_mascotas{
+    width: 100%;
+    background-color: chartreuse;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card{
+    max-height: 300px;
+    background-color: #ECECEC;
+    border-radius: 15px;
+}
+
+.img-card{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+
