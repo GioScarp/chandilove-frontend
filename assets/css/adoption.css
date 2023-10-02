@@ -8,6 +8,7 @@
     background-color: aqua;
     display: flex;
     align-content: space-between;
+    margin-top: 20px;
 }
 
 .contenedor-sidebar {
@@ -20,28 +21,67 @@ main {
     background-color: red;
     width: 100%;
     display: flex;
-
 }
 
 #adopcion {
     background-color: blue;
-    width: 70%;
+    width: 80%;
 }
 
 .contenedor_adopcion {
     background-color: aquamarine;
     width: 100%;
+    padding: 0 50px;
 }
 
 .contenedor-buscador{
-    background-color: black;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+.buscador{
+    display: flex;
+    width: 20%;
+    height: 30px;
+}
+
+.btn_buscador{
+    width: 70px;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    /* position: absolute;
+    right: 0;
+    top: 0; */
+    height: 100%;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
 }
 
 .contenedor__banner{
+    width: 100%;
+    height: 300px;
     background-color: brown;
 }
 
+.banner {
+    height: 100%;
+    background-color: black;
+}
+
+.banner img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
 .contenedor_categorias{
+    margin-top: 30px;
     background-color: rebeccapurple;
 }
 
@@ -50,18 +90,25 @@ main {
     justify-content: space-between;
     background-color: antiquewhite;
     list-style-type: none;
-    width: 50%;
+    margin-top: 15px;
+    width: 30%;
+}
+
+.titulo_fundaciones{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo_fundaciones img{
+    width: 40px;
 }
 
 .boton_categoria{
     border-radius: 10px;
-    width: 150px;
+    width: 100px;
+    height: 30px;
 }
-.contenedor_fundaciones {
-    background-color: sandybrown;
-    width: 30%;
-}
-
 
 .contenedor_mascotas{
     width: 100%;
@@ -69,6 +116,7 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    margin-top: 20px;
 }
 
 .card{
@@ -84,5 +132,45 @@ main {
     border-radius: 15px;
 }
 
+.fundaciones{
+    width: 20%;
+}
 
+.contenedor_fundaciones {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-top: 30px;
+}
+
+.perfil{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.perfil img {
+    width: 50px;
+}
+
+.listado_fundaciones{
+    margin-top: 70px;
+}
+
+
+.card_fundacion{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.card_fundacion img {
+    width: 60px;
+    height: 60px;
+}
+
+.info_fundacion {
+    margin-left: 20px;
+    font-size: 20px;
+}
 
