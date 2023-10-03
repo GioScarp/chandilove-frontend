@@ -565,12 +565,13 @@ section{
 .titleContact {
     color: var(--gris);
     font-size: 56px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 66px; /* 117.857% */
-    /*  padding: 0px 0px 0px 150px; */
+    /* font-style: normal; */
+    /* font-weight: 700; */
+    line-height: 66px;
+    /* padding: 0px 0px 0px 150px; */
     margin: 0px 0px 5px;
 }
+
 
 .titleContact span {
     color: var(--naranja);
@@ -591,6 +592,7 @@ section{
 }
 .contact-wrapper > * {
     padding: 32px;
+    margin-top: 50px;
 }
 
 .contact-form {
@@ -616,7 +618,7 @@ section{
 
 .contact-form form p {
     margin:0px;
-    padding: 32px 24px 32px 16px;
+    margin-left: 68px;
 }
 
 .contact-form form input {
@@ -624,46 +626,94 @@ section{
     border: none;
     background: #fff;
     outline: 0;
-    color: #fff;
+    color: var(--gris);
     border-radius: 50px;
     margin: auto;
 }
 .contact-form form p.container-input {
     margin: auto;
+    
 }
+
+/* Estilos para los campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    padding: 27px;
+    border: none;
+    background: #fff;
+    outline: 0;
+    border-radius: 50px;
+    margin: auto;
+    color: #404040; /* Color #404040 para el texto en los campos */
+    font-family: Dosis;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+/* Estilos para los placeholders */
+::placeholder {
+    color: #ccc; /* Color gris claro para los placeholders */
+}
+
+/* Estilos para los campos de entrada cuando están enfocados */
+input:focus {
+    color: #404040; /* Color #404040 para el texto de entrada */
+}
+
+textarea[name="message"] {
+    grid-column: span 2; /* El textarea ocupa dos columnas */
+    width: calc(100% - 124px); /* Restar el espacio entre elementos (gap) */
+    height: 65px;
+    padding: 5px; /* Agregar relleno para el textarea */
+    resize: vertical; /* Permitir el cambio de altura verticalmente si es necesario */
+    padding: 27px;
+    border: none;
+    background: #fff;
+    outline: 0;
+    border-radius: 50px;
+    font-family: Dosis;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 18px;
+  }
 
 .contact-form form button {
     background: #FE5E6D;
     border: none;
     padding: 24px;
     border-radius: 50px;
+    color: #FFF;
+    font-weight: 600;
 }
 
 p.block.sbmt {
     margin: auto;
-}
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    /* margin: auto; */
+    }
+
+
 .contact-form form button:hover,
 .contact-form form button:focus {
     background: #FCA311;
     color: #fff;
     transition: background-color 0.2s ease-out;
     outline: 0;
+    
 }
 
 .h2{
     color: #404040;
     font-size: 56px;
     font-style: normal;
-    font-weight: 700;
     line-height: 66px; /* 117.857% */
 }
-.h3{
-    color: #FFF;
-    font-size: 44px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 50px; /* 113.636% */
-}
+
 .h6{
     color: #404040;
    
@@ -676,7 +726,7 @@ p.block.sbmt {
 }
 .h4{
     color: #FFF;
-    font-size: 36px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 700;
     line-height: 46px; /* 127.778% */
@@ -701,34 +751,26 @@ form {
   
   p.block {
     grid-column: span 2; /* Los elementos con clase "block" ocupan dos columnas completas */
-    margin-left: 4rem !important;
   }
   
-  textarea[name="message"] {
-    grid-column: span 2; /* El textarea ocupa dos columnas */
-    width: calc(100% - 110px); /* Restar el espacio entre elementos (gap) */
-    height: 65px;
-    padding: 5px; /* Agregar relleno para el textarea */
-    resize: vertical; /* Permitir el cambio de altura verticalmente si es necesario */
-    padding: 27px;
-    border: none;
-    background: #fff;
-    outline: 0;
-    color: #fff;
-    border-radius: 50px;
-  }
+
+
 
 /* Detalle contacto*/
 
 
 .contact-info {
     background: #FCA311;
-    padding: 80px 104px 0px 104px;
+    padding: 40px 104px 0px 104px;
 }
 
-.contact-info h4, .contact-info ul, .contact-info p {
+.contact-info-img{
+    background: #FCA311;
+    border-radius: 0px 0px 0px 50px;
+}
+.contact-info h6, .contact-info ul, .contact-info p {
     text-align: center;
-    margin: 0 0 16px 0;
+    margin: 0 0 5px 0;
 }
 
 /* LARGE SIZE */
@@ -741,18 +783,26 @@ form {
         grid-template-columns: 2fr 1fr;
     }
     .contact-wrapper > * {
-        padding: 32px;
+        padding: 32px 0px 0px 0px;
     }
     .contact-info {
-        padding: 80px 104px 0px 104px;
+        padding: 50px 104px 0px 104px;
     }
-    .contact-info h4,
+    .contact-info h6,
     .contact-info ul,
     .contact-info p {
         text-align: left;
     }
 }
 
+/*Gato portada contactenos*/
+
+.container__imgdetalles,
+.img__gato{
+    height: 300px;
+    width: 300px;
+    padding-left: 0px 0px;
+}
 
 
 
