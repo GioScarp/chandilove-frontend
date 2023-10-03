@@ -223,29 +223,29 @@
                     <p class="subtitleContact">No dudes en contactarnos, te brindaremos el soporte que necesitas.</p>
                 </div>
                 <div class="contact-form">
-                    <form action="https://formsubmit.co/vacevedoareiza@gmail.com" method="POST">
+                    <form id="form" action="https://formspree.io/f/xwkdwqab" method="POST">
                         <p class="container-input">
                             <label>Nombre</label>
-                            <input type="text" name="fullname">
+                            <input type="text" name="fullname" placeholder="Nombre y Apellido">
                         </p>
                         <p class="container-input">
                             <label>Email</label>
-                            <input type="email" name="email">
+                            <input type="email" name="email" placeholder="ejemplo@gmail.com">
                         </p>
                         <p class="container-input">
                             <label>Telefono</label>
-                            <input type="number" name="phone">
+                            <input type="number" name="phone" placeholder="(+57)300 000 000">
                         </p>
                         <p class="container-input">
                             <label>Empresa</label>
-                            <input type="text" name="affair">
+                            <input type="text" name="affair" placeholder="Empresa">
                         </p>
                         <p class="block">
                             <label>Mensaje</label>
-                            <textarea name="message"></textarea>
+                            <textarea name="message" placeholder="Por favor escribe tu mensaje"></textarea>
                         </p>
                         <p class="block sbmt">
-                            <button class="boton-img">
+                            <button type="submit" class="boton-img">
                                 <span class="texto-botón">Enviar mensaje</span>
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
@@ -253,22 +253,22 @@
                     </form>
                 </div>
             </div>
-            <div class="contact-info">
-                <p class="h3">Te dejamos más detalles!</p>
-                <p class="h6">Estamos ubicados</p>
-                <p class="h4">En la ciudad de Medellín, Antioquia, Colombia.</p>
-                <p class="h6">Puedes llamarnos  o iniciar un chat al número</p>
-                <p class="h4">(123) 456 - 789</p>
-                <p class="h6">También puedes escribirnos un correo a</p>
-                <p class="h4">chandilove@gmail.com</p>
+            <div class="contact-info-img">
+                <div class="contact-info">
+                    <p class="h4">Te dejamos más detalles!</p>
+                    <p class="h6">Estamos ubicados</p>
+                    <p class="h4">En la ciudad de Medellín, Antioquia, Colombia.</p>
+                    <p class="h6">Puedes llamarnos o iniciar un chat al número</p>
+                    <p class="h4">(123) 456 - 789</p>
+                    <p class="h6">También puedes escribirnos un correo a</p>
+                    <p class="h4">chandilove@gmail.com</p>
+                </div>
+                <div class="container__imgdetalles">
+                    <img src="img/gato_portada.png" alt="gato" class="img__gato">
+                </div>
             </div>
         </div>
-        <div class="container__imgdetalles">
-            <img src="" alt="gato">
-        </div>
     </section>
-
-
 
     <!--Footer-->
 
@@ -300,9 +300,11 @@
         </div>
     </footer>
 
-
+    
+    <script src="assets/js/script.js"></script>
     <script src="js/efectos.js"></script>
     <script src="https://kit.fontawesome.com/d81632c2ac.js" crossorigin="anonymous"></script>
+    
 </body>
 
 </html>
