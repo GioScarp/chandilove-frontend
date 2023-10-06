@@ -2,10 +2,21 @@
 
 
 /* Estilos generales */
+
 body {
-    margin: 0;
+    margin: 0 20;
     padding: 0;
-    font-family: Dosis, sans-serif;
+    font-family: Dosis;
+}
+section{
+    align-items: center;
+    justify-content: center;
+    /* height:100vh;
+    width: 100%; */
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
 }
 
 :root {
@@ -22,9 +33,10 @@ body {
     background-attachment: fixed;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 0px;
     margin: 0px;
-    width: 1295px;
+    width: 100%;
 }
 
 /* Logo */
@@ -32,12 +44,12 @@ body {
 .navbar img{
     width: 150px;
     padding-top: 0px;
-    padding-left: 50px;
 }
 
 /* Barra de navegación */
 
 .nav-links {
+    gap: 15px;
     list-style: none;
     display: flex;
 }
@@ -99,15 +111,14 @@ body {
     padding-left: 120px;
     padding-right: 150px;
     display: flex;
-    width: 1025px;
+    width: 100%;
     height: 550px;
 }
 
 .cabecera h1{
-    padding-top: 10px;
     font-family: Dosis;
     color: var(--gris);
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .cabecera p{
@@ -126,13 +137,12 @@ body {
 .cabecera .imagen{
     display: flex;
     margin-top: 30px;
-    margin-left: -80px;
-    width: 350px;
-    height: 600px;
+    width: 500px;
+    height: 700px;
 }
 
 .cabecera .imagen img{
-    width: 400px;
+    width: 700px;
     height: 500px;
 }
 
@@ -177,23 +187,22 @@ body {
     color: #FCA311;
 }
 
-section{
-    /* height:100vh;
-    width: 100%; */
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+.container h2 {
+    font-size: 40px;
 }
+
+
+/******************************/
+/**   ¿Qué opciones tienes?  **/
+/******************************/
 
 #opciones {
     background-image: url("/chandilove-frontend/img/barra.png");
     margin-top: -30px;
     padding-top: -30px;
-    padding-left: 80px;
-    padding-right: 150px;
+    justify-content: center;
     display: flex;
-    width: 1025px;
+    width: 100%;
     height: 350px;
 }
 
@@ -202,20 +211,27 @@ section{
     text-align: center;
     font-family: Dosis;
     color: var(--gris);
-    border: 5px gray double;
     margin: 35px;
-    height: 330px;
+    height: 370px;
+    border-radius: 30px;
+    box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+}
+
+.caja p{
+    font-size: 25px;
 }
 
 .caja img{
+
     width: 300px;
     height: 250px;
 }
 
 
 #cajitas{
-    padding-top: 40px;
-    padding-left: 120px;
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
 }
 
 #cajitas .cajitas1{
@@ -228,7 +244,6 @@ section{
     padding-top: 20px;
     margin: 30px;
     text-align: center;
-    margin-right: 10px;
     background-color: var(--azul);
     width: 200px;
     height: 50px;
@@ -240,7 +255,6 @@ section{
     padding-top: 20px;
     text-align: center;
     margin: 30px;
-    margin-right: 10px;
     width: 200px;
     height: 50px;
     background-color: #F9A213;
@@ -252,7 +266,6 @@ section{
     padding-top: 20px;
     text-align: center;
     margin: 30px;
-    margin-right: 10px;
     width: 200px;
     height: 50px;
     background-color: var(--rojo);
@@ -264,19 +277,27 @@ section{
     padding-top: 20px;
     text-align: center;
     margin: 30px;
-    margin-right: 10px;
     background-color: var(--azul);
     width: 200px;
     height: 50px;
     border-radius: 5px;
 }
 
+/*************************/
+/**   ¿Quiénes somos?   **/
+/*************************/
+
+.container2 h2{
+    font-size: 40px;
+}
+
+
 .container2{
     display: flex;
     background-size: cover;
     background-attachment: fixed;
     padding-left: 20px;
-    width: 1000px;
+    width: 100%;
     height: 100px;
     color: var(--gris);
     font-family: Dosis;
@@ -340,13 +361,11 @@ section{
 }
 
 #opciones2 {
-    background-image: url("/img/barra.png");
+    background-image: url("/img/Fondo__paticas.svg");
     margin-top: 0px;
     padding-top: -30px;
-    padding-left: 80px;
-    padding-right: 150px;
     display: flex;
-    width: 1025px;
+    width: 100%;
     height: 300px;
 }
 
@@ -368,7 +387,7 @@ section{
     padding-left: 180px;
     padding-top: -10px;
     width: 100px;
-    height: 70px;
+    height: 100px;
 }
 
 .caja2 p{
@@ -396,11 +415,13 @@ section{
 
 .container__cards{
     text-align: center;
-    margin-left: 150px;
-    width: 1000px;
+    width: 100%;
     color: var(--gris);
     font-family: Dosis;
     font-size: 25px;
+}
+.container__cards h2 {
+    font-size: 40px;
 }
 
 .container__cards span{
@@ -416,17 +437,17 @@ section{
 }
 
 .swiper-wrapper {
-    
-    width: 1025px;
+
+    width: 100%;
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 130px;
-    gap: 20px;
+    gap: 50px;
 }
 
 .card__Ot {
+    
     width: 230px;
     height: 250px;
     background-color: #fff;
@@ -493,34 +514,7 @@ section{
     cursor: pointer;
 }
 
-
-
-
-/* #OurTeam {
-    margin-top: -30px;
-    padding-top: -30px;
-    padding-left: 80px;
-    padding-right: 150px;
-    display: flex;
-    width: 1025px;
-    height: 300px;
-} */
-
-/* #OurTeam .caja__ourTeam {
-    text-align: center;
-    font-family: Dosis;
-    color: var(--gris);
-    border: 5px gray double;
-    margin: 35px;
-    height: 230px;
-}
-
-.caja__ourTeam img {
-    width: 100px;
-} */
-
 .OurTeam__txt {
-    margin-left: -30px;
     text-align: center;
 }
 
@@ -538,23 +532,342 @@ section{
 
 .marcas__container{
     height: 0;
-    width: 1025px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 100px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 200px;
 }
 
 .brand{
-    margin:auto;
+    display: flex;
+    padding: 50px 70px;
     align-items: center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 
 
 .marca__img {
-    width: 120px;
+    width: 150px;
 }
+
+
+/*************************/
+/****   Contact Us   *****/
+/*************************/
+
+.containerContact{
+    width: 70%;
+    margin: auto;
+}
+.titleContact {
+    color: var(--gris);
+    font-size: 56px;
+    /* font-style: normal; */
+    /* font-weight: 700; */
+    line-height: 66px;
+    /* padding: 0px 0px 0px 150px; */
+    margin: 0px 0px 5px;
+}
+
+
+.titleContact span {
+    color: var(--naranja);
+}
+
+.subtitleContact {
+    width: 552px;
+    height: 40.764px;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Dosis;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--gris);
+    /*  padding: 0px 0px 0px 150px; */
+    margin-top: 10px;
+}
+.contact-wrapper > * {
+    padding: 32px;
+    margin-top: 50px;
+}
+
+.contact-form {
+    width: 70%;
+    margin: auto;
+    border-radius: 25px;
+    background: #30B6B8;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.contact-form form {
+    display: grid;
+    /*EstapropiedadCSSseutilizaparadefiniruncontenedorcomoungrid(rejilla)deelementos.Enestecaso,seestáconfigurandoelformularioparaqueutiliceunsistemaderejillaparaorganizarsuselementosinternos.*/
+    grid-template-columns: 1fr 1fr;
+    /*EstapropiedadCSSseutilizaparadefinirlascolumnasdelgridenelformulario.Enestecaso,seestáncreandodoscolumnasdeigualancho.Launidad"fr"significa"fracción"yseutilizaparadistribuirelespaciodisponibledemaneraequitativaentrelascolumnas.Enestecaso,ambascolumnasocuparánlamitaddelanchodisponiblecadauna.*/
+}
+
+.contact-form form label {
+    padding: 32px 0px 10px 0px;
+    display: block;
+    color:#fff
+}
+
+.contact-form form p {
+    margin:0px;
+    margin-left: 68px;
+}
+
+.contact-form form input {
+    padding: 27px;
+    border: none;
+    background: #fff;
+    outline: 0;
+    color: var(--gris);
+    border-radius: 50px;
+    margin: auto;
+}
+.contact-form form p.container-input {
+    margin: auto;
+    
+}
+
+/* Estilos para los campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    padding: 27px;
+    border: none;
+    background: #fff;
+    outline: 0;
+    border-radius: 50px;
+    margin: auto;
+    color: #404040; /* Color #404040 para el texto en los campos */
+    font-family: Dosis;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+/* Estilos para los placeholders */
+::placeholder {
+    color: #ccc; /* Color gris claro para los placeholders */
+}
+
+/* Estilos para los campos de entrada cuando están enfocados */
+input:focus {
+    color: #404040; /* Color #404040 para el texto de entrada */
+}
+
+textarea[name="message"] {
+    grid-column: span 2; /* El textarea ocupa dos columnas */
+    width: calc(100% - 124px); /* Restar el espacio entre elementos (gap) */
+    height: 65px;
+    padding: 5px; /* Agregar relleno para el textarea */
+    resize: vertical; /* Permitir el cambio de altura verticalmente si es necesario */
+    padding: 27px;
+    border: none;
+    background: #fff;
+    outline: 0;
+    border-radius: 50px;
+    font-family: Dosis;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 18px;
+  }
+
+.contact-form form button {
+    background: #FE5E6D;
+    border: none;
+    padding: 24px;
+    border-radius: 50px;
+    color: #FFF;
+    font-weight: 600;
+}
+
+p.block.sbmt {
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    /* margin: auto; */
+    }
+
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: #FCA311;
+    color: #fff;
+    transition: background-color 0.2s ease-out;
+    outline: 0;
+    
+}
+
+.h2{
+    color: #404040;
+    font-size: 56px;
+    font-style: normal;
+    line-height: 66px; /* 117.857% */
+}
+
+.h6{
+    color: #404040;
+   
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 111.111% */
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+.h4{
+    color: #FFF;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 46px; /* 127.778% */
+}
+.h5{
+    color: #404040;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 150% */
+} 
+
+.bg-orange {
+    color: #FAA212;
+}   
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide el formulario en dos columnas */
+    gap: 0px; /* Espacio entre elementos */
+  }
+  
+  p.block {
+    grid-column: span 2; /* Los elementos con clase "block" ocupan dos columnas completas */
+  }
+  
+
+
+
+/* Detalle contacto*/
+
+.contact-info {
+    background: #FCA311;
+    padding: 40px 104px 0px 104px;
+}
+
+.contact-info-img{
+    background: #FCA311;
+    border-radius: 0px 0px 0px 50px;
+}
+.contact-info h6, .contact-info ul, .contact-info p {
+    text-align: center;
+    margin: 0 0 5px 0;
+}
+
+/* LARGE SIZE */
+@media(min-width: 700px) {
+    body {
+        padding: 0 64px;
+    }
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper > * {
+        padding: 32px 0px 0px 0px;
+    }
+    .contact-info {
+        padding: 50px 104px 0px 104px;
+    }
+    .contact-info h6,
+    .contact-info ul,
+    .contact-info p {
+        text-align: left;
+    }
+}
+
+/*Gato portada contactenos*/
+
+.container__imgdetalles,
+.img__gato{
+    height: 300px;
+    width: 300px;
+    padding-left: 0px 0px;
+}
+
+/*************************/
+/****   Footer   *****/
+/*************************/
+
+.container__footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social.mb-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+ul.list-unstyled {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+}
+
+p.mb-0 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer-16371 .footer-site-logo {
+    text-align: center;
+}
+
+.footer-16371 .footer-site-logo a {
+    color: #4200ff; }
+
+.footer-16371 .nav-links {
+    padding: 0;
+    margin: 0; }
+      
+.footer-16371 .nav-links li {
+    display: inline-block; }
+
+.footer-16371 .nav-links li a {
+    padding: 10px;
+    color: #000; }
+
+.footer-16371 .nav-links li a:hover {
+    color: #FE5E6D; }
+    
+.footer-16371 .social h3 {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000; }
+
+.footer-16371 .social ul li {
+    display: inline-block; }
+
+.footer-16371 .social ul li a {
+    display: inline-block;
+    padding: 10px; }
+
+.footer-16371 .social ul li.li a {
+    color: #df588a; }
+
+.footer-16371 .social ul li.wp a {
+    color: #19ff15dd; }
