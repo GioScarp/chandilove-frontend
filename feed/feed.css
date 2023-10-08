@@ -130,7 +130,7 @@ main {
 main .container {
     display: grid;
     grid-template-columns: 15vw auto 20vw;
-    column-gap: 2rem;
+
     position: relative;
 }
 
@@ -160,24 +160,17 @@ main .container .left{
     top: var(--sticky-top-left);
 }
 
-/* main .container .left .profile {
-    padding: var(--card-padding);
-    background: var(--color-white);
-    border-radius: var(--card-border-radius);
-    display: flex;
-    align-items: center;
-    column-gap: 1rem;
-    width: 200px;
-} */
 
 /* ---------- SIDEBAR ---------- */
 .left .sidebar {
     /* width: 200px; */
+    margin-top: 50px;
     background: var(--color-white);
     border-radius: var(--card-border-radius);
 }
 
 .left .sidebar .menu-item {
+    
     display: flex;
     align-items: center;
     height: 3.5rem;
@@ -250,9 +243,9 @@ main .container .left{
     padding: 1rem 0;
 }
 
-.btn-logout {
+/* .btn-logout {
     margin-top: 220px;
-}
+} */
 
 /* ---------- NOTIFICATION POPUP ---------- */
 
