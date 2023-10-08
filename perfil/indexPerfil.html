@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel="stylesheet" href="perfilStyles.css">
+</head>
+
+<body>
+
+    <!--NavBar-->
+    <nav>
+        <div class="container">
+            <img src="/img/Logo_2.png" class="img__logo">
+            <div class="search-bar">
+                <input type="search" placeholder="Busca una cuenta, fundacion...">
+                <i class="fi fi-rr-search"></i>
+            </div>
+            <div class="profile-photo">
+                <img src="/img/Giovanni__OurTeam.svg">
+            </div>
+
+        </div>
+    </nav>
+
+    <main>
+        <div class="container-main">
+            <!-- SideBar -->
+            <div class="left">
+                <div class="sidebar">
+                    <a class="menu-item active">
+                        <span><i class="fi fi-rr-home"></i> </span>
+                        <h3>Feed</h3>
+                    </a>
+                    <a class="menu-item">
+                        <span><i class="fi fi-rr-user"></i> </span>
+                        <h3>Perfil</h3>
+                    </a>
+                    <a class="menu-item">
+                        <span><i class="fi fi-rr-paw"></i></span>
+                        <h3>Adopta</h3>
+                    </a>
+                    <a class="menu-item">
+                        <span><i class="fi fi-rr-store-alt"></i> </span>
+                        <h3>PetShop</h3>
+                    </a>
+                    <!-------- END OF SIDEBAR  ------->
+                    <label for="create-post" class="btn btn-primary">Publicar</label>
+                    <a class="menu-item btn-logout">
+                        <span><i class="fi fi-rr-exit"></i> </span>
+                        <h3>Salir</h3>
+                    </a>
+                </div>
+            </div>
+            <!-- Contenedor del perfil y publicaciones (lado derecho) -->
+
+            <div class="profile-content">
+                <!-- Perfil en disposición horizontal -->
+                <div class="profile-horizontal">
+                    <div class="profile-info">
+                        <h1>Jhan Carlos <br>Castañeda</br></h1>
+                        <button>Seguir</button>
+                    </div>
+                    <div class="profile">
+                        <img src="img/jhanFotoPerfil.png" alt="Foto de perfil">
+                    </div>
+                    <div class="stats">
+                        <p>Publicaciones: 100</p>
+                        <p>Seguidores: 150</p>
+                        <p>Siguiendo: 500</p>
+                    </div>
+                </div>
+                <div class="description">
+                    <h3>Sobre mí</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, excepturi, nisi soluta
+                            mollitia nobis consequatur molestias ipsum unde at, quia amet reiciendis deserunt
+                            reprehenderit! Quas fugit consequatur repudiandae voluptatibus rem.</p>
+                </div>
+
+                <!-- Publicaciones en una cuadrícula -->
+                <div class="posts" id="container-posts">
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="perfilScript.js"></script>
+</body>
+
+</html>

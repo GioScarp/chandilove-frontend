@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;500;600&family=Outfit:wght@100;300;600;700&family=Quicksand:wght@300;400;500&display=swap');
+
+:root {
+    --color-white: hsl(252, 30%, 100%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-black: hsl(252, 30%, 10%);
+
+    --azul: #30B6B8 ;
+    --naranja: #F9A112;
+    --rojo: #FE5E6D;
+    --gris: #404040;
+    --blanco: #FFFFFF;
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 4rem;
+    --card-padding: 1rem;
+
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+}
+
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Dosis';
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container-main {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.profile-photo {
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.text-bold {
+    font-weight: 500;
+}
+
+.text-muted {
+    color: var(--color-gray);
+}
+
+/* NavBar */
+
+.img__logo{
+    width: 150px;
+}
+
+nav{
+    width: 100%;
+    background: var(--color-white);
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav .search-bar {
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+}
+
+nav .search-bar input  {
+    background: transparent;
+    width: 20vw;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-dark)
+
+}
+
+nav .search-bar input [type="search"]::placeholder {
+    color: var(--color-gray);
+}
+
+/*.container {
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 70%;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}*/
+
+/* Main */
+
+.aside {
+    width: 25%;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+main {
+    position: relative;
+    top: 5.4rem;
+}
+
+main .container {
+    display: grid;
+    grid-template-columns: 30vh auto 20vw;
+    column-gap: 2rem;
+    position: relative;
+}
+
+.btn {
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
+btn:hover {
+    opacity: 0.8;
+}
+
+.btn-primary {
+    background: var(--rojo);
+    color: white;
+    margin: 1rem 1rem;
+    
+
+}
+
+/* Sidebar */
+.left .sidebar {
+    width: 200px;
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    margin-top: 13rem;
+}
+
+.left .sidebar .menu-item {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    cursor: pointer;
+    translate: all 300ms ease;
+    position: relative;
+}
+
+.left .sidebar .menu-item:hover {
+    background: var(--color-light);
+}
+
+.left .sidebar i{
+    font-size: 1.4rem;
+    color: var(--gris);
+    margin-left: 2.8rem;
+    position: relative;
+}
+
+.left .sidebar h3 {
+    margin-left: 1.5rem;
+    font-size: 1rem;
+}
+
+.left .sidebar .active {
+    background: var(--rojo);
+}
+
+.left .sidebar .active i,
+.left .sidebar .active h3 {
+    color: var(--blanco);
+}
+
+.left .sidebar .active::before {
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 100%;
+    position: absolute;
+    background: var(--rojo);
+}
+
+.left .sidebar .menu-item:first-child.active {
+    border-top-left-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+.left .sidebar .menu-item:last-child.active {
+    border-bottom-left-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+
+.left .btn {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 1rem 1rem;
+    width: 80%;
+}
+
+.btn-logout {
+    margin-top: 220px;
+}
+
+/*Container principal perfil*/
+
+.profile-content {
+    width: 100%;
+    margin: 0rem 1rem 0rem 0rem;
+    background-color: #63C8C9;
+    border-radius: 76px;
+}
+
+/* Estilos del perfil horizontal */
+.profile-horizontal {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.profile button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/* Estilos de estadísticas */
+.stats {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.stats p {
+    margin: 5px 0;
+}
+
+/* Estilos de descripción */
+.description {
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 1rem 8rem;
+    border-radius: 12px;
+    border: 1px solid #EBEBEB;
+    background: #FFF;
+}
+
+/* Estilos de publicaciones (cuadrícula) */
+.posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin: 4rem 5rem;
+}
+
+.post {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 16px 0px rgba(19, 21, 68, 0.06);
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    background: lightgray 0px -6.087px / 100% 140.351% no-repeat;
+    
+}
+
+/* Otros estilos personalizados para las publicaciones */
