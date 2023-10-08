@@ -2,36 +2,41 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- External CSS stylesheets -->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel="stylesheet" href="perfilStyles.css">
 </head>
 
 <body>
-
-    <!--NavBar-->
+    <!-- Navigation Bar -->
     <nav>
         <div class="container">
+            <!-- Logo -->
             <img src="/img/Logo_2.png" class="img__logo">
+            <!-- Search Bar -->
             <div class="search-bar">
-                <input type="search" placeholder="Busca una cuenta, fundacion...">
+                <input type="search" placeholder="Search for an account, foundation...">
                 <i class="fi fi-rr-search"></i>
             </div>
+            <!-- Profile Photo -->
             <div class="profile-photo">
                 <img src="/img/Giovanni__OurTeam.svg">
             </div>
-
         </div>
     </nav>
 
     <main>
         <div class="container-main">
-            <!-- SideBar -->
+            <!-- Sidebar -->
             <div class="left">
                 <div class="sidebar">
+                    <!-- Menu Items -->
                     <a class="menu-item active">
                         <span><i class="fi fi-rr-home"></i> </span>
                         <h3>Feed</h3>
@@ -48,46 +53,61 @@
                         <span><i class="fi fi-rr-store-alt"></i> </span>
                         <h3>PetShop</h3>
                     </a>
-                    <!-------- END OF SIDEBAR  ------->
-                    <label for="create-post" class="btn btn-primary">Publicar</label>
+                    <!-- End of Sidebar -->
+                    <label for="create-post" class="btn btn-primary" id="open-form">Publicar</label>
                     <a class="menu-item btn-logout">
                         <span><i class="fi fi-rr-exit"></i> </span>
                         <h3>Salir</h3>
                     </a>
                 </div>
             </div>
-            <!-- Contenedor del perfil y publicaciones (lado derecho) -->
-
+            <!-- Container for Profile and Posts (right side) -->
             <div class="profile-content">
-                <!-- Perfil en disposición horizontal -->
+                <!-- Horizontal Profile Section -->
                 <div class="profile-horizontal">
+                    <!-- Profile Information -->
                     <div class="profile-info">
                         <h1>Jhan Carlos <br>Castañeda</br></h1>
                         <button>Seguir</button>
                     </div>
+                    <!-- Profile Photo -->
                     <div class="profile">
                         <img src="img/jhanFotoPerfil.png" alt="Foto de perfil">
                     </div>
+                    <!-- Statistics -->
                     <div class="stats">
                         <p>Publicaciones: 100</p>
                         <p>Seguidores: 150</p>
                         <p>Siguiendo: 500</p>
                     </div>
                 </div>
+                <!-- Description Section -->
                 <div class="description">
-                    <h3>Sobre mí</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, excepturi, nisi soluta
-                            mollitia nobis consequatur molestias ipsum unde at, quia amet reiciendis deserunt
-                            reprehenderit! Quas fugit consequatur repudiandae voluptatibus rem.</p>
+                    <h3>Sobre mí</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, excepturi, nisi soluta
+                        mollitia nobis consequatur molestias ipsum unde at, quia amet reiciendis deserunt
+                        reprehenderit! Quas fugit consequatur repudiandae voluptatibus rem.</p>
                 </div>
-
-                <!-- Publicaciones en una cuadrícula -->
+                <!-- Posts Grid -->
                 <div class="posts" id="container-posts">
                 </div>
             </div>
-
         </div>
     </main>
+    <!-- Contenedor del formulario emergente -->
+    <div id="popup-container" class="popup">
+        <div class="popup-content">
+            <!-- Formulario para crear la publicación -->
+            <form id="post-form">
+                <input type="text" placeholder="Título" name="title">
+                <textarea placeholder="Contenido" name="content"></textarea>
+                <button type="submit">Publicar</button>
+            </form>
+            <!-- Botón para cerrar el formulario emergente -->
+            <button id="close-form" class="btn btn-primary">Cerrar</button>
+        </div>
+    </div>
+    <!-- JavaScript File -->
     <script src="perfilScript.js"></script>
 </body>
 

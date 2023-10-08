@@ -55,4 +55,26 @@ function templatePost(imgUrl) {
 
 // render data
 // note: Change this in a future
-renderPost('container-posts');  
+renderPost('container-posts');
+
+// Obtener elementos del DOM
+const openFormButton = document.getElementById('open-form');
+const closeFormButton = document.getElementById('close-form');
+const popupContainer = document.getElementById('popup-container');
+
+// Mostrar el formulario emergente al hacer clic en el botón "Publicar"
+openFormButton.addEventListener('click', () => {
+    popupContainer.style.display = 'flex';
+});
+
+// Ocultar el formulario emergente al hacer clic en el botón de cierre
+closeFormButton.addEventListener('click', () => {
+    popupContainer.style.display = 'none';
+});
+
+// Evitar que el formulario se cierre al hacer clic dentro de él
+popupContainer.addEventListener('click', (event) => {
+    if (event.target === popupContainer) {
+        popupContainer.style.display = 'none';
+    }
+});

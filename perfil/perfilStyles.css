@@ -1,6 +1,9 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;500;600&family=Outfit:wght@100;300;600;700&family=Quicksand:wght@300;400;500&display=swap');
 
+/* Root-level CSS variables for color and styling */
 :root {
+    /* Color variables */
     --color-white: hsl(252, 30%, 100%);
     --color-light: hsl(252, 30%, 95%);
     --color-gray: hsl(252, 15%, 65%);
@@ -11,24 +14,27 @@
     --color-dark: hsl(252, 30%, 17%);
     --color-black: hsl(252, 30%, 10%);
 
-    --azul: #30B6B8 ;
+    /* Custom color variables */
+    --azul: #30B6B8;
     --naranja: #F9A112;
     --rojo: #FE5E6D;
     --gris: #404040;
     --blanco: #FFFFFF;
 
+    /* Common styling variables */
     --border-radius: 2rem;
     --card-border-radius: 1rem;
     --btn-padding: 0.6rem 2rem;
     --search-padding: 0.6rem 4rem;
     --card-padding: 1rem;
 
+    /* Sticky positions */
     --sticky-top-left: 5.4rem;
     --sticky-top-right: -18rem;
 }
 
-
-*, *::before, *::after{
+/* Reset CSS for common styles */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -38,7 +44,7 @@
     border: none;
 }
 
-/* Estilos generales */
+/* General styles for the body */
 body {
     font-family: 'Dosis';
     margin: 0;
@@ -46,17 +52,20 @@ body {
     overflow-x: hidden;
 }
 
+/* Main container for the entire content */
 .container-main {
     display: flex;
     overflow: hidden;
     width: 100%;
 }
 
+/* General container styles */
 .container {
     width: 100%;
     margin: 0 auto;
 }
 
+/* Styling for profile photos */
 .profile-photo {
     width: 2.7rem;
     aspect-ratio: 1/1;
@@ -64,11 +73,13 @@ body {
     overflow: hidden;
 }
 
+/* Styling for images */
 img {
     display: block;
     width: 100%;
 }
 
+/* Common text styles */
 .text-bold {
     font-weight: 500;
 }
@@ -77,13 +88,12 @@ img {
     color: var(--color-gray);
 }
 
-/* NavBar */
-
-.img__logo{
+/* Navigation Bar styles */
+.img__logo {
     width: 150px;
 }
 
-nav{
+nav {
     width: 100%;
     background: var(--color-white);
     padding: 0.7rem 0;
@@ -104,39 +114,22 @@ nav .search-bar {
     padding: var(--search-padding);
 }
 
-nav .search-bar input  {
+nav .search-bar input {
     background: transparent;
     width: 20vw;
     margin-left: 1rem;
     font-size: 0.9rem;
-    color: var(--color-dark)
-
+    color: var(--color-dark);
 }
 
 nav .search-bar input [type="search"]::placeholder {
     color: var(--color-gray);
 }
 
-/*.container {
-    display: flex;
-    border-radius: 15px;
-    overflow: hidden;
-    width: 70%;
-    margin: 20px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}*/
-
-/* Main */
-
-.aside {
-    width: 25%;
-    background-color: #f0f0f0;
-    padding: 20px;
-}
-
+/* Main content styles */
 main {
     position: relative;
-    top: 5.4rem;
+    top: var(--sticky-top-left);
 }
 
 main .container {
@@ -146,6 +139,7 @@ main .container {
     position: relative;
 }
 
+/* General button styles */
 .btn {
     display: inline-block;
     padding: var(--btn-padding);
@@ -160,20 +154,19 @@ btn:hover {
     opacity: 0.8;
 }
 
+/* Primary button styles */
 .btn-primary {
     background: var(--rojo);
     color: white;
     margin: 1rem 1rem;
-    
-
 }
 
-/* Sidebar */
+/* Sidebar styles */
 .left .sidebar {
     width: 200px;
     background: var(--color-white);
     border-radius: var(--card-border-radius);
-    margin-top: 13rem;
+    margin-top: var(--sticky-top-left);
 }
 
 .left .sidebar .menu-item {
@@ -189,7 +182,7 @@ btn:hover {
     background: var(--color-light);
 }
 
-.left .sidebar i{
+.left .sidebar i {
     font-size: 1.4rem;
     color: var(--gris);
     margin-left: 2.8rem;
@@ -223,6 +216,7 @@ btn:hover {
     border-top-left-radius: var(--card-border-radius);
     overflow: hidden;
 }
+
 .left .sidebar .menu-item:last-child.active {
     border-bottom-left-radius: var(--card-border-radius);
     overflow: hidden;
@@ -239,8 +233,7 @@ btn:hover {
     margin-top: 220px;
 }
 
-/*Container principal perfil*/
-
+/* Main profile container styles */
 .profile-content {
     width: 100%;
     margin: 0rem 1rem 0rem 0rem;
@@ -248,7 +241,7 @@ btn:hover {
     border-radius: 76px;
 }
 
-/* Estilos del perfil horizontal */
+/* Horizontal Profile styles */
 .profile-horizontal {
     display: flex;
     align-items: center;
@@ -277,7 +270,7 @@ btn:hover {
     margin-left: 20px;
 }
 
-/* Estilos de estadísticas */
+/* Stats styles */
 .stats {
     display: flex;
     flex-direction: column;
@@ -288,7 +281,7 @@ btn:hover {
     margin: 5px 0;
 }
 
-/* Estilos de descripción */
+/* Description styles */
 .description {
     padding: 20px;
     background-color: #ffffff;
@@ -298,7 +291,7 @@ btn:hover {
     background: #FFF;
 }
 
-/* Estilos de publicaciones (cuadrícula) */
+/* Posts Grid styles */
 .posts {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -306,6 +299,7 @@ btn:hover {
     margin: 4rem 5rem;
 }
 
+/* Individual post styles */
 .post {
     border: 1px solid #ccc;
     padding: 10px;
@@ -319,7 +313,33 @@ btn:hover {
     height: auto;
     border-radius: 16px;
     background: lightgray 0px -6.087px / 100% 140.351% no-repeat;
-    
 }
 
-/* Otros estilos personalizados para las publicaciones */
+/* form new publication */
+
+/* Estilos para el fondo desenfocado (blur) */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fondo desenfocado */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el contenido del formulario emergente */
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Estilos para el botón de cierre */
+#close-form {
+    margin-top: 20px;
+}
