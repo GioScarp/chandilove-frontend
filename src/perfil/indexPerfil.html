@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- External CSS stylesheets -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/emojimart/3.0.1/css/emojimart.css" rel="stylesheet" />
+    <link rel="stylesheet" href="perfilStyles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <!-- Logo -->
+            <img src="/img/Logo_2.png" class="img__logo">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <i class="fi fi-rr-search"></i>
+                <input type="search" placeholder="Busca una cuenta, fundacion...">
+            </div>
+            <a class="profile">
+                <div class="handle">
+                    <h4>Joscari Ortiz</h4>
+                    <p class="text-muted">
+                        @joscari
+                    </p>
+                </div>
+                <div class="profile-photo">
+                    <img src="/img/Joscari__OurTeam.svg">
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <!-- Sidebar -->
+            <div class="left">
+                <div class="sidebar">
+                    <!-- Menu Items -->
+                    <a href="../feed/feed.html" class="menu-item active">
+                        <span><i class="fi fi-rr-home"></i> </span>
+                        <h3>Feed</h3>
+                    </a>
+                    <a href="../perfil/indexPerfil.html" class="menu-item">
+                        <span><i class="fi fi-rr-user"></i> </span>
+                        <h3>Perfil</h3>
+                    </a>
+                    <a class="menu-item" id="notifications">
+                        <span><i class="fi fi-rr-bell"><small class="notification-count">9+</small></i></span>
+                        <h3>Notificaciones</h3>
+                        <!------------- NOTIFICACION POPUP  ---------->
+                    </a>
+                    <a href="../adoption/adoption.html" class="menu-item">
+                        <span><i class="fi fi-rr-paw"></i></span>
+                        <h3>Adopta</h3>
+                    </a>
+                    <a class="menu-item">
+                        <span><i class="fi fi-rr-store-alt"></i> </span>
+                        <h3>PetShop</h3>
+                    </a>
+                    <!-- End of Sidebar -->
+                    <label for="create-post" class="btn btn-primary" id="open-form">Publicar<img class="btn-huella"
+                            src="/img/Dog-print.png"></label>
+                    <a href="/index.html" class="menu-item btn-logout">
+                        <span><i class="fi fi-rr-exit"></i> </span>
+                        <h3>Salir</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="middle">
+                <!-- Container for Profile and Posts (right side) -->
+                <div class="profile-content">
+                    <!-- Horizontal Profile Section -->
+                    <div class="profile-horizontal">
+                        <!-- Profile Information -->
+                        <div class="profile-info">
+                            <h1>Joscari <br><span>Ortiz</span></br></h1>
+                            <button><span>Seguir +</span></button>
+                        </div>
+                        <!-- Profile Photo -->
+                        <div class="foto-perfil">
+                            <img src="/img/Joscari__OurTeam.svg" alt="Foto de perfil">
+                        </div>
+                        <!-- Statistics -->
+                        <div class="stats">
+                            <p>100 <span>Publicaciones</span></p>
+                            <p>150 <span>Seguidores</span></p>
+                            <p>500 <span>Siguiendo</span></p>
+                        </div>
+                    </div>
+                    <!-- Description Section -->
+                    <div class="description">
+                        <h3>Sobre mí</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, excepturi, nisi soluta
+                            mollitia nobis consequatur molestias ipsum unde at, quia amet reiciendis deserunt
+                            reprehenderit! Quas fugit consequatur repudiandae voluptatibus rem.</p>
+                    </div>
+                    <!-- Posts Grid -->
+                    <div class="posts" id="container-posts">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenedor del formulario emergente -->
+            <div id="popup-container" class="popup">
+                <div class="popup-content">
+                    <!-- Botón para cerrar el formulario emergente -->
+                    <button id="close-form" class="close-button">X</button>
+                    <!-- Formulario para crear la publicación -->
+                    <form id="post-form">
+                        <h2>Crear Publicación</h2>
+                        <input required type="text" placeholder="Título" name="title">
+                        <textarea required id="content" name="content" placeholder="Qué quieres compartir hoy?..."></textarea>
+                        <div class="form-actions">
+                            <input type="file" accept="image/*" required name="image" id="image-upload" style="display: none;" title="Seleccione una imagen">
+                            <label for="image-upload" class="upload-button">
+                                <i class="fas fa-camera"></i> 
+                                <span id="upload-message"> Subir imagen</span>
+                            </label>
+                            <button type="button" class="emoji-button" id="emoji-button"><i class="far fa-smile"></i></button>
+                            <button type="submit" class="publish-button">Compartir</button>
+                        </div>
+                    </form>
+                    <!-- Contenedor de emojis (oculto por defecto) -->
+                    <div id="emoji-container" class="emoji-popup">
+                    </div>
+                </div>
+            <div class="right">
+
+            </div>
+        </div>
+    </main>
+    <!-- JavaScript File -->
+    <script  src =" https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js " ></script> 
+    <script src="https://kit.fontawesome.com/d81632c2ac.js" crossorigin="anonymous"></script>
+    <script src="perfilScript.js"></script>
+</body>
+
+</html>

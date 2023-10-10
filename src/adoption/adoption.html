@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChandiLove</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel="stylesheet" href="/src/adoption/adoption.css">
+    <link rel="stylesheet" href="/src/feed/feed.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <img src="/img/Logo_2.png" class="img__logo">
+                <div class="search-bar">
+                    <i class="fi fi-rr-search"></i>
+                    <input type="search" placeholder="Busca una cuenta, fundacion...">
+                </div>
+                <a class="profile">
+                    <div class="handle">
+                        <h4>Joscari Ortiz</h4>
+                        <p class="text-muted">
+                            @joscari
+                        </p>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="/img/Joscari__OurTeam.svg">
+                    </div>
+                </a>
+            </div>
+        </nav> 
+    </header>
+
+    <!---------------- MAIN  ----------------->
+    <main>
+        <div class="container">
+            <!--================= LEFT  ================-->
+            <div class="left">
+
+                <!-------- SIDEBAR -------->
+                <div class="sidebar">
+                    <a href="../feed/feed.html" class="menu-item active">
+                        <span><i class="fi fi-rr-home"></i> </span> <h3>Feed</h3>
+                    </a>
+                    <a href="../perfil/indexPerfil.html" class="menu-item"> 
+                        <span><i class="fi fi-rr-user"></i> </span> <h3>Perfil</h3> 
+                    </a>
+                    <a class="menu-item" id="notifications">
+                        <span><i class="fi fi-rr-bell"><small class="notification-count">9+</small></i></span> <h3>Notificaciones</h3> 
+                         <!------------- NOTIFICACION POPUP  ---------->
+                         <div class="notifications-popup">
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="../img/Estiber__OurTeam.svg">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Estiber Tellez</b> le gustó tu publicación 
+                                    <small class="text-muted">2 DAYS AGO</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="../img/Valentina__OurTeam.svg">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Estiber Tellez</b> comentó tu publicación 
+                                    <small class="text-muted">1 DAYS AGO</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="../img/Giovanni__OurTeam.svg">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Estiber Tellez</b> le gustó tu publicación 
+                                    <small class="text-muted">30 MIN AGO</small>
+                                </div>
+                            </div>
+                         </div>
+                    </a>
+                    <a href="../adoption/adoption.html" class="menu-item">    
+                        <span><i class="fi fi-rr-paw"></i></span> <h3>Adopta</h3>
+                    </a>
+                    <a class="menu-item">
+                        <span><i class="fi fi-rr-store-alt"></i> </span> <h3>PetShop</h3>  
+                    </a>
+                    
+                    <label for="create-post" class="btn btn-primary" id="open-form">Publicar<img class="btn-huella" src="/img/Dog-print.png"></label>
+                    
+                    <a href="/index.html" class="menu-item btn-logout">
+                        <span><i class="fi fi-rr-exit"></i> </span> <h3>Salir</h3>  
+                    </a>
+                </div>
+                                    <!-------- END OF SIDEBAR  ------->
+            </div>
+            <!--================= MIDDLE  ================-->
+            <section class="middle">
+                    <div class="contenedor_adopcion">
+                        <!-- Banners informativos -->
+                        <section class="contenedor__banner">
+                            <div class="banner">
+                                <img src="https://img.freepik.com/vector-gratis/portada-facebook-cuidado-mascotas-diseno-plano_23-2149648220.jpg?w=1380&t=st=1695790690~exp=1695791290~hmac=b9bdf1f275603ca7628b732ceef36f0728a154d4a85553e28309fc96542e36bd">
+                            </div>                       
+                        </section>
+                        <!-- Categorias -->
+                        <section class="contenedor_categorias">
+                            <h1>Categorias</h1>
+                            <ul class="lista_botones">
+                                <li><button class="boton_categoria"><i class="fi fi-br-cat"></i> Gatos</button></li>
+                                <li><button class="boton_categoria"> Perros</button></li>
+                                <li><button class="boton_categoria"><i class="fi fi-br-object-union"></i> Todos</button></li>
+                                <li><button class="boton_categoria"><i class="fi fi-br-comment-heart"></i> Favoritos</button></li>
+                            </ul>
+                        </section>
+    
+                        <!-- Mascotas para adoptar -->
+                        <section class="contenedor_mascotas">
+                            <!-- Aqui se colcan las mascotas creadas con js -->
+                        </section>
+
+                        <div class="container-popup">
+                            <div class="carousel-popup">
+                                <img src="https://static.guiaongs.org/wp-content/uploads/2015/12/faa_destacada1-360x336.png" alt="">
+                            </div>
+                            <div class="container-info-pet">
+                                <h1 class="title-popup">Kaissa</h1>
+                                <ul class="info-pet">
+                                    <li class="list-box">
+                                        <div class="rounded-box">
+                                            <h3>Info</h3>
+                                            <p>Macho</p>
+                                        </div>
+                                    </li>
+                                    <li class="list-box">
+                                        <div class="rounded-box">
+                                            <h3>Info</h3>
+                                            <p>Macho</p>
+                                        </div>
+                                    </li>
+                                    <li class="list-box">
+                                        <div class="rounded-box">
+                                            <h3>Info</h3>
+                                            <p>Macho</p>
+                                        </div>
+                                    </li>
+                                    <li class="list-box">
+                                        <div class="rounded-box">
+                                            <h3>Info</h3>
+                                            <p>Macho</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p class="description-pet">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis quos dolores molestiae amet, velit maxime esse illum sit optio facere. Eos corrupti facere ratione mollitia culpa inventore dolore earum vel.
+                                    Dolore eius voluptatem recusandae voluptatibus ipsa, blanditiis odio velit rerum cum ratione dicta ipsum et ex obcaecati suscipit vitae molestiae non tempora eaque illum, consequatur, dolor repellat accusantium quibusdam? Beatae.
+                                </p>
+                                <div class="btn-adoption">
+                                    <button>Adoptame</button>
+                                    <button>Donar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <!--================= RIGHT  ================-->
+            <div class="right">
+                <div class="contenedor_fundaciones">
+                    <!-- Listado de fundaciones -->
+                    <div class="listado_fundaciones">
+                        <div class="titulo_fundaciones">
+                            <h1>Fundaciones</h1>
+                            <img src="/img/premio.png" alt="fundaciones">
+                        </div>
+                        <!-- Aqui va e llistado de fundaciones cargado por js -->
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </main>
+    <script src="./adopt.js"></script>
+</body>
+</html>
