@@ -57,24 +57,64 @@ function templatePost(imgUrl) {
 // note: Change this in a future
 renderPost('container-posts');
 
+//PopUp Publicar
+
 // Obtener elementos del DOM
 const openFormButton = document.getElementById('open-form');
 const closeFormButton = document.getElementById('close-form');
 const popupContainer = document.getElementById('popup-container');
+const emojiButton = document.getElementById('emoji-button');
+const emojiContainer = document.getElementById('emoji-container');
 
 // Mostrar el formulario emergente al hacer clic en el botón "Publicar"
 openFormButton.addEventListener('click', () => {
     popupContainer.style.display = 'flex';
 });
 
+
+
+
 // Ocultar el formulario emergente al hacer clic en el botón de cierre
 closeFormButton.addEventListener('click', () => {
-    popupContainer.style.display = 'none';
+    // Confirmar antes de cerrar el formulario
+    if (confirm('¿Está seguro de cancelar la publicación?')) {
+        popupContainer.style.display = 'none';
+        emojiContainer.style.display = 'none'; // Ocultar el contenedor de emojis si está abierto
+    }
+});
+
+// Inicializar EmojiMart
+const pickerOptions = {onEmojiSelect: console.log };
+  const emojiPicker = new EmojiMart.Picker(pickerOptions);
+  
+  emojiContainer.appendChild(emojiPicker);
+
+  // Manejar la selección de emojis
+  emojiContainer.addEventListener('click', (event) => {
+    if (event.target.classList.contains('emoji')) {
+        const emoji = event.target.textContent;
+        const contentTextarea = document.querySelector('textarea[name="content"]');
+        contentTextarea.value += emoji;
+        emojiContainer.style.display = 'none';
+    }
+  });
+
+// Mostrar/ocultar el contenedor de emojis al hacer clic en el botón de emoticonos
+emojiButton.addEventListener('click', () => {
+    if (emojiContainer.style.display === 'block') {
+        emojiContainer.style.display = 'none';
+    } else {
+        emojiContainer.style.display = 'block';
+    }
 });
 
 // Evitar que el formulario se cierre al hacer clic dentro de él
 popupContainer.addEventListener('click', (event) => {
     if (event.target === popupContainer) {
-        popupContainer.style.display = 'none';
+        // Confirmar antes de cerrar el formulario
+        if (confirm('¿Está seguro de cancelar la publicación?')) {
+            popupContainer.style.display = 'none';
+        }
     }
 });
+
