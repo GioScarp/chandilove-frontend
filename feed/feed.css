@@ -1,9 +1,10 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;500;600&family=Outfit:wght@100;300;600;700&family=Quicksand:wght@300;400;500&display=swap');
 
+  
   :root {
     --color-white: hsl(252, 30%, 100%);
-    --color-light: hsl(0, 0%, 97%);
+    --color-light: hsl(0, 0%, 95%);
     --color-gray: hsl(252, 15%, 65%);
     --color-primary: hsl(252, 75%, 60%);
     --color-secondary: hsl(252, 100%, 90%);
@@ -41,7 +42,7 @@
 body {
     font-family: 'Dosis', sans-serif;
     color: var(--color-dark);
-    background: var(--color-light) ;
+    background: var(--color-white) ;
     overflow-x: hidden;
 }
 
@@ -50,12 +51,26 @@ body {
     margin: 0 auto;
 }
 
-.profile-photo {
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+ .profile-photo {
     width: 2.7rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
-}
+} 
 
 img {
     display: block;
@@ -90,6 +105,7 @@ nav .container {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin: 0 -60px
 }
 
 
@@ -100,11 +116,17 @@ nav .search-bar {
     border-radius: var(--border-radius);
     padding: var(--search-padding);
 }
+.search-bar i {
+    font-size: 1rem;
+    color: var(--color-gray);
+    margin-left: 2rem;
+    position: relative;
+}
 
 nav .search-bar input  {
     background: transparent;
     width: 20vw;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     font-size: 0.9rem;
     color: var(--color-dark)
 
@@ -121,7 +143,12 @@ nav .search-bar input [type="search"]::placeholder {
 
 
 
+
 /* ========== MAIN ========== */
+a {
+    color: inherit; 
+    text-decoration: none; 
+}
 
 main {
     position: relative;
@@ -131,7 +158,7 @@ main {
 
 main .container {
     display: grid;
-    grid-template-columns: 15vw auto 20vw;
+    grid-template-columns: 15vw auto 23vw;
 
     position: relative;
 }
@@ -142,6 +169,7 @@ main .container .left{
     height: max-content;
     position: sticky;
     top: var(--sticky-top-left);
+    background-color: var(--color-white);
 }
 
 
@@ -166,6 +194,8 @@ main .container .left{
 .left .sidebar .menu-item:hover {
     background: var(--color-light);
 }
+
+
 
 .left .sidebar i{
     font-size: 1.4rem;
@@ -324,7 +354,7 @@ btn:hover {
     background: var(--color-white);
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
-    margin: 1rem 0;
+    margin: 3rem 0;
     font-size: 0.85rem;
     line-height: 1.5;
 }
@@ -380,7 +410,6 @@ btn:hover {
 
 /* ========== RIGHT ========== */
 .container .right {
-    margin-right: 50px;
+    background-color: var(--color-light);
 }
-
 
