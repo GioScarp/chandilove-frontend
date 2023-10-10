@@ -83,6 +83,57 @@
           "image": "",
           "thumbnail": "https://img.freepik.com/foto-gratis/disparo-aislado-gatito-jengibre-sentado-frente-blanco-mirando-derecha_181624-45937.jpg?w=740&t=st=1696810895~exp=1696811495~hmac=5ab1b819f44bf0578364437e75cceda6288cb3784b13cab0bf3c57869ba59da7"
         }
+    },
+    {
+      "id": 6,
+      "name": "Rosty",
+      "gender": "Hembra",
+      "age": "2 años",
+      "category": "Perro",
+      "color": "Gris",
+      "breed": "",
+      "description": "",
+      "healthStatus": "",
+      "fundacionID": 1,
+      "images":
+        {
+          "image": "",
+          "thumbnail": "https://img.freepik.com/foto-gratis/retrato-vertical-tipo-perro-pastor-aleman-lindo-domestico_181624-1407.jpg?w=740&t=st=1696912093~exp=1696912693~hmac=4a8adc30f52032b8f25bcc25210bf7fcb3e32ec25e5f9dbf6da2fe5355a9b271"
+        }
+    },
+    {
+      "id": 7,
+      "name": "Michin",
+      "gender": "Hembra",
+      "age": "2 años",
+      "category": "Gatos",
+      "color": "Gris",
+      "breed": "",
+      "description": "",
+      "healthStatus": "",
+      "fundacionID": 1,
+      "images":
+        {
+          "image": "",
+          "thumbnail": "https://img.freepik.com/foto-gratis/hermoso-gato-blanco-pelotas-interior_23-2150752872.jpg?w=826&t=st=1696912060~exp=1696912660~hmac=a5d0aec45726068c5d81c2cc74ad918ab20cd8f4787c3aeab3567c05cadf7c5f"
+        }
+    },
+    {
+      "id": 8,
+      "name": "Ross",
+      "gender": "Hembra",
+      "age": "2 años",
+      "category": "Gatos",
+      "color": "Gris",
+      "breed": "",
+      "description": "",
+      "healthStatus": "",
+      "fundacionID": 1,
+      "images":
+        {
+          "image": "",
+          "thumbnail": "https://img.freepik.com/foto-gratis/retrato-husky-siberiano-ojos-diferentes-colores-sobre-superficie-negra_181624-48434.jpg?w=740&t=st=1696912238~exp=1696912838~hmac=985dc772959c68156a319d45b6f53055a960ed13606bab0e25c03e23bb942e0a"
+        }
     }
   ],
 

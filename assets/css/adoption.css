@@ -181,6 +181,8 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    border-radius: 0px 50px 50px 0px;
+    background-color: var(--rojo);
 }
 
 .listado_fundaciones{
@@ -237,31 +239,40 @@
 /* =============== PopUp mascotas ============= */
 
 .container-popup {
+    display: none;
     width: 500px;
-    background-color: #404040;
     border-radius: 50px;
+    margin-bottom: 100px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Sombra en todos los bordes */
+}
+
+.carousel-popup{
+    width: 100%;
 }
 
 .carousel-popup img {
     width: 100%;
     border-radius: 50px;
+    object-fit: cover;
 }
 
 
 .container-info-pet{
-    background-color: green;
     width: 100%;
     padding: 10px 30px 0px;
 }
 
 .title-popup{
+    margin-top: 10px;
     font-size: 30px;
-    color: var(--blanco);
+    color: var(--gris);
 }
 
 .info-pet {
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top: 15px;
 }
 
 .list-box{
@@ -276,5 +287,31 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    border-radius: var(--rojo);
+    border: 2px solid var(--rojo);
+    border-radius: 15%;
+    gap: 5px;
+}
+
+.rounded-box p {
+    color: var(--rojo);
+}
+
+.description-pet{
+    margin: 30px 0px 0px 
+}
+
+.btn-adoption{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-adoption button {
+    background-color: var(--rojo);
+    border-radius: 50px;
+    width: 45%;
+    height: 50px;
+    margin: 50px 0px 30px 0px;
+    color: var(--blanco);
 }
