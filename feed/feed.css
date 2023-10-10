@@ -74,6 +74,7 @@ img {
 
 .img__logo{
     width: 150px;
+    
 }
 
 nav{
@@ -127,6 +128,7 @@ main {
     top: 5.4rem;
 }
 
+
 main .container {
     display: grid;
     grid-template-columns: 15vw auto 20vw;
@@ -134,24 +136,6 @@ main .container {
     position: relative;
 }
 
-.btn {
-    display: inline-block;
-    padding: var(--btn-padding);
-    font-weight: 500;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: all 300ms ease;
-    font-size: 0.9rem;
-}
-
-btn:hover {
-    opacity: 0.8;
-}
-
-.btn-primary {
-    background: var(--rojo);
-    color: white;
-}
 
 /* ========== LEFT ========== */
 main .container .left{
@@ -209,12 +193,12 @@ main .container .left{
 }
 
 .left .sidebar .active {
-    background: var(--color-light);
+    background: var(--rojo);
 }
 
 .left .sidebar .active i,
 .left .sidebar .active h3 {
-    color: var(--rojo);
+    color: var(--blanco);
 }
 
 .left .sidebar .active::before {
@@ -242,6 +226,43 @@ main .container .left{
     text-align: center;
     padding: 1rem 0;
 }
+
+
+.btn {
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
+btn:hover {
+    opacity: 0.8;
+}
+
+.btn-primary {
+    background: var(--rojo);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+
+.btn-huella {
+    margin-left: 0.3rem;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+
+}
+
+.left .sidebar .menu-item.btn-logout {
+    position: fixed;
+    bottom: 0;
+}
+
 
 /* .btn-logout {
     margin-top: 220px;
@@ -296,7 +317,7 @@ main .container .left{
 /*---------- FEEDS  ----------*/
 
 .feeds {
-    padding: 0 100px;
+    padding: 0px 100px;
 }
 
 .middle .feeds .feed {
