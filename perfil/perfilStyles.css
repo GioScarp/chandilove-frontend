@@ -1,0 +1,558 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;500;600&family=Outfit:wght@100;300;600;700&family=Quicksand:wght@300;400;500&display=swap');
+
+/* Root-level CSS variables for color and styling */
+:root {
+    /* Color variables */
+    --color-white: hsl(252, 30%, 100%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-black: hsl(252, 30%, 10%);
+
+    /* Custom color variables */
+    --azul: #30B6B8;
+    --naranja: #F9A112;
+    --rojo: #FE5E6D;
+    --gris: #404040;
+    --blanco: #FFFFFF;
+
+    /* Common styling variables */
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 4rem;
+    --card-padding: 1rem;
+
+    /* Sticky positions */
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+}
+
+/* Reset CSS for common styles */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+/* General styles for the body */
+body {
+    font-family: 'Dosis';
+    color: var(--gris);
+    background: var(--blanco);
+    overflow-x: hidden;
+}
+
+/* General container styles */
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Styling for profile photos */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 1rem;
+}
+
+.profile-photo {
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+
+/* Styling for images */
+img {
+    display: block;
+    width: 100%;
+}
+
+/* Common text styles */
+.text-bold {
+    font-weight: 500;
+}
+
+.text-muted {
+    color: var(--color-gray);
+}
+
+/* Navigation Bar styles */
+.img__logo {
+    width: 150px;
+}
+
+nav {
+    width: 100%;
+    background: var(--color-white);
+    padding: 0.7rem 0px;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px -60px;
+}
+
+nav .search-bar {
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+}
+.search-bar i {
+    font-size: 1rem;
+    color: var(--color-gray);
+    margin-left: 2rem;
+    position: relative;
+}
+
+nav .search-bar input  {
+    background: transparent;
+    width: 20vw;
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-dark)
+
+}
+
+nav .search-bar input [type="search"]::placeholder {
+    color: var(--color-gray);
+}
+
+.user-navbar {
+    display: flex;
+    
+}
+
+/* Main content styles */
+a {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+main {
+    position: relative;
+    top: 5.4rem;
+}
+
+main .container {
+    display: grid;
+    grid-template-columns: 15vw auto;
+    position: relative;
+}
+
+/* General button styles */
+.btn {
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
+btn:hover {
+    opacity: 0.8;
+}
+
+/* Primary button styles */
+.btn-primary {
+    background: var(--rojo);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-huella {
+    margin-left: 0.3rem;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+
+}
+
+.left .sidebar .menu-item.btn-logout {
+    position: fixed;
+    bottom: 0;
+}
+
+main .container .left{
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-left);
+    background-color: var(--color-white);
+}
+
+/* Sidebar styles */
+.left .sidebar {
+    /* width: 200px; */
+    margin-top: 50px;
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+}
+
+.left .sidebar .menu-item {
+    
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+    position: relative;
+}
+
+.left .sidebar .menu-item:hover {
+    background: var(--color-light);
+}
+
+.left .sidebar i {
+    font-size: 1.4rem;
+    color: var(--color-gray);
+    margin-left: 2rem;
+    position: relative;
+}
+
+.left .sidebar i .notification-count {
+    background: var(--color-danger);
+    color: white;
+    font-size: 0.7rem;
+    width: fit-content;
+    border-radius: 0.8rem;
+    padding: 0.1rem 0.4rem;
+    position: absolute;
+    top: -0.2rem;
+    right: -0.3rem;
+}
+
+.left .sidebar h3 {
+    margin-left: 1.5rem;
+    font-size: 1rem;
+}
+
+.left .sidebar .active {
+    background: var(--rojo);
+}
+
+.left .sidebar .active i,
+.left .sidebar .active h3 {
+    color: var(--blanco);
+}
+
+.left .sidebar .active::before {
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 100%;
+    position: absolute;
+    background: var(--rojo);
+}
+
+.left .sidebar .menu-item:first-child.active {
+    border-top-left-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+.left .sidebar .menu-item:last-child.active {
+    border-bottom-left-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+
+.left .btn {
+    margin-top: 1rem;
+    margin-left: 20px;
+    width: 80%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 15px;
+}
+
+/*.btn-logout {
+    margin-top: 220px;
+}
+
+/* Main container for the entire content 
+.container-main {
+    background-color: rgba(99, 200, 201, 1);
+    border-radius: 50px 0 0 50px;
+}*/
+
+.middle {
+    width: 99%;
+    background-color: rgba(99, 200, 201, 1);
+    border-radius: 50px 50px 0 50px;
+    
+}
+
+
+/* Main profile container styles */
+.profile-content {
+    width: 100%;
+    margin: 0rem 1rem 0rem 0rem;
+    border-radius: 76px;
+}
+
+/* Horizontal Profile styles */
+.profile-horizontal {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.foto-perfil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.foto-perfil h1 {
+    font-size: 28px;
+    line-height: 25px;
+    margin: 0;
+}
+
+.profile-info {
+    margin-right: 7rem;
+    color: var(--blanco);
+    text-align: right;
+}
+
+.profile-info span {
+    font-size: 25px;
+    color: var(--blanco)
+}
+
+.profile-info button {
+    background-color: var(--rojo);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 9px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.profile-info button span {
+    color: var(--blanco);
+    font-size: 14px;
+    font-style: normal;
+}
+
+/* Stats styles */
+.stats {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 1rem 7rem;
+    color: var(--blanco);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.stats p {
+    margin: 5px 0;
+}
+
+.stats span {
+    font-size: 15px;
+}
+
+/* Description styles */
+.description {
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 1rem 8rem;
+    border-radius: 12px;
+    border: 1px solid #EBEBEB;
+    background: #FFF;
+}
+
+/* Posts Grid styles */
+.posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin: 4rem 5rem;
+}
+
+/* Individual post styles */
+.post {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 16px 0px rgba(19, 21, 68, 0.06);
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    background: lightgray 0px -6.087px / 100% 140.351% no-repeat;
+}
+
+/* Estilo para el fondo de vidrio */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.30); /* Fondo de vidrio */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px); /* Efecto de desenfoque */
+    z-index: 1;
+}
+
+/* Estilo para el contenido del formulario emergente */
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    max-width: 80%;
+}
+
+/* Estilo para el campo de título */
+#post-form input[name="title"] {
+    font-family: 'Dosis';
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 23px;
+
+}
+
+form#post-form {
+    width: 500px;
+    height: 246px;
+}
+
+/* Estilo para el campo de descripción */
+#post-form textarea[name="content"] {
+    font-family: 'Dosis';
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    resize: vertical; /* Permitir que la descripción se redimensione verticalmente */
+}
+
+/* Upload image*/
+
+/* Estilo para ocultar el input */
+#image-upload {
+    display: none;
+}
+
+/* Estilo para mostrar el label */
+.upload-button {
+    cursor: pointer;
+}
+
+/* Estilo para cambiar el color del icono de la cámara después de cargar una imagen */
+.upload-button i {
+    color: var(--rojo);
+}
+
+/* Estilo para ocultar el mensaje cuando el input está vacío */
+#image-upload:valid + .upload-button #upload-message {
+    display: none;
+}
+
+/* Estilo para el botón de cierre */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Estilo para el botón "Publicar" */
+.publish-button {
+    font-family: 'Dosis';
+    font-size: 15px;
+    margin-top: 20px;
+    background-color: var(--rojo);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo para el botón "Publicar" al pasar el mouse */
+.publish-button:hover {
+    background-color: var(--azul);
+}
+
+/* Estilo para los botones de iconos */
+.upload-button,
+.emoji-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: var(--rojo);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.upload-button:hover,
+.emoji-button:hover {
+    color: var(--azul);
+}
+
+/* Estilo para el contenedor de emojis */
+.emoji-popup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.emoji {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Estilo para el contenedor de emojis al pasar el mouse */
+.emoji:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
