@@ -26,7 +26,7 @@
             </div>
             <div class="user-navbar">
                 <div class="profile-photo pf-container">
-                    <img src="/img/Joscari__OurTeam.svg">                           
+                    <img src="/img/Joscari__OurTeam.svg">
                 </div>
                 <div class="handle-user">
                     <h4>Joscari Ortiz</h4>
@@ -34,12 +34,12 @@
                         @joscari
                     </p>
                 </div>
-            </div>  
+            </div>
         </div>
     </nav>
 
     <main>
-        <div class="container-main">
+        <div class="container">
             <!-- Sidebar -->
             <div class="left">
                 <div class="sidebar">
@@ -53,8 +53,9 @@
                         <h3>Perfil</h3>
                     </a>
                     <a class="menu-item" id="notifications">
-                        <span><i class="fi fi-rr-bell"><small class="notification-count">9+</small></i></span> <h3>Notificaciones</h3> 
-                         <!------------- NOTIFICACION POPUP  ---------->
+                        <span><i class="fi fi-rr-bell"><small class="notification-count">9+</small></i></span>
+                        <h3>Notificaciones</h3>
+                        <!------------- NOTIFICACION POPUP  ---------->
                     </a>
                     <a class="menu-item">
                         <span><i class="fi fi-rr-paw"></i></span>
@@ -67,56 +68,63 @@
                     <!-- End of Sidebar -->
                     <label for="create-post" class="btn btn-primary" id="open-form">Publicar</label>
                     <a class="menu-item btn-logout">
-                        <span><i class="fi fi-rr-exit"></i> </span> <h3>Salir</h3>
+                        <span><i class="fi fi-rr-exit"></i> </span>
+                        <h3>Salir</h3>
                     </a>
                 </div>
             </div>
-            <!-- Container for Profile and Posts (right side) -->
-            <div class="profile-content">
-                <!-- Horizontal Profile Section -->
-                <div class="profile-horizontal">
-                    <!-- Profile Information -->
-                    <div class="profile-info">
-                        <h1>Jhan Carlos <br>Castañeda</br></h1>
-                        <button>Seguir</button>
+            <div class="middle">
+                <!-- Container for Profile and Posts (right side) -->
+                <div class="profile-content">
+                    <!-- Horizontal Profile Section -->
+                    <div class="profile-horizontal">
+                        <!-- Profile Information -->
+                        <div class="profile-info">
+                            <h1>Jhan Carlos <br>Castañeda</br></h1>
+                            <button>Seguir</button>
+                        </div>
+                        <!-- Profile Photo -->
+                        <div class="profile">
+                            <img src="img/jhanFotoPerfil.png" alt="Foto de perfil">
+                        </div>
+                        <!-- Statistics -->
+                        <div class="stats">
+                            <p>Publicaciones: 100</p>
+                            <p>Seguidores: 150</p>
+                            <p>Siguiendo: 500</p>
+                        </div>
                     </div>
-                    <!-- Profile Photo -->
-                    <div class="profile">
-                        <img src="img/jhanFotoPerfil.png" alt="Foto de perfil">
+                    <!-- Description Section -->
+                    <div class="description">
+                        <h3>Sobre mí</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, excepturi, nisi soluta
+                            mollitia nobis consequatur molestias ipsum unde at, quia amet reiciendis deserunt
+                            reprehenderit! Quas fugit consequatur repudiandae voluptatibus rem.</p>
                     </div>
-                    <!-- Statistics -->
-                    <div class="stats">
-                        <p>Publicaciones: 100</p>
-                        <p>Seguidores: 150</p>
-                        <p>Siguiendo: 500</p>
+                    <!-- Posts Grid -->
+                    <div class="posts" id="container-posts">
                     </div>
                 </div>
-                <!-- Description Section -->
-                <div class="description">
-                    <h3>Sobre mí</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, excepturi, nisi soluta
-                        mollitia nobis consequatur molestias ipsum unde at, quia amet reiciendis deserunt
-                        reprehenderit! Quas fugit consequatur repudiandae voluptatibus rem.</p>
+            </div>
+
+            <!-- Contenedor del formulario emergente -->
+            <div id="popup-container" class="popup">
+                <div class="popup-content">
+                    <!-- Formulario para crear la publicación -->
+                    <form id="post-form">
+                        <input type="text" placeholder="Título" name="title">
+                        <textarea placeholder="Contenido" name="content"></textarea>
+                        <button type="submit">Publicar</button>
+                    </form>
+                    <!-- Botón para cerrar el formulario emergente -->
+                    <button id="close-form" class="btn btn-primary">Cerrar</button>
                 </div>
-                <!-- Posts Grid -->
-                <div class="post" id="container-posts">
-                </div>
+            </div>
+            <div class="right">
+
             </div>
         </div>
     </main>
-    <!-- Contenedor del formulario emergente -->
-    <div id="popup-container" class="popup">
-        <div class="popup-content">
-            <!-- Formulario para crear la publicación -->
-            <form id="post-form">
-                <input type="text" placeholder="Título" name="title">
-                <textarea placeholder="Contenido" name="content"></textarea>
-                <button type="submit">Publicar</button>
-            </form>
-            <!-- Botón para cerrar el formulario emergente -->
-            <button id="close-form" class="btn btn-primary">Cerrar</button>
-        </div>
-    </div>
     <!-- JavaScript File -->
     <script src="perfilScript.js"></script>
 </body>

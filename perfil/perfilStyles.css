@@ -47,22 +47,15 @@
 /* General styles for the body */
 body {
     font-family: 'Dosis';
-    margin: 0;
-    padding: 0;
+    color: var(--gris);
+    background: var(--blanco);
     overflow-x: hidden;
-}
-
-/* Main container for the entire content */
-.container-main {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
 }
 
 /* General container styles */
 .container {
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
 }
 
 /* Styling for profile photos */
@@ -126,16 +119,19 @@ nav .search-bar input [type="search"]::placeholder {
     color: var(--color-gray);
 }
 
+.user-navbar {
+    display: flex;   
+}
+
 /* Main content styles */
 main {
     position: relative;
-    top: var(--sticky-top-left);
+    top: 5.4rem;
 }
 
 main .container {
     display: grid;
-    grid-template-columns: 30vh auto 20vw;
-    column-gap: 2rem;
+    grid-template-columns: 15vw auto;
     position: relative;
 }
 
@@ -158,23 +154,29 @@ btn:hover {
 .btn-primary {
     background: var(--rojo);
     color: white;
-    margin: 1rem 1rem;
+}
+
+main .container .left{
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-left);
 }
 
 /* Sidebar styles */
 .left .sidebar {
-    width: 200px;
+    /* width: 200px; */
+    margin-top: 50px;
     background: var(--color-white);
     border-radius: var(--card-border-radius);
-    margin-top: var(--sticky-top-left);
 }
 
 .left .sidebar .menu-item {
+    
     display: flex;
     align-items: center;
-    height: 4rem;
+    height: 3.5rem;
     cursor: pointer;
-    translate: all 300ms ease;
+    transition: all 300ms ease;
     position: relative;
 }
 
@@ -184,9 +186,21 @@ btn:hover {
 
 .left .sidebar i {
     font-size: 1.4rem;
-    color: var(--gris);
-    margin-left: 2.8rem;
+    color: var(--color-gray);
+    margin-left: 2rem;
     position: relative;
+}
+
+.left .sidebar i .notification-count {
+    background: var(--color-danger);
+    color: white;
+    font-size: 0.7rem;
+    width: fit-content;
+    border-radius: 0.8rem;
+    padding: 0.1rem 0.4rem;
+    position: absolute;
+    top: -0.2rem;
+    right: -0.3rem;
 }
 
 .left .sidebar h3 {
@@ -195,12 +209,12 @@ btn:hover {
 }
 
 .left .sidebar .active {
-    background: var(--rojo);
+    background: var(--color-light);
 }
 
 .left .sidebar .active i,
 .left .sidebar .active h3 {
-    color: var(--blanco);
+    color: var(--rojo);
 }
 
 .left .sidebar .active::before {
@@ -224,20 +238,34 @@ btn:hover {
 
 .left .btn {
     margin-top: 1rem;
-    text-align: center;
-    padding: 1rem 1rem;
+    margin-left: 20px;
     width: 80%;
+    text-align: center;
+    padding: 1rem 0;
 }
 
-.btn-logout {
+/*.btn-logout {
     margin-top: 220px;
 }
+
+/* Main container for the entire content 
+.container-main {
+    background-color: rgba(99, 200, 201, 1);
+    border-radius: 50px 0 0 50px;
+}*/
+
+.middle {
+    width: 99%;
+    background-color: rgba(99, 200, 201, 1);
+    border-radius: 50px 50px 0 50px;
+    
+}
+
 
 /* Main profile container styles */
 .profile-content {
     width: 100%;
     margin: 0rem 1rem 0rem 0rem;
-    background-color: #63C8C9;
     border-radius: 76px;
 }
 
@@ -342,4 +370,8 @@ btn:hover {
 /* Estilos para el botón de cierre */
 #close-form {
     margin-top: 20px;
+}
+
+.container .right {
+    margin-right: 50px;
 }
