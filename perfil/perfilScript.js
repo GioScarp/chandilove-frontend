@@ -57,6 +57,7 @@ function templatePost(imgUrl) {
 // note: Change this in a future
 renderPost('container-posts');
 
+
 //PopUp Publicar
 
 // Obtener elementos del DOM
@@ -70,8 +71,6 @@ const emojiContainer = document.getElementById('emoji-container');
 openFormButton.addEventListener('click', () => {
     popupContainer.style.display = 'flex';
 });
-
-
 
 
 // Ocultar el formulario emergente al hacer clic en el botón de cierre
