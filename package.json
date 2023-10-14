@@ -1,0 +1,15 @@
+{
+  "name": "chandilove-frontend",
+  "version": "1.0.0",
+  "description": "Este repositorio incluye los componentes de la interfaz de usuario, el diseño, la lógica del cliente y otros recursos relacionados con la aplicación web Chandi Love.",
+  "main": "index.js",
+  "scripts": {
+    "server" : "json-server --watch db.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}

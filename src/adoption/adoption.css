@@ -1,0 +1,317 @@
+:root {
+    --color-white: hsl(252, 30%, 100%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-gray-light: hsl(252, 17%, 88%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-black: hsl(252, 30%, 10%);
+
+    --azul: #30B6B8 ;
+    --naranja: #F9A112;
+    --rojo: #FE5E6D;
+    --gris: #404040;
+    --blanco: #FFFFFF;
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 4rem;
+    --card-padding: 1rem;
+
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* ========== Middle ========== */
+.middle {
+    background-color: var(--blanco) !important;
+}
+
+.contenedor_adopcion {
+    /* background-color: aquamarine; */
+    width: 100%;
+    padding: 0 50px;
+}
+.contenedor__banner{
+    width: 100%;
+    height: 300px;
+    background-color: brown;
+    margin-top: 40px;
+}
+
+.banner {
+    height: 100%;
+    background-color: black;
+}
+
+.banner img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.contenedor_categorias{
+    margin-top: 30px;
+    /* background-color: rebeccapurple; */
+}
+
+.lista_botones{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-top: 15px;
+    width: 42%;
+}
+
+.boton_categoria{
+    width: 100px;
+    height: 30px;
+    border: 1px solid var(--rojo);
+    border-radius: var(--border-radius);
+    background: var(--blanco);
+}
+
+.boton_categoria:focus {
+    background-color: var(--rojo);
+    color: var(--blanco);
+}
+
+.mio {
+    background-color: #404040;
+    color: var(--rojo);
+}
+
+.contenedor_mascotas{
+    width: 100%;
+    /* background-color: chartreuse; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 30px 0px 50px;
+}
+
+.card{
+    position: relative;
+    height: 280px;
+    background: linear-gradient(to bottom, transparent, var(--color-white));
+    border-radius: 15px;
+    box-shadow: 0px 8px 8px -4px rgba(0, 0, 0, 0.3); /* Agrega una sombra */
+}
+
+.circle{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 25px;
+    height: 25px; 
+    background-color: var(--blanco); 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fi-br-heart {
+    color: red; /* Color del corazón */
+    font-size: 14px; /* Tamaño del corazón (ajústalo según tus necesidades) */
+    text-align: center;
+    padding-top: 2px;
+  }
+
+.img-card{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.info-mascota{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px 18px 0px;
+    color: black;
+}
+
+.info-mascota h3{
+    color: var(--rojo);
+}
+
+.info-mascota .edad {
+    text-align: right;
+    color: var(--gris);
+}
+
+.info-mascota .sexo{
+    padding-top: 10px;
+    color: var(--gris);
+}
+
+
+/* ========== RIGHT ========== */
+.right {
+    width: 95%;
+    background-color: var(--rojo);
+    border-radius: 0px 50px 50px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor_fundaciones {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 50px 50px 0px;
+    background-color: var(--rojo);
+}
+
+.listado_fundaciones{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 8%;
+}
+
+.titulo_fundaciones{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    color: var(--blanco);
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.titulo_fundaciones img{
+    width: 40px;
+}
+
+.card_fundacion{
+    width: 95%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.perfil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.perfil img {
+    width: 50px;
+}
+
+.info_fundacion {
+    font-size: 19px;
+    color: var(--blanco);
+}
+
+.info_fundacion p{
+    width: 90%;
+    white-space: nowrap;
+    color: var(--gris) !important;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+
+/* =============== PopUp mascotas ============= */
+
+.container-popup {
+    display: none;
+    width: 500px;
+    border-radius: 50px;
+    margin-bottom: 100px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Sombra en todos los bordes */
+}
+
+.carousel-popup{
+    width: 100%;
+}
+
+.carousel-popup img {
+    width: 100%;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+
+.container-info-pet{
+    width: 100%;
+    padding: 10px 30px 0px;
+}
+
+.title-popup{
+    margin-top: 10px;
+    font-size: 30px;
+    color: var(--gris);
+}
+
+.info-pet {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.list-box{
+    width: 20%;
+    height: 80px;
+}
+
+.rounded-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--rojo);
+    border-radius: 15%;
+    gap: 5px;
+}
+
+.rounded-box p {
+    color: var(--rojo);
+}
+
+.description-pet{
+    margin: 30px 0px 0px 
+}
+
+.btn-adoption{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-adoption button {
+    background-color: var(--rojo);
+    border-radius: 50px;
+    width: 45%;
+    height: 50px;
+    margin: 50px 0px 30px 0px;
+    color: var(--blanco);
+}
