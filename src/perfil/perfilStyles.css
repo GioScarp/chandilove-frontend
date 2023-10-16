@@ -686,6 +686,21 @@ h2 {
         bottom: 0;
         z-index: 10;
     }
+
+    .popup-content {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        width: 40%; 
+        /* max-width: 80%; */
+    }
+
+    #post-img-preview {
+        margin: auto;
+        display: none;
+    }
 }
     
 
