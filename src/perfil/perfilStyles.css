@@ -166,7 +166,6 @@ main .container {
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: all 300ms ease;
-    font-size: 0.9rem;
 }
 
 btn:hover {
@@ -182,10 +181,10 @@ btn:hover {
 }
 
 .btn-huella {
-    margin-left: 0.3rem;
+    margin-left: 0.2rem;
     width: 18px;
     height: 18px;
-    display: inline-block;
+    margin-top: 0.2rem;
 
 }
 
@@ -278,9 +277,8 @@ main .container .left{
     margin-top: 1rem;
     margin-left: 20px;
     width: 80%;
-    text-align: center;
     padding: 1rem 0;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 /*.btn-logout {
@@ -427,6 +425,7 @@ main .container .left{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     text-align: center;
     position: relative;
+    width: 50%;
     max-width: 80%;
 }
 
@@ -448,10 +447,6 @@ h2 {
 
 }
 
-form#post-form {
-    width: 500px;
-    height: 246px;
-}
 
 /* Estilo para el campo de descripción */
 #post-form textarea[name="content"] {
@@ -539,8 +534,7 @@ form#post-form {
 }
 
 #post-img-preview {
-    width: 200px;
-    height: 200px;
+    width: 35%;
     margin: auto;
     display: none;
 }
@@ -643,6 +637,21 @@ form#post-form {
 
     .stats span {
     font-size: 15px;
+    }
+
+    .popup-content {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        /* width: 50%; */
+        /* max-width: 80%; */
+    }
+
+    #post-img-preview {
+        margin: auto;
+        display: none;
     }
 }
 
