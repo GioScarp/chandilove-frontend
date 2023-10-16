@@ -296,16 +296,8 @@ main .container .left{
 .middle {
     width: 99%;
     background-color: rgba(99, 200, 201, 1);
-    border-radius: 50px 50px 0 50px;
-    
-}
-
-
-/* Main profile container styles */
-.profile-content {
-    width: 100%;
-    margin: 0rem 1rem 0rem 0rem;
-    border-radius: 76px;
+    border-radius: 50px 50px 50px 50px;
+    margin: 0rem 1rem 1rem 0rem;
 }
 
 /* Horizontal Profile styles */
@@ -386,25 +378,30 @@ main .container .left{
 /* Posts Grid styles */
 .posts {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-    margin: 4rem 5rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Tamaño de columna deseado */
+    grid-auto-rows: 320px; /* Tamaño de fila deseado */
+    gap: 5px; /* Espacio entre las imágenes */
+    margin: 3rem 6rem;
 }
 
 /* Individual post styles */
 .post {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 5px;
     background-color: #fff;
     border-radius: 16px;
     box-shadow: 0px 4px 16px 0px rgba(19, 21, 68, 0.06);
 }
 
 .post img {
-    max-width: 100%;
-    height: auto;
     border-radius: 16px;
     background: lightgray 0px -6.087px / 100% 140.351% no-repeat;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Estilo para el fondo de vidrio */
@@ -537,12 +534,29 @@ form#post-form {
     color: var(--azul);
 }
 
+.emojis--container {
+    display: inline;
+}
+
+#post-img-preview {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    display: none;
+}
 /* Estilo para el contenedor de emojis */
 .emoji-popup {
     display: none;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+    position: relative;
+    padding: 1px;
+    background: white;
+    height: 33vh;
+    overflow: scroll;
+    width: 370px;
+    margin: 3px auto auto;
 }
 
 .emoji {
@@ -559,14 +573,15 @@ form#post-form {
 
 /* RESPONSIVE PERFIL*/
 
-/* Estilos para dispositivos móviles (ancho máximo de 768px) */
-@media screen and (max-width: 768px) {
+/* Estilos para dispositivos móviles (ancho máximo de 719px) */
+@media screen and (max-width: 719px) {
     .middle {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 1rem;
+        border-radius: 50px 50px 50px 50px;
         margin: 1rem;
     }
 
@@ -585,17 +600,10 @@ form#post-form {
         z-index: 10;
     }
 
-    .profile-content {
-        width: 100%;
-        margin-top: 2rem;
-        margin-right: 2rem;
-        margin-left: 2rem;
-    }
-
     .profile-horizontal {
         display: flex;
         align-items: center;
-        padding: 30px 20px;
+        padding: 2rem 1rem 0rem 1rem;
         flex-direction: row;
         justify-content: space-evenly;
         align-content: center;
@@ -638,6 +646,38 @@ form#post-form {
     }
 }
 
+/* Estilos para dispositivos móviles (ancho máximo de 720 y 1160px) */
+@media screen and (min-width: 720px) and (max-width: 1160px) {
+    
+    .middle {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+        border-radius: 50px 50px 50px 50px;
+        margin: 1rem;
+    }
+
+    main .container {
+        display: flex;
+    }
+
+    /* Oculta el sidebar por defecto */
+    .left .sidebar {
+        display: none;
+    }
+
+    /* Estilo para el menú en dispositivos móviles */
+    .left .sidebar.mobile-menu {
+        display: block;
+        width: 100%;
+        background: var(--color-white);
+        position: fixed;
+        bottom: 0;
+        z-index: 10;
+    }
+}
     
 
 
