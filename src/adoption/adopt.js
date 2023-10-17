@@ -100,7 +100,6 @@ listaMascotas.addEventListener("click", e => {
     fetch(`http://localhost:3000/mascotas/${mascotaId}`)
       .then(response => response.json())
       .then(mascotaInfo => {
-        console.log(mascotaInfo);
         const popup = document.createRange().createContextualFragment(
             /*html*/`
             <div class="content-popup" id="mascota-details">
@@ -158,8 +157,8 @@ listaMascotas.addEventListener("click", e => {
             </div>
             `);
 
+        mascotaPopup.style.display = 'flex';
         mascotaPopup.append(popup);    
-        mascotaPopup.style.display = 'block';
       });
   }
 });
@@ -189,10 +188,13 @@ function closePopup(){
 function mostrarMas() {
     const parrafo = document.getElementById("parrafo_cortado");
     const verMas = document.getElementById("ver-mas");
+    const mascotaDetails = document.getElementById('mascota-details');
+    
 
     if (parrafo.classList.contains("recortado")) {
         parrafo.classList.remove("recortado");
         verMas.textContent = "Ver menos";
+        // mascotaDetails.style.top = "30px";
     } else {
         parrafo.classList.add("recortado");
         verMas.textContent = "Ver más";
