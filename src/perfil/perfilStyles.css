@@ -189,11 +189,21 @@ btn:hover {
 
 }
 
-.left .sidebar .menu-item.btn-logout {
+
+
+.left .sidebar .btn-logout {
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+    position: relative;
+}
+
+.left .sidebar .btn-logout {
     position: fixed;
     bottom: 0;
 }
-
 main .container .left{
     height: max-content;
     position: sticky;

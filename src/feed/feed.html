@@ -9,6 +9,7 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/emojimart/3.0.1/css/emojimart.css" rel="stylesheet" />
     <link rel="stylesheet" href="feed.css">
+    <script src="feed.js"></script>
 </head>
 <body>
     <nav>
@@ -44,7 +45,7 @@
                     <a href="/feed/feed.html" class="menu-item active">
                         <span><i class="fi fi-rr-home"></i> </span> <h3>Feed</h3>
                     </a>
-                    <a href="../perfil/indexPerfil.html" class="menu-item"> 
+                    <a href="../perfil/indexPerfil.html" class="menu-item "> 
                         <span><i class="fi fi-rr-user"></i> </span> <h3>Perfil</h3> 
                     </a>
                     <a class="menu-item" id="notifications">
@@ -89,7 +90,7 @@
                     
                     <label for="create-post" class="btn btn-primary" id="open-form">Publicar<img class="btn-huella" src="/img/Dog-print.png"></label>
                     
-                    <a href="/index.html" class="menu-item btn-logout">
+                    <a href="/index.html" class="btn-logout">
                         <span><i class="fi fi-rr-exit"></i> </span> <h3>Salir</h3>  
                     </a>
                 </div>
@@ -119,7 +120,7 @@
                         </div>
 
                         <div class="photo">
-                            <img src="/img/perros-post2.jpg">
+                            <img src="/img/post-4.jpg">
                         </div>
                         <div class="action-button">
                             <div class="interaction-buttons">
@@ -154,7 +155,7 @@
                                 </div>
                                 <div class="ingo">
                                     <h3> Valentina Acevedo</h3>
-                                    <small>Medellin, 15 MIN AGO</small>
+                                    <small><i class="fi fi-bs-marker"></i>Medellin, 15 MIN AGO</small>
                                 </div>       
                             </div>
                             <span class="edit">
@@ -163,7 +164,7 @@
                         </div>
 
                         <div class="photo">
-                            <img src="/img/perros-post2.jpg">
+                            <img src="/img/post-1.jpg">
                         </div>
                         <div class="action-button">
                             <div class="interaction-buttons">
@@ -195,8 +196,63 @@
             </div>
             <!--================= RIGHT  ================-->
             <div class="right">
-                
+                <!------- USUARIOS DESTACADOS ------->
+                <div class="friend-requests">
+                    <h4>Usuarios Destacados</h4>
+                    <div class="request">
+                        <div class="info">
+                            <div class="profile-photo">
+                                <img src="/img/Giovanni__OurTeam.svg">
+                            </div>
+                            <div>
+                                <h5>Giovanni Scarpetta</h5>
+                                <p class="text-muted">
+                                    Adoptó 5 mascotas este año
+                                </p>
+                            </div>
+                        </div>
+                        <div class="action">
+                            <button class="btn btn-seguir">
+                                Seguir +
+                            </button>
+                        </div>
+
+                        
+                    </div>
+                    
+                    <div class="request">
+                        <div class="info">
+                            <div class="profile-photo">
+                                <img src="/img/Valentina__OurTeam.svg">
+                            </div>
+                            <div>
+                                <h5>Valentina Acevedo</h5>
+                                <p class="text-muted">
+                                    Ha donado $6 USD este año
+                                </p>
+                            </div>
+                        </div>
+                        <div class="action">
+                            <button class="btn btn-seguir">
+                                Seguir +
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="publicidad">
+                        <img src="/img/oferta-3.jpg">
+                        
+                    </div>
+                    <div class="boton-oferta">
+                        <button class="btn-oferta">
+                            Ver oferta
+                        </button>
+                    </div>
+
+                </div>
             </div>
+
+            <!--=============== END RIGHT  ===============-->
 
             <!-- Contenedor del formulario emergente -->
             <div id="popup-container" class="popup">
@@ -227,5 +283,6 @@
     <script  src =" https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js " ></script> 
     <script src="https://kit.fontawesome.com/d81632c2ac.js" crossorigin="anonymous"></script>
     <script src="/src/perfil/perfilScript.js"></script>
+    
 </body>
 </html>
