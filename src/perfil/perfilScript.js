@@ -57,12 +57,14 @@ function templatePost(imgUrl) {
 // note: Change this in a future
 renderPost('container-posts');
 
+
 //PopUp Publicar
 
 // Obtener elementos del DOM
 const openFormButton = document.getElementById('open-form');
 const closeFormButton = document.getElementById('close-form');
 const popupContainer = document.getElementById('popup-container');
+const imgInput = document.getElementById('image-upload');
 const emojiButton = document.getElementById('emoji-button');
 const emojiContainer = document.getElementById('emoji-container');
 
@@ -70,8 +72,6 @@ const emojiContainer = document.getElementById('emoji-container');
 openFormButton.addEventListener('click', () => {
     popupContainer.style.display = 'flex';
 });
-
-
 
 
 // Ocultar el formulario emergente al hacer clic en el botón de cierre
@@ -83,21 +83,42 @@ closeFormButton.addEventListener('click', () => {
     }
 });
 
-// Inicializar EmojiMart
-const pickerOptions = {onEmojiSelect: console.log };
-  const emojiPicker = new EmojiMart.Picker(pickerOptions);
-  
-  emojiContainer.appendChild(emojiPicker);
+imgInput.addEventListener('change', function () {
+    const selectedFile = imgInput.files[0];
 
-  // Manejar la selección de emojis
-  emojiContainer.addEventListener('click', (event) => {
-    if (event.target.classList.contains('emoji')) {
-        const emoji = event.target.textContent;
-        const contentTextarea = document.querySelector('textarea[name="content"]');
-        contentTextarea.value += emoji;
-        emojiContainer.style.display = 'none';
+    if (selectedFile) {
+      const imageURL = URL.createObjectURL(selectedFile);
+      
+      const imagePreview = document.getElementById('post-img-preview');
+      imagePreview.innerHTML = ''; // Limpia el contenedor si ya hay una imagen previa
+      
+      const img = document.createElement('img');
+      img.src = imageURL;
+      imagePreview.appendChild(img);
+      imagePreview.style.display = "block";
     }
   });
+  
+// Creación de evento para añadir a formulario
+function emojiHandler(emoji) {
+    const emojiValue = emoji.native;
+    const contentTextarea = document.querySelector('textarea[name="content"]');
+    contentTextarea.value += emojiValue;
+}
+
+// Inicializar EmojiMart
+const pickerOptions = { onEmojiSelect: emojiHandler };
+const emojiPicker = new EmojiMart.Picker(pickerOptions);
+  
+emojiContainer.appendChild(emojiPicker);
+
+// Manejar la selección de emojis
+emojiContainer.addEventListener('click', (event) => {
+if (event.target.classList.contains('emoji')) {
+    const emoji = event.target.textContent;
+    emojiContainer.style.display = 'none';
+}
+});
 
 // Mostrar/ocultar el contenedor de emojis al hacer clic en el botón de emoticonos
 emojiButton.addEventListener('click', () => {
