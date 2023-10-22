@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    
     <title>ChandiLove</title>
 </head>
 
@@ -13,10 +16,10 @@
         <div class="logo"><img src="img/Logo_2.png"></div>
         <ul class="nav-links">
             <li><a href="#">Inicio</a></li>
-            <li><a href="#">¿Qué ofrecemos?</a></li>
-            <li><a href="#">¿Quiénes somos?</a></li>
-            <li><a href="#">El equipo</a></li>
-            <li><a href="#">Contáctenos</a></li>
+            <li><a href="#queOfrecemos">¿Qué ofrecemos?</a></li>
+            <li><a href="#quienesSomos">¿Quiénes somos?</a></li>
+            <li><a href="#elEquipo">El equipo</a></li>
+            <li><a href="#contactenos">Contáctenos</a></li>
             <li><button id="boton2">Registrarse</button></li>
             <li><button id="boton3">Iniciar Sesión</button></li>
         </ul>
@@ -30,11 +33,11 @@
     <!-- Sección Home/Inicio  + Encabezado -->
     <section class="cabecera">
         <div class="presentacion">
-            <h1>¿Listo para adoptar y amar <br>a un compañero peludo?</h1>
+            <h1>¿Listo para <span class="spn-adoptar"> adoptar</span> y <span class="spn-amar"> amar </span> <br>a un compañero peludo?</h1>
 
             <p>En nuestra comunidad la palabra "chanda" abraza el amor por todos los animales. <br>¡Únete y da un hogar
                 a un amigo necesitado!</p>
-            <button id="boton1">Adopta ahora</button>
+            <button id="boton1">Adopta ahora <img class="btn-huella" src="/img/Dog-print.png"></button>
             <ul class="menuCabecera">
                 <li>Adopta<br>
                     <p>Perritos y gatitos</p></a>
@@ -53,12 +56,12 @@
     </section>
 
     <!-- Sección: ¿Qué opciones tienes? -->
-    <div class="container">
+    <div class="container titulo-opciones" id="queOfrecemos">
         <h2>¿Qué opciones <span>tienes?</span></h2>
     </div>
     <section id="opciones">
         <div class="caja">
-            <img src="img/2.png">
+            <img src="img/1.png">
             <p>Adoptar, apadrinar <br> o donar</p>
         </div>
         <div class="caja">
@@ -81,43 +84,40 @@
 
 
     <!-- Sección: ¿Quiénes somos? -->
-    <div class="container2">
+    <div class="container2" id="quienesSomos">
         <h2>¿Quiénes <span>Somos?</span></h2>
     </div>
     <section id="opciones2">
         <div class="caja__somos">
-            <p>Chandi Love va más allá de ser una plataforma de adopción; es una comunidad apasionada por los animales.
-                <br>Los usuarios pueden interactuar, compartir historias y tips! <br>Puedes donar directamente desde
-                nuestra tienda o encontrar los esenciales para tu casa y tu adorado chandosito. <br>Encuentra descuentos
-                increibles!<br>Juntos podemos resignificar la palabra "chanda" como patrimonio cultural, promovamos la
-                idea de que todos los animales merecen amor y cuidado, sin importar su origen.
+            <p> 
+            ChandiLove es mucho más que una red social; es una plataforma que une a fundaciones <br> con verdaderos apasionados de los chandosos.
             </p>
         </div>
-        <div class="caja">
+        <!-- <div class="caja">
             <img src="img/esquina.png" class="esquina">
-        </div>
+        </div> -->
     </section>
-    <section id="opciones2">
+    <section id="opciones3">
         <div class="caja2">
-            <img src="img/28.png">
-            <p>Nuestra Causa</p>
-            <p>Descripción</p>
+            <img src="./img/28.png">
+            <h3>Nuestra Causa</h3>
+            <p class="parrafo-somos">Fortalecer el vínculo entre fundaciones y adoptantes en el ámbito de la protección animal. Utilizamos la tecnología para mejorar la comunicación y promover la conciencia social sobre la importancia de ayudar a los animales desprotegidos.</p>
         </div>
         <div class="caja2">
-            <img src="img/30.png">
-            <p>Nuestro Futuro</p>
-            <p>Descripción</p>
+            <img src="/img/30.png">
+            <h3>Nuestro Futuro</h3>
+            <p class="parrafo-somos">En 5 años, aspiramos a ser un referente confiable en adopciones, apoyos económicos y participación inclusiva. Nuestra visión va más allá de un proyecto social de corto plazo.</p>
         </div>
         <div class="caja2">
             <img src="img/29.png">
-            <p>Nuestros principios</p>
-            <p>Descripción</p>
+            <h3>Nuestros principios</h3>
+            <p class="parrafo-somos">Nuestros pilares fundamentales: Transparencia, Solidaridad, Compromiso y Amor. Buscamos abordar la problemática con autenticidad, trabajar juntos para concientizar sobre la importancia de los derechos de los animales, mantener una dedicación constante hacia nuestros objetivos y, sobre todo, cultivar el amor y cuidado hacia los animales desprotegidos.</p>
         </div>
     </section>
 
 
     <!-- Sección: Nuestro equipo -->
-    <div class="container__cards">
+    <div class="container__cards" id="elEquipo">
         <h2>Nuestro <span>equipo</span></h2>
     </div>
 
@@ -126,15 +126,23 @@
         <div class="swiper-wrapper">
             <div class="card__Ot"> <!-- card -->
                 <div class="card__Ot_img"> <!-- card__image -->
-                    <img src="/img/Valentina__OurTeam.svg" alt="card image">
+                    <img src="/img/fotoVale.svg" alt="card image">
                 </div>
 
                 <div class="card__content">
                     <!-- <span class="card__title">Front-end Developer</span> -->
-                    <span class="card__name">Valentina Acevedo</span>
-                    <!-- <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    </p> -->
-                    <!-- <button class="card__btn">View More</button> -->
+                    <span class="card__name">Valentina <span class="acevedo">Acevedo</span></span>
+                    <p>Mi sueño siempre fué ayudar a los chandositos de la calle, siempre he soñado con recoger a cada uno, darles alimento y amor.</p>
+                    <div class="redes-ot">
+                        <i class='bx bxl-linkedin-square' style='color:#3c7dd8'>
+                            <a href="https://www.linkedin.com/in/developer-valenaceve/" target="_blank"></a>
+
+                            </a>
+                          </i>
+                          
+                        <i class='bx bxl-github' style='color:#828282' ></i>
+                    </div>
+                   
                 </div>
 
 
@@ -146,10 +154,13 @@
 
                 <div class="card__content">
                     <!-- <span class="card__title">Back-end  Developer</span> -->
-                    <span class="card__name">Giovanni Escarpeta</span>
-                    <!-- <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    </p> -->
-                    <!-- <button class="card__btn">View More</button> -->
+                    <span class="card__name">Giovanni <span class="scarpetta"> Scarpetta</span> </span>
+                    <p>No vamos a cambiar el mundo ayudando un animal, pero al menos el mundo habrá cambiado para él.</p>
+                    <div class="redes-ot">
+                        <i class='bx bxl-linkedin-square' style='color:#3c7dd8'></i>
+                        <i class='bx bxl-github' style='color:#828282' ></i>
+                    </div>
+                  
                 </div>
 
 
@@ -162,29 +173,18 @@
 
                 <div class="card__content">
                     <!-- <span class="card__title">Front-end Developer</span> -->
-                    <span class="card__name">Joscari Ortiz</span>
-                    <!-- <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    </p> -->
-                    <!-- <button class="card__btn">View More</button> -->
+                    <span class="card__name">Joscari <span class="ortiz"> Ortiz</span></span>
+                    <p>La adopción es la magia de dar y recibir amor incondicional.</p>
+                    <div class="redes-ot">
+                        <i class='bx bxl-linkedin-square' style='color:#3c7dd8'></i>
+                        <i class='bx bxl-github' style='color:#828282' ></i>
+                    </div>
+                    
                 </div>
 
 
             </div>
-            <div class="card__Ot"> <!-- card -->
-                <div class="card__Ot_img"> <!-- card__image -->
-                    <img src="/img/Estiber__OurTeam.svg" alt="card image">
-                </div>
-
-                <div class="card__content">
-                    <!-- <span class="card__title">Back-end Developer</span> -->
-                    <span class="card__name">Estiber Téllez</span>
-                    <!-- <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    </p> -->
-                    <!-- <button class="card__btn">View More</button> -->
-                </div>
-
-
-            </div>
+         
         </div>
     </section>
 
@@ -279,16 +279,16 @@
                     <div class="footer-site-logo mb-4">
                         <h2>ChandiLove</h2>
                     </div>
-                    <ul class="list-unstyled nav-links mb-5">
+                    <!-- <ul class="list-unstyled nav-links mb-5">
                         <li><a href="#">Inicio</a></li>
                         <li><a href="#">¿Qué ofrecemos?</a></li>
                         <li><a href="#">¿Quiénes somos?</a></li>
                         <li><a href="#">Contáctenos</a></li>
-                    </ul>
+                    </ul> -->
                     <div class="social mb-4">
                         <h3>Sigue en contacto</h3>
                         <ul class="list-unstyled">
-                            <li class="li"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li class="li"><a href="#"><i class="fa-brands fa-linkedin" ></i></a></li>
                             <li class="wp"><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
                         </ul>
                     </div>

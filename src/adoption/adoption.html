@@ -8,7 +8,6 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel="stylesheet" href="/src/adoption/adoption.css">
-    <link rel="stylesheet" href="/src/feed/feed.css">
 </head>
 <body>
     <header>
@@ -54,7 +53,7 @@
                          <div class="notifications-popup">
                             <div>
                                 <div class="profile-photo">
-                                    <img src="../img/Estiber__OurTeam.svg">
+                                    <img src="../../img/Estiber__OurTeam.svg">
                                 </div>
                                 <div class="notification-body">
                                     <b>Estiber Tellez</b> le gustó tu publicación 
@@ -63,7 +62,7 @@
                             </div>
                             <div>
                                 <div class="profile-photo">
-                                    <img src="../img/Valentina__OurTeam.svg">
+                                    <img src="../../img/Valentina__OurTeam.svg">
                                 </div>
                                 <div class="notification-body">
                                     <b>Estiber Tellez</b> comentó tu publicación 
@@ -72,7 +71,7 @@
                             </div>
                             <div>
                                 <div class="profile-photo">
-                                    <img src="../img/Giovanni__OurTeam.svg">
+                                    <img src="../../img/Giovanni__OurTeam.svg">
                                 </div>
                                 <div class="notification-body">
                                     <b>Estiber Tellez</b> le gustó tu publicación 
@@ -109,60 +108,17 @@
                         <section class="contenedor_categorias">
                             <h1>Categorias</h1>
                             <ul class="lista_botones">
-                                <li><button class="boton_categoria"><i class="fi fi-br-cat"></i> Gatos</button></li>
-                                <li><button class="boton_categoria"> Perros</button></li>
+                                <li><button class="boton_categoria"><i class="fa-solid fa-cat"></i> Gatos</button></li>
+                                <li><button class="boton_categoria"><i class="fa-solid fa-dog"></i> Perros</button></li>
                                 <li><button class="boton_categoria"><i class="fi fi-br-object-union"></i> Todos</button></li>
                                 <li><button class="boton_categoria"><i class="fi fi-br-comment-heart"></i> Favoritos</button></li>
                             </ul>
                         </section>
     
                         <!-- Mascotas para adoptar -->
-                        <section class="contenedor_mascotas">
+                        <section class="contenedor_mascotas" id="lista-mascotas">
                             <!-- Aqui se colcan las mascotas creadas con js -->
                         </section>
-
-                        <div class="container-popup">
-                            <div class="carousel-popup">
-                                <img src="https://static.guiaongs.org/wp-content/uploads/2015/12/faa_destacada1-360x336.png" alt="">
-                            </div>
-                            <div class="container-info-pet">
-                                <h1 class="title-popup">Kaissa</h1>
-                                <ul class="info-pet">
-                                    <li class="list-box">
-                                        <div class="rounded-box">
-                                            <h3>Info</h3>
-                                            <p>Macho</p>
-                                        </div>
-                                    </li>
-                                    <li class="list-box">
-                                        <div class="rounded-box">
-                                            <h3>Info</h3>
-                                            <p>Macho</p>
-                                        </div>
-                                    </li>
-                                    <li class="list-box">
-                                        <div class="rounded-box">
-                                            <h3>Info</h3>
-                                            <p>Macho</p>
-                                        </div>
-                                    </li>
-                                    <li class="list-box">
-                                        <div class="rounded-box">
-                                            <h3>Info</h3>
-                                            <p>Macho</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <p class="description-pet">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis quos dolores molestiae amet, velit maxime esse illum sit optio facere. Eos corrupti facere ratione mollitia culpa inventore dolore earum vel.
-                                    Dolore eius voluptatem recusandae voluptatibus ipsa, blanditiis odio velit rerum cum ratione dicta ipsum et ex obcaecati suscipit vitae molestiae non tempora eaque illum, consequatur, dolor repellat accusantium quibusdam? Beatae.
-                                </p>
-                                <div class="btn-adoption">
-                                    <button>Adoptame</button>
-                                    <button>Donar</button>
-                                </div>
-                            </div>
-                        </div>
                     </div>
             </section>
 
@@ -180,7 +136,14 @@
                 </div> 
             </div>
         </div>
+
+        <!-- Aqui va el Popup -->
+        <div class="container__popup" id="mascota-popup">
+    
+        </div>
+
     </main>
+    <script src="https://kit.fontawesome.com/fffdbb4c78.js" crossorigin="anonymous"></script>
     <script src="./adopt.js"></script>
 </body>
 </html>

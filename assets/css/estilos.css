@@ -1,23 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500;700');
+
+
 
 
 /* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    margin: 0 20;
+    margin: 0;
     padding: 0;
-    font-family: Dosis;
+    font-family: Dosis, sans-serif;
+    font-weight: bold;
 }
-section{
-    align-items: center;
-    justify-content: center;
-    /* height:100vh;
-    width: 100%; */
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; 
-}
+
 
 :root {
     --azul: #30B6B8 ;
@@ -29,14 +28,17 @@ section{
 /* Barra de navegación */
 .navbar {
     background-size: cover;
-	background-image: url("/img/barra-prueba3.png");
+	background-image: url("/img/Background_NavBar.jpg");
     background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px;
+    padding: 10px 0px;
     margin: 0px;
     width: 100%;
+    position: fixed;
+    z-index: 100;
+
 }
 
 /* Logo */
@@ -44,12 +46,13 @@ section{
 .navbar img{
     width: 150px;
     padding-top: 0px;
+    margin-right: 45px;
 }
 
 /* Barra de navegación */
 
 .nav-links {
-    gap: 15px;
+    gap: 18px;
     list-style: none;
     display: flex;
 }
@@ -72,13 +75,15 @@ section{
 }
 
 #boton1 {
-    margin-top: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
     width: 170px;
     height: 55px;
     border-radius: 30px;
     border-style: none;
     background-color: var(--rojo);
     color: snow;
+    cursor: pointer;
 }
 
 #boton2 {
@@ -90,6 +95,7 @@ section{
     border-style: none;
     margin-top: -30px;
     background-color: var(--naranja);
+    margin-left: 80px;
 }
 
 #boton3 {
@@ -108,11 +114,12 @@ section{
 .cabecera {
     background-size: cover;
     background-attachment: fixed;
-    padding-left: 120px;
+    padding-left: 155px;
     padding-right: 150px;
+    padding-top: 80px;
     display: flex;
     width: 100%;
-    height: 550px;
+    height: 700px;
 }
 
 .cabecera h1{
@@ -131,7 +138,7 @@ section{
 .cabecera .presentacion{
     margin-top: 50px;
     width: 750px;
-    height: 545px;
+    height: 645px;
 }
 
 .cabecera .imagen{
@@ -142,8 +149,8 @@ section{
 }
 
 .cabecera .imagen img{
-    width: 700px;
-    height: 500px;
+
+    height: 600px;
 }
 
 .menuCabecera{
@@ -153,7 +160,7 @@ section{
 }
 
 .menuCabecera li{
-    margin-top: 10px;
+    margin-top: 50px;
     font-family: Dosis;
     color: var(--gris);
     display: inline;
@@ -167,20 +174,36 @@ section{
     font-size: 20px;
 }
 
+.spn-adoptar {
+    color: var(--azul);
+}
+
+.spn-amar {
+    color: var(--rojo);
+}
+
+.btn-huella {
+    margin-left: 0rem;
+    width: 18px;
+    height: 18px;
+    margin-bottom: -0.3rem;
+
+}
+
+/******************************/
+/**   ¿Qué opciones tienes?  **/
+/******************************/
 .container{
     display: flex;
     background-size: cover;
     background-attachment: fixed;
-    padding-left: 20px;
-    width: 1000px;
+    
     height: 100px;
     color: var(--gris);
     font-family: Dosis;
     font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 40px;
     padding-top: -30px;
-    margin-left: 120PX;
 }
 
 .container span{
@@ -191,10 +214,11 @@ section{
     font-size: 40px;
 }
 
-
-/******************************/
-/**   ¿Qué opciones tienes?  **/
-/******************************/
+.titulo-opciones {
+    /* display: flex;
+    justify-content: center; */
+    margin-left: 240px;
+}
 
 #opciones {
     background-image: url("/chandilove-frontend/img/barra.png");
@@ -246,7 +270,7 @@ section{
     text-align: center;
     background-color: var(--azul);
     width: 200px;
-    height: 50px;
+    height: 60%;
     border-radius: 5px;
 }
 
@@ -256,7 +280,7 @@ section{
     text-align: center;
     margin: 30px;
     width: 200px;
-    height: 50px;
+    height: 60%;
     background-color: #F9A213;
     border-radius: 5px;
 }
@@ -267,7 +291,7 @@ section{
     text-align: center;
     margin: 30px;
     width: 200px;
-    height: 50px;
+    height: 60%;
     background-color: var(--rojo);
     border-radius: 5px;
 }
@@ -279,7 +303,7 @@ section{
     margin: 30px;
     background-color: var(--azul);
     width: 200px;
-    height: 50px;
+    height: 60%;
     border-radius: 5px;
 }
 
@@ -289,23 +313,17 @@ section{
 
 .container2 h2{
     font-size: 40px;
+
+    
 }
 
 
 .container2{
     display: flex;
-    background-size: cover;
-    background-attachment: fixed;
-    padding-left: 20px;
-    width: 100%;
-    height: 100px;
+    margin: 10px 0px 10px 110px ;
+    padding: 20px 0;
     color: var(--gris);
-    font-family: Dosis;
     font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: -30px;
-    padding-top: -30px;
-    margin-left: 120PX;
 }
 
 .container2 span{
@@ -313,94 +331,78 @@ section{
 }
 
 
-/* NO SE ESTA USANDO */
-#somos {
-    background-image: url("/img/barra.png");
-    margin-top: 10px;
-    padding-top: 30px;
-    padding-left: 80px;
-    padding-right: 150px;
-    display: flex;
-    width: 1025px;
-    height: 650px;
-}
-
-#somos .caja{
-    padding-left: 30px;
-    font-family: Dosis;
-    color: var(--gris);
-    margin: 35px;
-}
-
-#somos .caja img{
-    width: 300px;
-    height: 250px;
-}
-
-#somos2 {
-    background-image: url("/chandilove-frontend/img/barra.png");
-    margin-top: 10px;
-    padding-top: 30px;
-    padding-left: 80px;
-    padding-right: 150px;
-    display: flex;
-    width: 1025px;
-    height: 350px;
-}
-
-#somos2 .caja{
-    padding-left: 30px;
-    font-family: Dosis;
-    color: var(--gris);
-    margin: 35px;
-}
-
-#somos2 .caja img{
-    width: 300px;
-    height: 250px;
-}
-
 #opciones2 {
-    background-image: url("/img/Fondo__paticas.svg");
-    margin-top: 0px;
-    padding-top: -30px;
+ 
+    padding: 10px 80px;
+    background-image: url("");
+    display: flex;
+    width: 100%;
+}
+
+
+
+
+#opciones2 p{
+
+    padding: 5px 35px ;
+    text-align: left;
+    font-size: 30px;
+    color: var(--gris);
+}
+
+#opciones3 {
+  
+    padding: 10px 80px;
+    background-image: url("");
     display: flex;
     width: 100%;
     height: 300px;
+    justify-content: center;
 }
 
 
-#opciones2 .caja{
-    text-align: center;
-    font-family: Dosis;
+
+
+#opciones3 p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    font-weight: lighter;
+    font-size: 20px;
     color: var(--gris);
-    margin: 35px;
-    height: 330px;
+    
 }
 
-#opciones2 p{
-    text-align: left;
+.parrafo-somos {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 200px ;
 }
-
 
 .caja2 img{
-    padding-left: 180px;
-    padding-top: -10px;
     width: 100px;
     height: 100px;
 }
 
+.caja2 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 40px;
+}
+
 .caja2 p{
-    padding-left: 180px;
-    font-family: Dosis;
+    padding-top: 15px ;
     color: var(--gris);
 }
 
 .caja .esquina{
-    margin-top: -30px;
-    padding-top: -30px;
+    display: relative;
     width: 300px;
     height: 330px;
+    background-color: #F9A112;
 }
 
 /*************************/
@@ -421,7 +423,9 @@ section{
     font-size: 25px;
 }
 .container__cards h2 {
-    font-size: 40px;
+    margin-top: 100px;
+    font-size: 45px;
+    margin-bottom: 100px;
 }
 
 .container__cards span{
@@ -436,6 +440,17 @@ section{
     flex-wrap: wrap; */
 }
 
+.card__name .acevedo {
+    color: var(--azul);
+}
+
+.card__name .scarpetta {
+    color: var(--naranja);
+}
+.card__name .ortiz {
+    color: var(--rojo);
+}
+
 .swiper-wrapper {
 
     width: 100%;
@@ -443,13 +458,13 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 75px;
 }
 
 .card__Ot {
     
-    width: 230px;
-    height: 250px;
+    width: 330px;
+    height: 350px;
     background-color: #fff;
     border-radius: 2em;
     box-shadow: 0 0 2em rgba(0, 0, 0, .2);
@@ -482,6 +497,13 @@ section{
     flex-direction: column;
 }
 
+.card__content p {
+    display: flex;
+    padding: 0.5rem 1.5rem;
+    font-weight: lighter;
+    height: 100px;
+}
+
 .card__title {
     font-size: 1rem;
     font-weight: 500;
@@ -491,27 +513,22 @@ section{
 
 .card__name{
     color: var(--gris);
+    font-size: 23px;
 }
 
 .card__text {
     text-align: center;
     font-size: 1.1rem;
     margin: 1em 0;
+
 }
 
 
-
-.card__btn {
-    background-color: var(--azul);
-    color: #fff;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    border: none;
-    padding: .5em;
-    border-radius: .5em;
-    margin-top: .5em;
+.redes-ot i{
+    margin-top:1rem ;
+    font-size: 48px;
     cursor: pointer;
+    bottom: 0;
 }
 
 .OurTeam__txt {
@@ -523,6 +540,8 @@ section{
 }
 
 .OurTeam__txt h2{
+    margin-top: 130px;
+    font-size: 35px;
     color: var(--gris);
 }
 
@@ -538,7 +557,7 @@ section{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-bottom: 200px;
+    margin-bottom: 300px;
 }
 
 .brand{
@@ -558,13 +577,16 @@ section{
 /****   Contact Us   *****/
 /*************************/
 
+
+
+
 .containerContact{
     width: 70%;
     margin: auto;
 }
 .titleContact {
     color: var(--gris);
-    font-size: 56px;
+    font-size: 45px;
     /* font-style: normal; */
     /* font-weight: 700; */
     line-height: 66px;
@@ -579,7 +601,6 @@ section{
 
 .subtitleContact {
     width: 552px;
-    height: 40.764px;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Dosis;
     font-size: 20px;
@@ -592,7 +613,7 @@ section{
 }
 .contact-wrapper > * {
     padding: 32px;
-    margin-top: 50px;
+
 }
 
 .contact-form {
@@ -667,7 +688,7 @@ input:focus {
 textarea[name="message"] {
     grid-column: span 2; /* El textarea ocupa dos columnas */
     width: calc(100% - 124px); /* Restar el espacio entre elementos (gap) */
-    height: 65px;
+    height: 75px;
     padding: 5px; /* Agregar relleno para el textarea */
     resize: vertical; /* Permitir el cambio de altura verticalmente si es necesario */
     padding: 27px;
@@ -717,7 +738,7 @@ p.block.sbmt {
 .h6{
     color: #404040;
    
-    font-size: 18px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 700;
     line-height: 20px; /* 111.111% */
@@ -726,7 +747,7 @@ p.block.sbmt {
 }
 .h4{
     color: #FFF;
-    font-size: 30px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 700;
     line-height: 46px; /* 127.778% */
@@ -760,7 +781,7 @@ form {
 
 .contact-info {
     background: #FCA311;
-    padding: 40px 104px 0px 104px;
+    padding: 0px 104px 0px 104px;
 }
 
 .contact-info-img{
@@ -775,7 +796,7 @@ form {
 /* LARGE SIZE */
 @media(min-width: 700px) {
     body {
-        padding: 0 64px;
+        padding: 0;
     }
     .contact-wrapper {
         display: grid;
@@ -784,9 +805,7 @@ form {
     .contact-wrapper > * {
         padding: 32px 0px 0px 0px;
     }
-    .contact-info {
-        padding: 50px 104px 0px 104px;
-    }
+ 
     .contact-info h6,
     .contact-info ul,
     .contact-info p {
@@ -808,6 +827,7 @@ form {
 /*************************/
 
 .container__footer {
+    margin-top: 80px;
     display: flex;
     justify-content: space-around;
 }
