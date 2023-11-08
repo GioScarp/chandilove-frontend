@@ -35,13 +35,13 @@
                     <span class="icono"><a href="#" onclick="toggle()">x</a></span>
                 </button>
             <h2>Iniciar sesión</h2>
-            <form action="#" >
+            <form action="#" id="formulario">
                 <p>Email</p>
                 <label for=""></label>
                 <input class="popup_input" type="text" name="email" placeholder="Correo electronico" required>
                 <p>Contraseña</p>
                 <input class="popup_input" type="password" name="password" placeholder="Contraseña" required>
-                <button class="btn-popup" type="submit"><a href="/src/feed/feed.html">Entrar</a></button>
+                <button class="btn-popup" id="boton-iniciar-sesion" type="submit"><a href="/src/feed/feed.html">Entrar</a></button>
             </form>
             <p class="continue">o continua con:</p>
             <div class="cuenta-container">
@@ -62,6 +62,8 @@
                     <p><a href="#" onclick="toggle()">Registra aquí tu fundación</a></p> 
                 </div>
             </div>
+
+            <div class="mensaje"></div>
         </div>
 
 
