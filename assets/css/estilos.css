@@ -41,11 +41,13 @@ body {
     cursor: pointer;
 }
 
-.icono {
-    display: block;
+.icono a {
     width: 100%;
     height: 100%;
     text-align: center;
+    font-size: 35px;
+    color: black;
+    text-decoration: none;
 }
 
 #popup{
