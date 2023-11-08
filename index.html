@@ -31,13 +31,17 @@
         
         <!-- POP-UP START -->
         <div id="popup">
+                <button class="cerrar" onclick="cerrarFormulario()">
+                    <span class="icono">x</span>
+                </button>
             <h2>Iniciar sesión</h2>
             <form action="#" >
                 <p>Email</p>
+                <label for=""></label>
                 <input class="popup_input" type="text" name="email" placeholder="Correo electronico">
                 <p>Contraseña</p>
                 <input class="popup_input" type="password" name="password" placeholder="Contraseña">
-                <button type="submit"><a href="/src/feed/feed.html">Entrar</a></button>
+                <button class="btn-popup" type="submit"><a href="/src/feed/feed.html">Entrar</a></button>
             </form>
             <p class="continue">o continua con:</p>
             <div class="cuenta-container">
@@ -62,30 +66,89 @@
 
 
         <div id="popup2">
+            <button class="cerrar" onclick="cerrarFormulario()">
+                <span class="icono">x</span>
+            </button>
             <h2>Registrate</h2>
-            <form action="#" >
-                <p>Email</p>
-                <input class="popup_input" type="text" name="email" placeholder="Correo electronico">
-                <p>Contraseña</p>
-                <input class="popup_input" type="password" name="password" placeholder="Escribe tu contraseña">
-                <p>Confirma tu contraseña</p>
-                <input class="popup_input" type="password" name="password" placeholder="Confirma tu contraseña">
-                <button type="submit"><a href="/src/feed/feed.html">Entrar</a></button>
+            <form action="#" class="form2">
+                <div class="column">
+                    <div class="input-box">
+                        <label>Nombre</label>
+                        <input type="text" placeholder="Ingresa tu nombre" required />
+                    </div>
+                    <div class="input-box">
+                        <label>Apellido</label>
+                        <input type="text" placeholder="Ingresa tu apellido" required />
+                    </div>
+                </div>
+
+
+                <div class="column">
+                    <div class="input-box">
+                        <label>Email</label>
+                        <input type="text" placeholder="Ingresa tu email" required />
+                    </div>
+                    <div class="input-box">
+                        <label>Contraseña</label>
+                        <input type="password" placeholder="Ingresa tu contraseña" required>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="input-box">
+                    <label>Nombre de usuario</label>
+                    <input type="text" placeholder="Ingresa un nombre de usuario" required />
+                    </div>
+                    <div class="input-box">
+                    <label>Birth Date</label>
+                    <input type="date" placeholder="Fecha de nacimiento" required />
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="select-box">
+                        <select>
+                            <option hidden>Ciudad</option>
+                            <option>Bogotá D.C</option>
+                            <option>Medellin</option>
+                            <option>Barranquilla</option>
+                            <option>Santa Marta</option>
+                            <option>Armenia</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="column txt">
+                    <div class="text-area">
+                        <label>Biografia</label>
+                        <textarea name="" id="" rows="4"></textarea>
+                    </div>
+                    <div class="photo-area">
+                        <label for="">Subir Foto</label><br>
+                        <input type="file" name="photo">
+                    </div>
+                </div>
+
+                <div class="gender-box">
+                    <h3>Gender</h3>
+                    <div class="gender-option">
+                        <div class="gender">
+                            <input type="radio" id="check-male" name="gender" checked />
+                            <label for="check-male">Hombre</label>
+                        </div>
+                        <div class="gender">
+                            <input type="radio" id="check-female" name="gender" />
+                            <label for="check-female">Mujer</label>
+                        </div>
+                        <div class="gender">
+                            <input type="radio" id="check-other" name="gender" />
+                            <label for="check-other">Prefiero no decir</label>
+                        </div>
+                    </div>
+                </div>
+                <button>Submit</button>
             </form>
-            <p class="continue">o continua con:</p>
-            <div class="cuenta-container">
-                <div class="cuenta">
-                    <div class="google"><img src="img/google-img.png" alt=""></div>
-                </div>
-                <div class="cuenta">
-                    <div class="facebook"><img src="img/facebook-img.png" alt=""></div>
-                </div>
-            </div>
-            <div class="cuenta-promo">
-                <div class="noCuenta">
-                    <p>¡No te vayas! Tu chandosito te espera</p>   
-                </div>
-            </div>
         </div>
         <!-- POP-UP END -->
 
@@ -293,19 +356,19 @@
                     <form id="form" action="https://formspree.io/f/xwkdwqab" method="POST">
                         <p class="container-input">
                             <label>Nombre</label>
-                            <input type="text" name="fullname" placeholder="Nombre y Apellido">
+                            <input class="container-input_contain" type="text" name="fullname" placeholder="Nombre y Apellido">
                         </p>
                         <p class="container-input">
                             <label> </label>
-                            <input type="email" name="email" placeholder="ejemplo@gmail.com">
+                            <input class="container-input_contain" type="email" name="email" placeholder="ejemplo@gmail.com">
                         </p>
                         <p class="container-input">
                             <label>Telefono</label>
-                            <input type="number" name="phone" placeholder="(+57)300 000 000">
+                            <input class="container-input_contain" type="number" name="phone" placeholder="(+57)300 000 000">
                         </p>
                         <p class="container-input">
                             <label>Empresa</label>
-                            <input type="text" name="affair" placeholder="Empresa">
+                            <input class="container-input_contain" type="text" name="affair" placeholder="Empresa">
                         </p>
                         <p class="block">
                             <label>Mensaje</label>
@@ -381,6 +444,7 @@
             var popup2 = document.getElementById('popup2');
             popup2.classList.toggle('active');
         }
+
     </script>
     <script src="assets/js/script.js"></script>
     <script src="js/efectos.js"></script>
