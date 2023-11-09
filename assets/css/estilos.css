@@ -129,6 +129,10 @@ body {
     color: var(--blanco);
     text-decoration: none;
 }
+
+#popup a:hover{
+    color: var(--rojo);
+}
 .continue {
     text-align: center;
     font-family: Dosis, serif;
@@ -221,7 +225,7 @@ body {
     background: #fff;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
   }
   .container header {
     font-size: 1.5rem;
@@ -451,10 +455,10 @@ body {
     background-attachment: fixed;
     padding-left: 155px;
     padding-right: 150px;
-    padding-top: 110px;
+    padding-top: 90px;
     display: flex;
     width: 100%;
-    height: 900px;
+    height: 750px;
 }
 
 .cabecera h1{
@@ -655,7 +659,7 @@ body {
 
 .container2{
     display: flex;
-    margin: 10px 0px 10px 110px ;
+    margin: 50px 0px 10px 110px ;
     padding: 20px 0;
     color: var(--gris);
     font-size: 20px;
@@ -679,7 +683,7 @@ body {
 
 #opciones2 p{
 
-    padding: 5px 35px ;
+    padding: 0px 35px 60px ;
     text-align: left;
     font-size: 30px;
     color: var(--gris);
@@ -716,8 +720,8 @@ body {
 }
 
 .caja2 img{
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
 }
 
 .caja2 {
@@ -726,6 +730,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 0 40px;
+
 }
 
 .caja2 p{
@@ -758,7 +763,7 @@ body {
     font-size: 25px;
 }
 .container__cards h2 {
-    margin-top: 100px;
+    margin-top: 150px;
     font-size: 45px;
     margin-bottom: 100px;
 }
@@ -807,12 +812,12 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-
+    margin-bottom: 60px;
 }
 
 .card__Ot_img {
-    width: 5em;
-    height: 5em;
+    width: 7.5em;
+    height: 7.5em;
     border-radius: 50%;
     padding: 3px;
     margin-top: 1em;
@@ -861,7 +866,7 @@ body {
 
 .redes-ot i{
     margin-top:1rem ;
-    font-size: 48px;
+    font-size: 30px;
     cursor: pointer;
     bottom: 0;
 }
@@ -893,6 +898,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 300px;
+
 }
 
 .brand{
@@ -945,6 +951,7 @@ body {
     color: var(--gris);
     /*  padding: 0px 0px 0px 150px; */
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 .contact-wrapper > * {
     padding: 32px;
@@ -953,6 +960,7 @@ body {
 
 .contact-form {
     width: 70%;
+    height: 70%;
     margin: auto;
     border-radius: 25px;
     background: #30B6B8;
@@ -967,7 +975,7 @@ body {
 }
 
 .contact-form form label {
-    padding: 32px 0px 10px 0px;
+    padding: 22px 0px 10px 0px;
     display: block;
     color:#fff
 }
@@ -978,7 +986,7 @@ body {
 }
 
 .contact-form form input {
-    padding: 27px;
+    padding: 20px;
     border: none;
     background: #fff;
     outline: 0;

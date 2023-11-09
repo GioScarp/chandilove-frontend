@@ -126,7 +126,35 @@
         <div class="container__popup" id="mascota-popup">
     
         </div>
+        <!-- Contenedor del formulario emergente -->
+        <div id="popup-container" class="popup">
+            <div class="popup-content">
+                <!-- Botón para cerrar el formulario emergente -->
+                <button id="close-form" class="close-button">X</button>
+                <!-- Formulario para crear la publicación -->
+                <form id="post-form">
+                    <h2>Crear Publicación</h2>
+                    <input required type="text" placeholder="Título" name="title">
+                    <textarea required id="content" name="content" placeholder="Qué quieres compartir hoy?..."></textarea>
+                    <div class="form-actions">
+                        <input type="file" accept="image/*" required name="image" id="image-upload" style="display: none;" title="Seleccione una imagen">
+                        <label for="image-upload" class="upload-button">
+                            <i class="fas fa-camera"></i> 
+                            <span id="upload-message"> Subir imagen</span>
+                        </label>
+                        <button type="button" class="emoji-button" id="emoji-button"><i class="far fa-smile"></i></button>
+                        <button type="submit" class="publish-button">Compartir</button>
+                    </div>
+                    <!-- Contenedor de emojis (oculto por defecto) -->
+                    <div id="emoji-container" class="emoji-popup">
+                </div>
+                </form>
+                <div id="post-img-preview" class="post"> </div>
+            </div>
+        <div class="right">
 
+        </div>
+    </div>
     </main>
     <script src="https://kit.fontawesome.com/fffdbb4c78.js" crossorigin="anonymous"></script>
     <script src="./adopt.js"></script>

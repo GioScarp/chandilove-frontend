@@ -495,6 +495,34 @@ main .container .right {
 
 
 
+/* Posts Grid styles */
+.posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Tamaño de columna deseado */
+    grid-auto-rows: 320px; /* Tamaño de fila deseado */
+    gap: 5px; /* Espacio entre las imágenes */
+    margin: 3rem 6rem;
+}
+
+/* Individual post styles */
+.post {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 16px 0px rgba(19, 21, 68, 0.06);
+}
+
+.post img {
+    border-radius: 16px;
+    background: lightgray 0px -6.087px / 100% 140.351% no-repeat;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 /* Estilo para el fondo de vidrio */
 .popup {
@@ -513,13 +541,13 @@ main .container .right {
 
 /* Estilo para el contenido del formulario emergente */
 .popup-content {
-    height: 350px;
     background: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     text-align: center;
     position: relative;
+    width: 50%;
     max-width: 80%;
 }
 
@@ -541,10 +569,6 @@ h2 {
 
 }
 
-form#post-form {
-    width: 500px;
-    height: 246px;
-}
 
 /* Estilo para el campo de descripción */
 #post-form textarea[name="content"] {
@@ -627,12 +651,28 @@ form#post-form {
     color: var(--azul);
 }
 
+.emojis--container {
+    display: inline;
+}
+
+#post-img-preview {
+    width: 35%;
+    margin: auto;
+    display: none;
+}
 /* Estilo para el contenedor de emojis */
 .emoji-popup {
     display: none;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+    position: relative;
+    padding: 1px;
+    background: white;
+    height: 33vh;
+    overflow: scroll;
+    width: 370px;
+    margin: 3px auto auto;
 }
 
 .emoji {
@@ -647,6 +687,8 @@ form#post-form {
     border-radius: 5px;
 }
 
+
+/*========== RESPONSIVE  ==========*/
 /*========== RESPONSIVE NEST-HUB ==========*/
 
 /* SIDEBAR */
