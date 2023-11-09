@@ -1,6 +1,4 @@
 const $form = document.querySelector('#form');
-const formulario = document.getElementById('formulario');
-const mensaje = document.getElementById('mensaje');
 const botonIniciarSesion = document.getElementById('boton-iniciar-sesion');
 
 $form.addEventListener('submit', handleSubmit)
@@ -22,40 +20,118 @@ async function handleSubmit(event) {
 }
 
 
-        
+<<<<<<< HEAD
+document.getElementById('login-button').addEventListener('click', function() {
+    // Obtener los valores de correo electrónico y contraseña del formulario
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+=======
 
-formulario.addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que el formulario se envíe de forma convencional
+>>>>>>> 99b659d51f77d6763d3e370cb061c487e9132448
 
-    const url = 'http://localhost:8080/api/usuario/login'; // URL de inicio de sesión
-    const usuario = document.getElementById('usuario').value;
-    const contrasena = document.getElementById('contrasena').value;
-
-    const datosUsuario = {
-      usuario: usuario,
-      contrasena: contrasena
+    // Crear un objeto con los datos del formulario
+    const formData = {
+        email: email,
+        password: password,
     };
 
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(datosUsuario)
+    // Realizar una solicitud POST al endpoint
+    fetch('http://localhost:8080/api/usuario/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
     })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('No se pudo iniciar sesión');
+    .then((response) => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Error en la solicitud');
         }
-        return response.json();
-      })
-      .then(data => {
-        // Manejar la respuesta del servidor, por ejemplo, guardar un token de autenticación
-        const token = data.token;
-        mensaje.textContent = 'Inicio de sesión exitoso. Token: ' + token;
-      })
-      .catch(error => {
-        // Manejar errores
-        mensaje.textContent = 'Error al iniciar sesión: ' + error.message;
-      });
-  });
+    })
+    .then((data) => {
+        // Manejar la respuesta exitosa aquí
+
+        // Guardar la información de inicio de sesión en el localStorage
+        localStorage.setItem('usuario', JSON.stringify(data));
+
+        // Redirigir a la página de inicio
+        window.location.href = '/src/feed/feed.html';
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        // Manejar el error (por ejemplo, mostrar un mensaje de error al usuario)
+        Swal.fire({
+            title: "Error",
+            text: "Error en el inicio de sesión.  Por favor, inténtalo de nuevo.",
+            icon: "error"
+        });
+    });
+}); 
+
+
+
+// headers: {
+//     "Content-Type": "multipart/form-data",
+//     
+// },
+
+// DATOS REGISTRO
+document.getElementById("registrar-persona-button").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Obtener los valores del formulario de Registro
+    const nombreUsuario = document.getElementById("nombre-usuario").value;
+    const email = document.getElementById("email1").value;
+    const contrasena = document.getElementById("contrasena").value;
+    const biografia = document.getElementById("biografia").value;
+    const ciudad = document.getElementById("ciudad").value;
+    const nombre = document.getElementById("nombre").value;
+    const apellido = document.getElementById("apellido").value;
+    const fechaNacimiento = document.getElementById("fecha-nacimiento").value;
+    const fotoPerfilInput = document.getElementById("foto_perfil");
+
+    // Crear un objeto FormData
+    const formData = new FormData();
+
+    // Agregar campos de texto al FormData
+    formData.append("nombreUsuario", nombreUsuario);
+    formData.append("email", email);
+    formData.append("password", contrasena);
+    formData.append("biografía", biografia);
+    formData.append("ciudad", ciudad);
+    formData.append("typeUser", 2);
+    formData.append("nombre", nombre);
+    formData.append("apellido", apellido);
+    formData.append("fechaNacimiento", fechaNacimiento);
+    formData.append("gender", "FEMENINO");
+
+    // Agregar archivo de imagen al FormData
+    formData.append("imagen", fotoPerfilInput.files[0]);
+
+    // Realizar una solicitud 'POST' al endpoint de registro
+    fetch("http://localhost:8080/api/usuario/registro", {
+        method: "POST",
+        body: formData,
+        headers:{
+            "Content-Type": "multipart/form-data",
+        },
+        mode: 'no-cors',
+    })
+    .then((response) => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Error en la solicitud');
+        }
+    })
+    .then((data) => {
+        // Manejar la respuesta del servidor después del registro
+        console.log("Usuario registrado:", data);
+    })
+    .catch((error) => {
+        // Manejar los errores, por ejemplo, mostrando un mensaje de error
+        console.error("Error al registrar usuario", error);
+    });
+});

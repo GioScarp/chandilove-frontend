@@ -319,6 +319,7 @@ main .container .left{
     padding: 30px 20px;
     justify-content: center;
     flex-direction: row;
+    gap: 50px;
 }
 
 .foto-perfil img {
