@@ -20,6 +20,9 @@ async function handleSubmit(event) {
 }
 
 
+
+
+
 document.getElementById('login-button').addEventListener('click', function() {
     // Obtener los valores de correo electrónico y contraseña del formulario
     const email = document.getElementById('email').value;
@@ -47,87 +50,89 @@ document.getElementById('login-button').addEventListener('click', function() {
         }
     })
     .then((data) => {
-        // Manejar la respuesta exitosa aquí
+        // Mostrar el JSON de la persona en la consola
+        console.log('Datos de la persona:', data);
 
         // Guardar la información de inicio de sesión en el localStorage
         localStorage.setItem('usuario', JSON.stringify(data));
 
         // Redirigir a la página de inicio
-        window.location.href = '/src/feed/feed.html';
+        window.location.href = 'src/feed/feed.html'; // Ajusté la ruta de redirección
     })
     .catch((error) => {
         console.error('Error:', error);
-        // Manejar el error (por ejemplo, mostrar un mensaje de error al usuario)
+        // Mostrar un mensaje de error al usuario
         Swal.fire({
             title: "Error",
-            text: "Error en el inicio de sesión.  Por favor, inténtalo de nuevo.",
+            text: "Error en el inicio de sesión. Por favor, inténtalo de nuevo.",
             icon: "error"
         });
     });
-}); 
-
-
-
-// headers: {
-//     "Content-Type": "multipart/form-data",
-//     
-// },
+});
 
 // DATOS REGISTRO
-document.getElementById("registrar-persona-button").addEventListener("click", function (e) {
+document.getElementById("registro-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
     // Obtener los valores del formulario de Registro
-    const nombreUsuario = document.getElementById("nombre-usuario").value;
-    const email = document.getElementById("email1").value;
-    const contrasena = document.getElementById("contrasena").value;
-    const biografia = document.getElementById("biografia").value;
-    const ciudad = document.getElementById("ciudad").value;
     const nombre = document.getElementById("nombre").value;
     const apellido = document.getElementById("apellido").value;
+    const ciudad = document.getElementById("ciudad").value;
     const fechaNacimiento = document.getElementById("fecha-nacimiento").value;
-    const fotoPerfilInput = document.getElementById("foto_perfil");
-
-    // Crear un objeto FormData
-    const formData = new FormData();
-
-    // Agregar campos de texto al FormData
-    formData.append("nombreUsuario", nombreUsuario);
-    formData.append("email", email);
-    formData.append("password", contrasena);
-    formData.append("biografía", biografia);
-    formData.append("ciudad", ciudad);
-    formData.append("typeUser", 2);
-    formData.append("nombre", nombre);
-    formData.append("apellido", apellido);
-    formData.append("fechaNacimiento", fechaNacimiento);
-    formData.append("gender", "FEMENINO");
-
-    // Agregar archivo de imagen al FormData
-    formData.append("imagen", fotoPerfilInput.files[0]);
+    const email = document.getElementById("email").value;
+    const contrasena = document.getElementById("contrasena").value;
+    const nombreUsuario = document.getElementById("nombre-usuario").value;
 
     // Realizar una solicitud 'POST' al endpoint de registro
     fetch("http://localhost:8080/api/usuario/registro", {
         method: "POST",
-        body: formData,
-        headers:{
-            "Content-Type": "multipart/form-data",
+        headers: {
+            "Content-Type": "application/json",
         },
-        mode: 'no-cors',
+        body: JSON.stringify({
+            nombre,
+            apellido,
+            ciudad,
+            fechaNacimiento,
+            email,
+            contrasena,
+            nombreUsuario,
+        }),
     })
-    .then((response) => {
-        if (response.ok) {
-            return response.json();
-        } else {
-            throw new Error('Error en la solicitud');
-        }
-    })
-    .then((data) => {
-        // Manejar la respuesta del servidor después del registro
-        console.log("Usuario registrado:", data);
-    })
-    .catch((error) => {
-        // Manejar los errores, por ejemplo, mostrando un mensaje de error
-        console.error("Error al registrar usuario", error);
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Error en la solicitud');
+            }
+        })
+        .then((data) => {
+            // Manejar la respuesta del servidor después del registro
+            console.log("Usuario registrado:", data);
+        })
+        .catch((error) => {
+            // Manejar los errores, por ejemplo, mostrando un mensaje de error
+            console.error("Error al registrar usuario", error);
+        });
+});
+
+document.getElementById("registrar-persona-button").addEventListener("click", function () {
+    // Imprimir el JSON del usuario registrado en la consola (simulado)
+    const nombre = document.getElementById("nombre").value;
+    const apellido = document.getElementById("apellido").value;
+    const ciudad = document.getElementById("ciudad").value;
+    const fechaNacimiento = document.getElementById("fecha-nacimiento").value;
+    const email = document.getElementById("email").value;
+    const contrasena = document.getElementById("contrasena").value;
+    const nombreUsuario = document.getElementById("nombre-usuario").value;
+
+    console.log("Persona registrada", {
+        nombre,
+        apellido,
+        ciudad,
+        fechaNacimiento,
+        email,
+        contrasena,
+        nombreUsuario,
     });
 });
