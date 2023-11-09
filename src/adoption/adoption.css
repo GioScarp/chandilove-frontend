@@ -408,7 +408,7 @@ btn:hover {
 
 /* ========== RIGHT ========== */
 .container .right {
-    background-color: var(--color-light);
+    background-color: #fff;
 }
 
 
@@ -600,20 +600,21 @@ form#post-form {
     padding: 0 50px;
 }
 
-.contenedor__banner{
-    width: 100%;
-    height: 250px;
-    margin-top: 40px;
+/* Image-container design */
+.contenedor__banner {
+    display: flex;
+    overflow: hidden;
+    height: 300px;
 }
 
-
-/* Image-container design */
-.image-container, .slide, .slide img{
+.image-container, .slide {
     width: 100%;
     height: 100%;
 }
 
-.slide img{
+.slide img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -753,7 +754,7 @@ form#post-form {
     width: 95%;
     background-color: var(--rojo);
     border-radius: 0px 50px 50px 0px;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
 }
 
@@ -770,6 +771,7 @@ form#post-form {
     flex-direction: column;
     width: 80%;
     margin-top: 8%;
+    margin-bottom: 8%;
 }
 
 .titulo_fundaciones{
@@ -777,7 +779,7 @@ form#post-form {
     display: flex;
     align-items: center;
     color: var(--blanco);
-    margin-bottom: 40px;
+    margin-bottom: 6px;
     gap: 20px;
 }
 
@@ -936,6 +938,12 @@ form#post-form {
 
 .rounded-box p {
     color: var(--rojo);
+}
+
+.rounded-box h3 {
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .parrafo{

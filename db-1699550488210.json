@@ -1,0 +1,197 @@
+{
+  "mascotas": [
+    {
+      "id": 1,
+      "name": "Pogba",
+      "gender": "Macho",
+      "age": "3",
+      "category": "Gatos",
+      "color": "Negro",
+      "breed": "KMH",
+      "description": "¡Hola! Soy Pogba, un gatito negro con ojos amarillos que te hipnotizarán. Tengo 3 años y soy todo un explorador. Me encanta jugar y recibir cariño. ¿Quieres ser mi compañero humano? 🖤",
+      "healthStatus": "",
+      "fundacionID": 1,
+      "images": {
+        "image": "",
+        "thumbnail": "https://img.freepik.com/foto-gratis/gato-negro-ojos-amarillos-mirando-camara-borroso_181624-1920.jpg?w=740&t=st=1696810645~exp=1696811245~hmac=b241bbdf18ec00a0a07ac033ac3c652bde9d7c653940f7cf1e39562dbe556b33"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Luna",
+      "gender": "Hembra",
+      "age": "2",
+      "category": "Perros",
+      "color": "Blanco",
+      "breed": "",
+      "description": "Hola, soy Luna, una perrita blanca llena de energía y amor. Con solo 2 años, estoy lista para llenar tu vida de alegría. ¿Quieres ser mi familia? 🐶💕",
+      "healthStatus": "",
+      "fundacionID": 2,
+      "images": {
+        "image": "",
+        "thumbnail": "https://img.freepik.com/foto-gratis/cerrar-lindo-gato-interior_23-2148882585.jpg?w=740&t=st=1696810233~exp=1696810833~hmac=fb4c38e13a9cee1d293b61e316d1b0c577f5b8f07c75419e858d38d10cdb1162"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Whiskers",
+      "gender": "Macho",
+      "age": "4",
+      "category": "Gatos",
+      "color": "Miel",
+      "breed": "",
+      "description": "¡Hola, bigotes de soja! Un gato adorable de 4 años con pelaje color miel. Mi personalidad tranquila y afectuosa hará que te enamores de mí. 😻",
+      "healthStatus": "",
+      "fundacionID": 1,
+      "images": {
+        "image": "",
+        "thumbnail": "https://img.freepik.com/foto-gratis/perro-pug-aislado-fondo-blanco_2829-11416.jpg?w=826&t=st=1696810749~exp=1696811349~hmac=3b45089cdc9b579e3421f04a0dbdc294291c3623735a286d882a47613871cd8c"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Rocky",
+      "gender": "Macho",
+      "age": "5",
+      "category": "Perros",
+      "color": "Marron con blanco",
+      "breed": "",
+      "description": "Hola, soy Rocky, un perro juguetón y leal de 5 años. Mi pelaje marrón y blanco es tan suave como parece. ¿Quieres salir a pasear conmigo? 🐕🌟",
+      "healthStatus": "",
+      "fundacionID": 2,
+      "images": {
+        "image": "",
+        "thumbnail": "https://img.freepik.com/psd-gratis/adorable-beagle-cachorro-solo-retrato_53876-73998.jpg?w=740&t=st=1696810801~exp=1696811401~hmac=d8a6221e427fe8f482e90f3f3c3d9a2d5625213dd3434df76171dcc3d4419788"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Misty",
+      "gender": "Hembra",
+      "age": "2",
+      "category": "Gatos",
+      "color": "Gris",
+      "breed": "",
+      "description": "Hola, soy Misty, una gata gris de 2 años. Mi elegancia y mi suave pelaje harán de tu hogar un lugar más acogedor. ¿Quieres ser mi humano? 😽",
+      "healthStatus": "",
+      "fundacionID": 1,
+      "images": {
+        "image": "",
+        "thumbnail": "https://img.freepik.com/foto-gratis/disparo-aislado-gatito-jengibre-sentado-frente-blanco-mirando-derecha_181624-45937.jpg?w=740&t=st=1696810895~exp=1696811495~hmac=5ab1b819f44bf0578364437e75cceda6288cb3784b13cab0bf3c57869ba59da7"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Rosty",
+      "gender": "Hembra",
+      "age": "2",
+      "category": "Perro",
+      "color": "Gris",
+      "breed": "",
+      "description": "¡Hola! Soy Rosty, una perrita gris llena de amor y energía. Con solo 2 años, estoy lista para ser tu compañera leal. ¿Quieres jugar conmigo? 🐾🐶",
+      "healthStatus": "",
+      "fundacionID": 1,
+      "images": {
+        "image": "",
+        "thumbnail": "https://img.freepik.com/foto-gratis/retrato-vertical-tipo-perro-pastor-aleman-lindo-domestico_181624-1407.jpg?w=740&t=st=1696912093~exp=1696912693~hmac=4a8adc30f52032b8f25bcc25210bf7fcb3e32ec25e5f9dbf6da2fe5355a9b271"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Michin",
+      "gender": "Hembra",
+      "age": "2",
+      "category": "Gatos",
+      "color": "Gris",
+      "breed": "",
+      "description": "¡Hola, soy Michin! Una gata gris llena de curiosidad y afecto. Mi pelaje suave y mi mirada tierna harán que te enamores de mí. 😻💖",
+      "healthStatus": "",
+      "fundacionID": 1,
+      "images": {
+        "image": "",
+        "thumbnail": "https://img.freepik.com/foto-gratis/hermoso-gato-blanco-pelotas-interior_23-2150752872.jpg?w=826&t=st=1696912060~exp=1696912660~hmac=a5d0aec45726068c5d81c2cc74ad918ab20cd8f4787c3aeab3567c05cadf7c5f"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Ross",
+      "gender": "Hembra",
+      "age": "2",
+      "category": "Gatos",
+      "color": "Gris",
+      "breed": "",
+      "description": "¡Hola, soy Ross! Una gata gris llena de misterio y encanto. Con solo 2 años, ya sé cómo conquistar corazones con mi suave pelaje. ¿Quieres ser mi humano? 😺💕",
+      "healthStatus": "",
+      "fundacionID": 1,
+      "images": {
+        "image": "",
+        "thumbnail": "https://img.freepik.com/foto-gratis/retrato-husky-siberiano-ojos-diferentes-colores-sobre-superficie-negra_181624-48434.jpg?w=740&t=st=1696912238~exp=1696912838~hmac=985dc772959c68156a319d45b6f53055a960ed13606bab0e25c03e23bb942e0a"
+      }
+    }
+  ],
+  "publicaciones": [
+    {}
+  ],
+  "fundaciones": [
+    {
+      "id": 1,
+      "img": "https://www.albergaria.es/media/logos/small/albergue-animales-oviedo-1657142497.jpg",
+      "name": "PROANIMALES",
+      "contact": {
+        "phone": "",
+        "email": "",
+        "address": ""
+      },
+      "description": "Fundación protectora de animales",
+      "web": ""
+    },
+    {
+      "id": 2,
+      "img": "https://static.guiaongs.org/wp-content/uploads/2015/12/faa_destacada1-360x336.png",
+      "name": "F.A.A",
+      "contact": {
+        "phone": "",
+        "email": "",
+        "address": ""
+      },
+      "description": "Fundación de ayuda a los animales",
+      "web": ""
+    },
+    {
+      "id": 3,
+      "img": "https://petepua.com/wp-content/uploads/2020/09/mascotas-en-ecuador.-Fundacion-Huellas-Paraiso-Animal.-petepuaweb.jpg",
+      "name": "PARAISO HUELLAS",
+      "contact": {
+        "phone": "",
+        "email": "",
+        "address": ""
+      },
+      "description": "Rescate animal",
+      "web": ""
+    },
+    {
+      "id": 4,
+      "img": "https://amipet.app/wp-content/uploads/2023/05/Fundacion-Callejeros-Buscan-Hogar-2.jpg",
+      "name": "BUSCADOG",
+      "contact": {
+        "phone": "",
+        "email": "",
+        "address": ""
+      },
+      "description": "Callejeros buscan hogar",
+      "web": ""
+    },
+    {
+      "id": 5,
+      "img": "https://www.buscadog.cl/uploads/2016-10-19_09-53-15_10_632.jpg",
+      "name": "ALMA ANIMAL",
+      "contact": {
+        "phone": "",
+        "email": "",
+        "address": ""
+      },
+      "description": "Fundación de ayuda a los animales",
+      "web": ""
+    }
+  ]
+}
