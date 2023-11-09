@@ -291,6 +291,10 @@ main .container .left{
     font-size: 18px;
 }
 
+.post {
+    height: 50px;
+    width: 50px;
+ }
 /*.btn-logout {
     margin-top: 220px;
 }

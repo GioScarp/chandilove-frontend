@@ -51,39 +51,7 @@
                     <a href="../perfil/indexPerfil.html" class="menu-item "> 
                         <span><i class="fi fi-rr-user"></i> </span> <h3>Perfil</h3> 
                     </a>
-                    <a class="menu-item" id="notifications">
-                        <span><i class="fi fi-rr-bell"><small class="notification-count">9+</small></i></span> <h3>Notificaciones</h3> 
-                         <!------------- NOTIFICACION POPUP  ---------->
-                         <div class="notifications-popup">
-                            <div>
-                                <div class="profile-photo">
-                                    <img src="../img/Estiber__OurTeam.svg">
-                                </div>
-                                <div class="notification-body">
-                                    <b>Estiber Tellez</b> le gustó tu publicación 
-                                    <small class="text-muted">2 DAYS AGO</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="profile-photo">
-                                    <img src="../img/Valentina__OurTeam.svg">
-                                </div>
-                                <div class="notification-body">
-                                    <b>Estiber Tellez</b> comentó tu publicación 
-                                    <small class="text-muted">1 DAYS AGO</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="profile-photo">
-                                    <img src="../img/Giovanni__OurTeam.svg">
-                                </div>
-                                <div class="notification-body">
-                                    <b>Estiber Tellez</b> le gustó tu publicación 
-                                    <small class="text-muted">30 MIN AGO</small>
-                                </div>
-                            </div>
-                         </div>
-                    </a>
+                    
                     <a href="../adoption/adoption.html" class="menu-item">    
                         <span><i class="fi fi-rr-paw"></i></span> <h3>Adopta</h3>
                     </a>
@@ -356,7 +324,6 @@
                     <!-- Formulario para crear la publicación -->
                     <form id="post-form">
                         <h2>Crear Publicación</h2>
-                        <input required type="text" placeholder="Título" name="title">
                         <textarea required id="content" name="content" placeholder="Qué quieres compartir hoy?..."></textarea>
                         <div class="form-actions">
                             <input type="file" accept="image/*" required name="image" id="image-upload" style="display: none;" title="Seleccione una imagen">
@@ -367,11 +334,15 @@
                             <button type="button" class="emoji-button" id="emoji-button"><i class="far fa-smile"></i></button>
                             <button type="submit" class="publish-button">Compartir</button>
                         </div>
-                    </form>
-                    <!-- Contenedor de emojis (oculto por defecto) -->
-                    <div id="emoji-container" class="emoji-popup">
+                        <!-- Contenedor de emojis (oculto por defecto) -->
+                        <div id="emoji-container" class="emoji-popup">
                     </div>
+                    </form>
+                    <div id="post-img-preview" class="post"> </div>
                 </div>
+            <div class="right">
+
+            </div>
         </div>
     </main>
     <script  src =" https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js " ></script> 
