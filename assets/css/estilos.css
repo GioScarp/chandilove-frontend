@@ -19,11 +19,343 @@ body {
 
 
 :root {
+    --blanco: #fff;
     --azul: #30B6B8 ;
     --naranja: #F9A112;
     --rojo: #FE5E6D;
     --gris: #404040;
 }
+
+.cerrar{
+    background: transparent;
+    border: none;
+
+}
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.icono {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#popup{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 765px;
+    border-radius: 40px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    padding: 70px 60px;
+
+    &.active{
+        top: 56%;
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;   
+    }
+}
+
+#popup2{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 950px;
+    height: 765px;
+    border-radius: 50px 0 0 50px;
+    padding: 50px 80px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    overflow-y: scroll;
+
+    &.active{
+        top: 56%;
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;   
+    }
+}
+#popup2::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+#popup2::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+#popup2::-webkit-scrollbar-thumb
+{
+	background-color: var(--rojo);
+	border: none;
+}
+
+#popup,#popup2 h2{
+    font-size: 38px;
+}
+#popup form p{
+    font-size: 20px;
+    padding-top: 30px;
+}
+#popup form{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+#popup form button a{
+    color: var(--blanco);
+    text-decoration: none;
+}
+.continue {
+    text-align: center;
+    font-family: Dosis, serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+#popup .popup_input{
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 6px; 
+    width: 447px;
+    height: 52px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+#popup .btn-popup{
+    width: 450px;
+    height: 52px;
+    margin: 40px auto;
+    border-radius: 5px;
+    background: var(--rojo);
+    color: var(--blanco);
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+.cuenta-container{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;   
+    margin: 0 auto;
+    padding-bottom: 40px;
+    text-align: center;
+}
+.cuenta{
+    width: 140px;
+    height: 52px;
+    border-radius: 40px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+.cuenta .google img,
+.cuenta .facebook img{
+    width: 25px;
+    height: 25px;
+    margin: 13px 40px 13px 40px;
+}
+
+.cuenta-promo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.noCuenta, .noRegistro{
+    display: flex;
+    padding: 15px 0;
+    font-size: 16px;
+}
+.noCuenta p, .noRegistro p{
+    padding: 0 15px;
+}
+.noCuenta a, .noRegistro a{
+    font-family: Dosis, serif;
+    size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #2a1e17;
+    margin: 0 auto;
+}
+.noRegistro p:last-child{
+    padding-bottom: 70px;
+}
+#blur.active{
+    filter: blur(20px);
+}
+#blur2.active{
+    filter: blur(20px);
+}
+
+.form2{
+    display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  .container header {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+  }
+  .container .form {
+    margin-top: 30px;
+  }
+  .form2 .input-box {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .input-box label, .text-area label {
+    color: #333;
+    font-size: 19px;
+  }
+  .form2 :where(.input-box input, .select-box) {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+  }
+  .input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+  .form2 .column {
+    width: 100%;
+    display: flex;
+    column-gap: 15px;
+  }
+  .txt{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+  }
+  .text-area textarea{
+    height: 100px;
+    width: 500px;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+    resize: none;
+  }
+  .photo-area input[type="file"] {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #ddd;
+    background-image: url("/img/image-preview.png");
+    background-size: cover;
+
+  }
+  .photo-area input[type="file"]:hover{
+    background-image: url("/img/image-preview.png");
+    background-size: cover;
+  }
+
+  .form2 .gender-box {
+    margin-top: 20px;
+  }
+  .gender-box h3 {
+    color: #333;
+    font-size: 19px;
+    margin-bottom: 8px;
+  }
+  .form2 :where(.gender-option, .gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+  }
+  .form2 .gender {
+    column-gap: 5px;
+  }
+  .gender input {
+    accent-color: rgb(130, 106, 251);
+  }
+  .form2 :where(.gender input, .gender label) {
+    cursor: pointer;
+  }
+  .gender label {
+    color: #707070;
+  }
+  .address :where(input, .select-box) {
+    margin-top: 15px;
+  }
+  .select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+  }
+  .form2 button {
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgb(254, 94, 109);
+  }
+  .form2 button:hover {
+    background: rgb(254, 52, 72);
+  }
+  /*Responsive*/
+  @media screen and (max-width: 500px) {
+    .form2 .column {
+      flex-wrap: wrap;
+    }
+    .form2 :where(.gender-option, .gender) {
+      row-gap: 15px;
+    }
+  }
+
+
+
+
+
+
 
 /* Barra de navegación */
 .navbar {
@@ -33,11 +365,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 0px;
     margin: 0px;
+    padding: 10px 10px;
     width: 100%;
     position: fixed;
-    z-index: 100;
+    z-index: 100;   
 
 }
 
@@ -96,6 +428,7 @@ body {
     margin-top: -30px;
     background-color: var(--naranja);
     margin-left: 80px;
+    cursor: pointer;
 }
 
 #boton3 {
@@ -107,6 +440,7 @@ body {
     border-style: none;
     margin-top: -30px;
     background-color: var(--azul); 
+    cursor: pointer;
 }
 
 /*Cabecera */
@@ -116,10 +450,10 @@ body {
     background-attachment: fixed;
     padding-left: 155px;
     padding-right: 150px;
-    padding-top: 80px;
+    padding-top: 110px;
     display: flex;
     width: 100%;
-    height: 700px;
+    height: 900px;
 }
 
 .cabecera h1{
@@ -657,9 +991,7 @@ body {
 }
 
 /* Estilos para los campos de entrada */
-input[type="text"],
-input[type="email"],
-input[type="number"],
+.container-input_contain
 textarea {
     padding: 27px;
     border: none;

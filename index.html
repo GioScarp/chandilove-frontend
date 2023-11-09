@@ -20,9 +20,139 @@
             <li><a href="#quienesSomos">¿Quiénes somos?</a></li>
             <li><a href="#elEquipo">El equipo</a></li>
             <li><a href="#contactenos">Contáctenos</a></li>
-            <li><button id="boton2">Registrarse</button></li>
-            <li><button id="boton3">Iniciar Sesión</button></li>
+            <li><button id="boton2" onclick="toggle2()">Registrarse</button>
+            </li>  
+            <li><button id="boton3" onclick="toggle()">Iniciar Sesión</button></li>
         </ul>
+
+
+
+
+        
+        <!-- POP-UP START -->
+        <div id="popup">
+                <button class="cerrar" onclick="cerrarFormulario()">
+                    <span class="icono">x</span>
+                </button>
+            <h2>Iniciar sesión</h2>
+            <form action="#" >
+                <p>Email</p>
+                <label for=""></label>
+                <input class="popup_input" type="text" name="email" placeholder="Correo electronico">
+                <p>Contraseña</p>
+                <input class="popup_input" type="password" name="password" placeholder="Contraseña">
+                <button class="btn-popup" type="submit"><a href="/src/feed/feed.html">Entrar</a></button>
+            </form>
+            <p class="continue">o continua con:</p>
+            <div class="cuenta-container">
+                <div class="cuenta">
+                    <div class="google"><img src="img/google-img.png" alt=""></div>
+                </div>
+                <div class="cuenta">
+                    <div class="facebook"><img src="img/facebook-img.png" alt=""></div>
+                </div>
+            </div>
+            <div class="cuenta-promo">
+                <div class="noCuenta">
+                    <p>¿Todavía no tienes una cuenta?</p>
+                    <p><a href="#" onclick="toggle()">Registrate aquí gratis</a></p>     
+                </div>
+                <div class="noRegistro">
+                    <p>¿Quieres registrate como empresa?</p>
+                    <p><a href="#" onclick="toggle()">Registra aquí tu fundación</a></p> 
+                </div>
+            </div>
+        </div>
+
+
+        <div id="popup2">
+            <button class="cerrar" onclick="cerrarFormulario()">
+                <span class="icono">x</span>
+            </button>
+            <h2>Registrate</h2>
+            <form action="#" class="form2">
+                <div class="column">
+                    <div class="input-box">
+                        <label>Nombre</label>
+                        <input type="text" placeholder="Ingresa tu nombre" required />
+                    </div>
+                    <div class="input-box">
+                        <label>Apellido</label>
+                        <input type="text" placeholder="Ingresa tu apellido" required />
+                    </div>
+                </div>
+
+
+                <div class="column">
+                    <div class="input-box">
+                        <label>Email</label>
+                        <input type="text" placeholder="Ingresa tu email" required />
+                    </div>
+                    <div class="input-box">
+                        <label>Contraseña</label>
+                        <input type="password" placeholder="Ingresa tu contraseña" required>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="input-box">
+                    <label>Nombre de usuario</label>
+                    <input type="text" placeholder="Ingresa un nombre de usuario" required />
+                    </div>
+                    <div class="input-box">
+                    <label>Birth Date</label>
+                    <input type="date" placeholder="Fecha de nacimiento" required />
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="select-box">
+                        <select>
+                            <option hidden>Ciudad</option>
+                            <option>Bogotá D.C</option>
+                            <option>Medellin</option>
+                            <option>Barranquilla</option>
+                            <option>Santa Marta</option>
+                            <option>Armenia</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="column txt">
+                    <div class="text-area">
+                        <label>Biografia</label>
+                        <textarea name="" id="" rows="4"></textarea>
+                    </div>
+                    <div class="photo-area">
+                        <label for="">Subir Foto</label><br>
+                        <input type="file" name="photo">
+                    </div>
+                </div>
+
+                <div class="gender-box">
+                    <h3>Gender</h3>
+                    <div class="gender-option">
+                        <div class="gender">
+                            <input type="radio" id="check-male" name="gender" checked />
+                            <label for="check-male">Hombre</label>
+                        </div>
+                        <div class="gender">
+                            <input type="radio" id="check-female" name="gender" />
+                            <label for="check-female">Mujer</label>
+                        </div>
+                        <div class="gender">
+                            <input type="radio" id="check-other" name="gender" />
+                            <label for="check-other">Prefiero no decir</label>
+                        </div>
+                    </div>
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+        <!-- POP-UP END -->
+
+
         <div class="hamburger">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -31,7 +161,7 @@
     </nav>
 
     <!-- Sección Home/Inicio  + Encabezado -->
-    <section class="cabecera">
+    <section class="cabecera" id="blur" id="blur2" >
         <div class="presentacion">
             <h1>¿Listo para <span class="spn-adoptar"> adoptar</span> y <span class="spn-amar"> amar </span> <br>a un compañero peludo?</h1>
 
@@ -56,10 +186,10 @@
     </section>
 
     <!-- Sección: ¿Qué opciones tienes? -->
-    <div class="container titulo-opciones" id="queOfrecemos">
+    <div class="container titulo-opciones" id="queOfrecemos" id="blur" id="blur2">
         <h2>¿Qué opciones <span>tienes?</span></h2>
     </div>
-    <section id="opciones">
+    <section id="opciones" id="blur blur2">
         <div class="caja">
             <img src="img/1.png">
             <p>Adoptar, apadrinar <br> o donar</p>
@@ -73,7 +203,7 @@
             <p>Comunidad amante de <br> los animales</p>
         </div>
     </section>
-    <div id="cajitas">
+    <div id="cajitas" id="blur blur2">
         <ul class="cajitas1">
             <li class="cajitas2">+ de 90 chandositos<br> esperando por ti</li>
             <li class="cajitas3">+ de 30 fundaciones<br> registradas</li>
@@ -226,19 +356,19 @@
                     <form id="form" action="https://formspree.io/f/xwkdwqab" method="POST">
                         <p class="container-input">
                             <label>Nombre</label>
-                            <input type="text" name="fullname" placeholder="Nombre y Apellido">
+                            <input class="container-input_contain" type="text" name="fullname" placeholder="Nombre y Apellido">
                         </p>
                         <p class="container-input">
-                            <label>Email</label>
-                            <input type="email" name="email" placeholder="ejemplo@gmail.com">
+                            <label> </label>
+                            <input class="container-input_contain" type="email" name="email" placeholder="ejemplo@gmail.com">
                         </p>
                         <p class="container-input">
                             <label>Telefono</label>
-                            <input type="number" name="phone" placeholder="(+57)300 000 000">
+                            <input class="container-input_contain" type="number" name="phone" placeholder="(+57)300 000 000">
                         </p>
                         <p class="container-input">
                             <label>Empresa</label>
-                            <input type="text" name="affair" placeholder="Empresa">
+                            <input class="container-input_contain" type="text" name="affair" placeholder="Empresa">
                         </p>
                         <p class="block">
                             <label>Mensaje</label>
@@ -300,6 +430,22 @@
         </div>
     </footer>
 
+    
+    <script type="text/javascript">
+        function toggle(){
+            var blur = document.getElementById('blur');
+            blur.classList.toggle('active');
+            var popup = document.getElementById('popup');
+            popup.classList.toggle('active');
+        };
+        function toggle2(){
+            var blur = document.getElementById('blur');
+            blur.classList.toggle('active');
+            var popup2 = document.getElementById('popup2');
+            popup2.classList.toggle('active');
+        }
+
+    </script>
     <script src="assets/js/script.js"></script>
     <script src="js/efectos.js"></script>
     <script src="https://kit.fontawesome.com/d81632c2ac.js" crossorigin="anonymous"></script>
