@@ -960,6 +960,198 @@ form#post-form {
 .btn-adoption button:hover{
     background-color: var(--azul);
 }
+/* Posts Grid styles */
+.posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Tamaño de columna deseado */
+    grid-auto-rows: 320px; /* Tamaño de fila deseado */
+    gap: 5px; /* Espacio entre las imágenes */
+    margin: 3rem 6rem;
+}
+
+/* Individual post styles */
+.post {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 16px 0px rgba(19, 21, 68, 0.06);
+}
+
+.post img {
+    border-radius: 16px;
+    background: lightgray 0px -6.087px / 100% 140.351% no-repeat;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo para el fondo de vidrio */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.30); /* Fondo de vidrio */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px); /* Efecto de desenfoque */
+    z-index: 1;
+}
+
+/* Estilo para el contenido del formulario emergente */
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    width: 50%;
+    max-width: 80%;
+}
+
+/* Estilo para el campo de título */
+#post-form input[name="title"] {
+    font-family: 'Dosis';
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 23px;
+
+}
+
+
+/* Estilo para el campo de descripción */
+#post-form textarea[name="content"] {
+    font-family: 'Dosis';
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    resize: vertical; /* Permitir que la descripción se redimensione verticalmente */
+}
+
+/* Upload image*/
+
+/* Estilo para ocultar el input */
+#image-upload {
+    display: none;
+}
+
+/* Estilo para mostrar el label */
+.upload-button {
+    cursor: pointer;
+}
+
+/* Estilo para cambiar el color del icono de la cámara después de cargar una imagen */
+.upload-button i {
+    color: var(--rojo);
+}
+
+/* Estilo para ocultar el mensaje cuando el input está vacío */
+#image-upload:valid + .upload-button #upload-message {
+    display: none;
+}
+
+/* Estilo para el botón de cierre */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Estilo para el botón "Publicar" */
+.publish-button {
+    font-family: 'Dosis';
+    font-size: 15px;
+    margin-top: 20px;
+    background-color: var(--rojo);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo para el botón "Publicar" al pasar el mouse */
+.publish-button:hover {
+    background-color: var(--azul);
+}
+
+/* Estilo para los botones de iconos */
+.upload-button,
+.emoji-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: var(--rojo);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.upload-button:hover,
+.emoji-button:hover {
+    color: var(--azul);
+}
+
+.emojis--container {
+    display: inline;
+}
+
+#post-img-preview {
+    width: 35%;
+    margin: auto;
+    display: none;
+}
+/* Estilo para el contenedor de emojis */
+.emoji-popup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+    padding: 1px;
+    background: white;
+    height: 33vh;
+    overflow: scroll;
+    width: 370px;
+    margin: 3px auto auto;
+}
+
+.emoji {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Estilo para el contenedor de emojis al pasar el mouse */
+.emoji:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
 
 /* ======= Responsive ======== */
 

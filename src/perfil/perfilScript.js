@@ -76,11 +76,22 @@ openFormButton.addEventListener('click', () => {
 
 // Ocultar el formulario emergente al hacer clic en el botón de cierre
 closeFormButton.addEventListener('click', () => {
-    // Confirmar antes de cerrar el formulario
-    if (confirm('¿Está seguro de cancelar la publicación?')) {
-        popupContainer.style.display = 'none';
-        emojiContainer.style.display = 'none'; // Ocultar el contenedor de emojis si está abierto
-    }
+    // Utilizar SweetAlert en lugar de confirm
+    Swal.fire({
+        title: '¿Está seguro de cancelar la publicación?',
+        text: '¡No podrás deshacer esta acción!',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, estoy seguro'
+    }).then((result) => {
+        // Si el usuario confirma, cierra el formulario
+        if (result.isConfirmed) {
+            popupContainer.style.display = 'none';
+            emojiContainer.style.display = 'none'; // Ocultar el contenedor de emojis si está abierto
+        }
+    });
 });
 
 imgInput.addEventListener('change', function () {
