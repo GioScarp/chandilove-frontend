@@ -27,13 +27,13 @@
             </div>
             <a href="../perfil/indexPerfil.html" class="profile">
                 <div class="handle">
-                    <h4>Joscari Ortiz</h4>
+                    <h4 id="nav_nombre">Joscari Ortiz</h4>
                     <p class="text-muted">
                         @joscari
                     </p>
                 </div>
                 <div class="profile-photo">
-                    <img src="/img/Joscari__OurTeam.svg">
+                    <img id="nav_foto_perfil" src="">
                 </div>
             </a>
         </div>
@@ -83,16 +83,14 @@
                     <div class="profile-horizontal">
                         <!-- Profile Information -->
                         <div class="profile-info">
-                            <h1>Joscari <br><span>Ortiz</span></br></h1>
-                            <button><span>Seguir +</span></button>
                         </div>
                         <!-- Profile Photo -->
                         <div class="foto-perfil">
-                            <img src="/img/Joscari__OurTeam.svg" alt="Foto de perfil">
+                            <img id="foto_perfil" src="" alt="Foto de perfil">
                         </div>
                         <!-- Statistics -->
                         <div class="stats">
-                            <p>100 <span>Publicaciones</span></p>
+                            <p id="numero_publicaciones">0 <span>Publicaciones</span></p>
                             <p>150 <span>Seguidores</span></p>
                             <p>500 <span>Siguiendo</span></p>
                         </div>
@@ -100,9 +98,6 @@
                     <!-- Description Section -->
                     <div class="description">
                         <h3>Sobre mí</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, excepturi, nisi soluta
-                            mollitia nobis consequatur molestias ipsum unde at, quia amet reiciendis deserunt
-                            reprehenderit! Quas fugit consequatur repudiandae voluptatibus rem.</p>
                     </div>
                     <!-- Posts Grid -->
                     <div class="posts" id="container-posts">
@@ -131,7 +126,8 @@
                         </div>
                         <!-- Contenedor de emojis (oculto por defecto) -->
                         <div id="emoji-container" class="emoji-popup">
-                    </div>
+
+                        </div>
                     </form>
                     <div id="post-img-preview" class="post"> </div>
                 </div>
@@ -144,6 +140,7 @@
     <script  src =" https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js " ></script> 
     <script src="https://kit.fontawesome.com/d81632c2ac.js" crossorigin="anonymous"></script>
     <script src="perfilScript.js"></script>
+    <script src="crearPublicacion.js"></script>
 </body>
 
 </html>
