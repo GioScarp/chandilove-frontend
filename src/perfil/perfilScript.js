@@ -14,7 +14,7 @@ function base64ToBlob(base64, contentType) {
     return new Blob([binaryArray], { type: contentType });
   }
 
-fetch('http://localhost:8080/api/persona/2')
+fetch('http://localhost:8080/api/persona/4')
   .then(response => {
     if (!response.ok) {
       throw new Error('La solicitud no pudo completarse con éxito');
@@ -104,7 +104,7 @@ fetch('http://localhost:8080/api/persona/2')
 // }
 
 let postsContent = "";
-fetch('http://localhost:8080/api/publicaciones/usuario/17')
+fetch('http://localhost:8080/api/publicaciones/usuario/19')
   .then(response => {
     if (!response.ok) {
       throw new Error('La solicitud no pudo completarse con éxito');
