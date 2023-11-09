@@ -20,10 +20,14 @@ async function handleSubmit(event) {
 }
 
 
+<<<<<<< HEAD
 document.getElementById('login-button').addEventListener('click', function() {
     // Obtener los valores de correo electrónico y contraseña del formulario
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
+=======
+
+>>>>>>> 99b659d51f77d6763d3e370cb061c487e9132448
 
     // Crear un objeto con los datos del formulario
     const formData = {

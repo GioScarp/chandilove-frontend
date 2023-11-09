@@ -291,6 +291,10 @@ main .container .left{
     font-size: 18px;
 }
 
+.post {
+    height: 50px;
+    width: 50px;
+ }
 /*.btn-logout {
     margin-top: 220px;
 }
@@ -315,6 +319,7 @@ main .container .left{
     padding: 30px 20px;
     justify-content: center;
     flex-direction: row;
+    gap: 50px;
 }
 
 .foto-perfil img {

@@ -1,3 +1,48 @@
+// Carousel de banners
+let slideIndex = 1;
+displaySlide(slideIndex);
+
+function moveSlides(n) {
+	displaySlide(slideIndex += n);
+}
+
+function activeSlide(n) {
+	displaySlide(slideIndex = n);
+}
+
+
+function displaySlide(n) {
+	let i;
+	let totalslides = document.getElementsByClassName("slide");
+	let totaldots = document.getElementsByClassName("footerdot");
+
+    
+	if (n > totalslides.length) {
+		slideIndex = 1;
+	}
+
+	if (n < 1) {
+		slideIndex = totalslides.length;
+	}
+	for (i = 0; i < totalslides.length; i++) {
+		totalslides[i].style.display = "none";
+	}
+	for (i = 0; i < totaldots.length; i++) {
+		totaldots[i].className = totaldots[i].className.replace(" active", "");
+	}
+	totalslides[slideIndex - 1].style.display = "block";
+	totaldots[slideIndex - 1].className += " active";
+}
+
+// Cambia automáticamente el slide cada 5 segundos
+setInterval(function () {
+    console.log("se mueve");
+	moveSlides(1); // Avanzar al siguiente slide
+}, 5000); 
+
+
+
+// Consulta las mascotas que hay en la DB
 function getPets(done){
 
     const results = fetch("http://localhost:3000/mascotas");
@@ -12,6 +57,7 @@ function getPets(done){
 
 }
 
+// Pinta las tarjetas de las mascotas
 getPets(data => {
     console.log(data);
     data.forEach(pet => {
@@ -79,7 +125,7 @@ getFoundations(data => {
 })
 
 
-// ==================== Popops ==================
+// ==================== Popups ==================
 
 // Obtener elementos del DOM
 const listaMascotas = document.getElementById('lista-mascotas');
